@@ -20,8 +20,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install pandas
+      - run: pip install pandas numpy scikit-learn
       - run: python scripts/actualizar_datos.py
+      - name: Análisis con IA (solo si existe el secreto ANTHROPIC_API_KEY)
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/analisis_ia.py
       - name: Guardar datos en el repositorio
         run: |
           git config user.name "github-actions"
