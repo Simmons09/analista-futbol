@@ -76,7 +76,7 @@ function chart(ser,o={}){const w=520,h=210,pd={l:44,r:12,t:10,b:22},xf=o.xf||dia
   g+=s.dots?s.pts.map(p=>`<circle cx="${sx(p[0])}" cy="${sy(p[1])}" r="${s.r||4}" fill="${s.c}"/>`).join(''):`<polyline fill="none" stroke="${s.c}" stroke-width="2" ${s.dash?'stroke-dasharray="4 4"':''} points="${pts.join(' ')}"/>`});
  return`<svg viewBox="0 0 ${w} ${h}" style="width:100%">${g}</svg><div class="leg">${ser.filter(s=>s.n).map(s=>`<span><i style="background:${s.c}"></i>${s.n}</span>`).join('')}</div>`}
 function go(t){document.querySelectorAll('.tab').forEach(e=>e.classList.toggle('on',e.id==='t-'+t));document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t))}
-function renderProx(){const p=L.proximos;if(!p.length){$('prox').innerHTML='<div class="nota">La fuente no tiene partidos próximos publicados para esta liga por ahora (se actualiza cada día).</div>';return}
+function renderProx(){const hoy=new Date().toLocaleDateString('en-CA'),p=L.proximos.filter(x=>x.f>=hoy);if(!p.length){$('prox').innerHTML='<div class="nota">La fuente no tiene partidos próximos publicados para esta liga por ahora (se actualiza cada día).</div>';return}
  let dia='',html='';p.forEach((x,i)=>{if(x.f!==dia){dia=x.f;html+=`<div class="dia">${new Date(x.f+'T12:00:00').toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long'})}</div>`}
   const r=pred(x.h,x.a);html+=`<div class="pm" data-i="${i}"><div class="t"><b>${x.h} vs ${x.a}</b><small>${x.t||''}</small></div>${barra(r.pl,r.pe,r.pv,0)}
   <small>Goles esperados ${r.lh.toFixed(1)}–${r.la.toFixed(1)} · Más de 2.5: ${pct(r.o)} · Ambos anotan: ${pct(r.bt)}${x.mk?` · Mercado: ${x.mk.map(pct).join(' / ')}`:''}</small></div>`});
