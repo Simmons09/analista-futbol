@@ -1,9 +1,11 @@
-"""Descarga 3 temporadas de football-data.co.uk (nuestra 'base de datos' en CSV), calcula fuerzas de equipos
-con pesos por recencia, ratings Elo, backtesting del modelo y próximos partidos.
-Genera data/datos.json y data/partidos.json.  Uso: python scripts/actualizar_datos.py [--csv-dir DIR]"""
+"""Descarga 5 temporadas de football-data.co.uk (nuestra 'base de datos' en CSV), calcula fuerzas de equipos,
+ratings Elo, un modelo estadístico (Poisson) y un modelo de IA (gradient boosting), los evalúa con backtesting
+y prepara los próximos partidos.  Genera data/datos.json y data/partidos.json.
+Uso: python scripts/actualizar_datos.py [--csv-dir DIR]"""
 import json, math, sys
 from datetime import date
 from pathlib import Path
+import numpy as np
 import pandas as pd
 
 LIGAS = {"E0": "Premier League", "SP1": "La Liga", "I1": "Serie A", "D1": "Bundesliga", "F1": "Ligue 1"}
@@ -13,16 +15,17 @@ CORE = ["Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG"]
 ODDS = ["B365H", "B365D", "B365A"]
 HL, K0, RHO, HOME_ELO = 120.0, 4.0, -0.10, 60.0   # semivida (días), suavizado, Dixon-Coles, ventaja local Elo
 EPOCH = pd.Timestamp(1970, 1, 1)
+NAN = float("nan")
 
 
 def fechas():
     hoy = date.today(); ini = hoy.year if hoy.month >= 7 else hoy.year - 1
-    return hoy, ini, [f"{y % 100:02d}{(y + 1) % 100:02d}" for y in (ini - 2, ini - 1, ini)]
+    return hoy, ini, [f"{y % 100:02d}{(y + 1) % 100:02d}" for y in range(ini - 4, ini + 1)]
 
 
 def leer(src):
     d = pd.read_csv(src, encoding="latin-1")
-    d.columns = [str(c).replace("ï»¿", "").replace("\ufeff", "").strip() for c in d.columns]  # quita el BOM
+    d.columns = [str(c).replace("ï»¿", "").replace("﻿", "").strip() for c in d.columns]  # quita el BOM
     for c in ODDS:
         if c not in d.columns:
             d[c] = float("nan")
@@ -75,28 +78,72 @@ def mercado(r):
     return tuple(x / s for x in inv)
 
 
-def procesar(df, test_desde, hoy_dia):
-    home, away, elo, hist, bt = {}, {}, {}, {}, []
-    sh = sa = n = 0.0; cnt = [0, 0, 0]
+def forma(l, d):
+    """Últimos 5 partidos: puntos, goles a favor, goles en contra (promedios) y días de descanso."""
+    r = l[-5:]; rest = min(d - l[-1][0], 21) if l else NAN
+    if len(r) < 3:
+        return [NAN, NAN, NAN, rest]
+    return [sum(x[1] for x in r) / len(r), sum(x[2] for x in r) / len(r), sum(x[3] for x in r) / len(r), rest]
+
+
+def feat(S, h, a, d):
+    """Variables del partido h vs a usando SOLO lo que se sabe antes del día d."""
+    mh, ma = S["sh"] / S["n"], S["sa"] / S["n"]
+    ah, dh = fz(S["home"].get(h, []), d, mh, ma); aa, da = fz(S["away"].get(a, []), d, ma, mh)
+    lh, la = mh * ah * da, ma * aa * dh; p = probs(lh, la)
+    eh, ea = S["elo"].get(h, 1500.0), S["elo"].get(a, 1500.0)
+    x = [lh, la, *p, eh, ea, eh + HOME_ELO - ea, ah, dh, aa, da, *forma(S["last"].get(h, []), d), *forma(S["last"].get(a, []), d)]
+    return x, p
+
+
+def procesar(df):
+    S = {"home": {}, "away": {}, "last": {}, "elo": {}, "sh": 0.0, "sa": 0.0, "n": 0}
+    hist, rows, cnt = {}, [], [0, 0, 0]
     for r in df.itertuples():
         h, a, hg, ag, d = r.HomeTeam, r.AwayTeam, int(r.FTHG), int(r.FTAG), int(r.dia)
-        hh, ha = home.setdefault(h, []), away.setdefault(a, [])
+        hh, ha = S["home"].setdefault(h, []), S["away"].setdefault(a, [])
         y = 0 if hg > ag else 1 if hg == ag else 2
-        if d >= test_desde and n >= 60 and len(hh) + len(away.get(h, [])) >= 4 and len(ha) + len(home.get(a, [])) >= 4:
-            mh, ma = sh / n, sa / n
-            ah, dh = fz(hh, d, mh, ma); aa, da = fz(ha, d, ma, mh)
-            p = probs(mh * ah * da, ma * aa * dh)
-            base = tuple((c + 1) / (sum(cnt) + 3) for c in cnt)
-            bt.append((y, p, mercado(r), base, d))
-        hh.append((d, hg, ag)); ha.append((d, ag, hg)); sh += hg; sa += ag; n += 1; cnt[y] += 1
-        eh, ea = elo.get(h, 1500.0), elo.get(a, 1500.0)
+        if S["n"] >= 60 and len(hh) + len(S["away"].get(h, [])) >= 4 and len(ha) + len(S["home"].get(a, [])) >= 4:
+            x, p = feat(S, h, a, d)
+            rows.append({"d": d, "y": y, "x": x, "p": p, "mk": mercado(r),
+                         "base": tuple((c + 1) / (sum(cnt) + 3) for c in cnt)})
+        hh.append((d, hg, ag)); ha.append((d, ag, hg))
+        S["last"].setdefault(h, []).append((d, 3 if y == 0 else 1 if y == 1 else 0, hg, ag))
+        S["last"].setdefault(a, []).append((d, 3 if y == 2 else 1 if y == 1 else 0, ag, hg))
+        S["sh"] += hg; S["sa"] += ag; S["n"] += 1; cnt[y] += 1
+        eh, ea = S["elo"].get(h, 1500.0), S["elo"].get(a, 1500.0)
         ex = 1 / (1 + 10 ** (-(eh + HOME_ELO - ea) / 400)); gd = abs(hg - ag)
         mult = 1 if gd < 2 else 1.5 if gd == 2 else (11 + gd) / 8
         delta = 20 * mult * ((1.0 if y == 0 else 0.5 if y == 1 else 0.0) - ex)
-        elo[h], elo[a] = eh + delta, ea - delta
+        S["elo"][h], S["elo"][a] = eh + delta, ea - delta
         ymd = int(r.Date.strftime("%Y%m%d"))
         hist.setdefault(h, []).append([ymd, round(eh + delta)]); hist.setdefault(a, []).append([ymd, round(ea - delta)])
-    return bt, elo, hist, home, away, sh / n, sa / n
+    return S, hist, rows
+
+
+def modelo_ml():
+    from sklearn.ensemble import HistGradientBoostingClassifier
+    return HistGradientBoostingClassifier(max_depth=3, learning_rate=0.05, max_iter=150, min_samples_leaf=40,
+                                          l2_regularization=1.0, random_state=0)
+
+
+def evaluar_ml(rows, test_desde):
+    """Walk-forward: cada 30 días reentrena con todo lo anterior y predice el bloque siguiente."""
+    X = np.array([r["x"] for r in rows], float); y = np.array([r["y"] for r in rows]); d = np.array([r["d"] for r in rows])
+    for ini in range(test_desde, int(d.max()) + 1, 30):
+        tr, te = d < ini, (d >= ini) & (d < ini + 30)
+        if tr.sum() < 300 or not te.any() or len(set(y[tr])) < 3:
+            continue
+        P = modelo_ml().fit(X[tr], y[tr]).predict_proba(X[te])
+        for i, q in zip(np.where(te)[0], P):
+            rows[i]["ml"] = tuple(float(v) for v in q)
+    return modelo_ml().fit(X, y)
+
+
+def vista(rs, modo):
+    def pr(r):
+        return r["p"] if modo == "p" else r["ml"] if modo == "ml" else tuple((a + b) / 2 for a, b in zip(r["p"], r["ml"]))
+    return [(r["y"], pr(r), r["mk"], r["base"], r["d"]) for r in rs]
 
 
 def metricas(rs):
@@ -144,39 +191,72 @@ def main():
     hoy, ini, temps = fechas()
     hoy_dia = (pd.Timestamp(hoy) - EPOCH).days
     inicio_temp = pd.Timestamp(ini, 7, 1); test_desde = (pd.Timestamp(ini - 1, 7, 1) - EPOCH).days
-    prox, ligas, partidos, todo = proximos(csv_dir), {}, {}, []
-    for cod, nombre in LIGAS.items():
+    tres = (pd.Timestamp(ini - 2, 7, 1) - EPOCH).days; tres_ymd = int(f"{ini - 2}0701")
+    prox, base, todas = proximos(csv_dir), {}, []
+    for cod in LIGAS:
         try:
             df = cargar(cod, temps, csv_dir)
-            bt, elo, hist, home, away, mh, ma = procesar(df, test_desde, hoy_dia)
+            S, hist, rows = procesar(df)
         except Exception as ex:
             print("SALTADA", cod, ex); continue
-        cur = df[df.Date >= inicio_temp]
-        eq = {}
+        for r in rows:
+            r["lig"] = cod
+        base[cod] = (df, S, hist); todas += rows
+    if not base:
+        sys.exit("No se pudo cargar ninguna liga")
+    modelo, ml_ok = None, False
+    try:
+        modelo = evaluar_ml(todas, test_desde); ml_ok = True
+    except Exception as ex:
+        print("IA omitida:", ex)
+    ev = [r for r in todas if r["d"] >= test_desde and (not ml_ok or "ml" in r)]
+    ligas, partidos = {}, {}
+    for cod, (df, S, hist) in base.items():
+        cur = df[df.Date >= inicio_temp]; mh, ma = S["sh"] / S["n"], S["sa"] / S["n"]; eq = {}
         for t in sorted(set(cur.HomeTeam) | set(cur.AwayTeam)):
             h, a = cur[cur.HomeTeam == t], cur[cur.AwayTeam == t]
             g = int((h.FTHG > h.FTAG).sum() + (a.FTAG > a.FTHG).sum()); e = int((h.FTHG == h.FTAG).sum() + (a.FTAG == a.FTHG).sum())
             ult = pd.concat([h.assign(r=h.FTHG - h.FTAG), a.assign(r=a.FTAG - a.FTHG)]).sort_values("Date").tail(5)
-            al, dl = fz(home.get(t, []), hoy_dia, mh, ma); av, dv = fz(away.get(t, []), hoy_dia, ma, mh)
+            al, dl = fz(S["home"].get(t, []), hoy_dia, mh, ma); av, dv = fz(S["away"].get(t, []), hoy_dia, ma, mh)
             eq[t] = {"pj": len(h) + len(a), "g": g, "e": e, "p": len(h) + len(a) - g - e,
                      "gf": int(h.FTHG.sum() + a.FTAG.sum()), "gc": int(h.FTAG.sum() + a.FTHG.sum()), "pts": 3 * g + e,
                      "forma": ["G" if r > 0 else "E" if r == 0 else "P" for r in ult.r],
                      "ataque_l": round(al, 4), "defensa_l": round(dl, 4), "ataque_v": round(av, 4), "defensa_v": round(dv, 4),
-                     "elo": round(elo.get(t, 1500))}
-        ligas[cod] = {"nombre": nombre, "avg_h": round(mh, 4), "avg_a": round(ma, 4), "n": len(cur), "equipos": eq,
-                      "proximos": [x for x in prox[cod] if x["h"] in eq and x["a"] in eq]}
-        nombres = sorted(set(df.HomeTeam) | set(df.AwayTeam)); ix = {t: i for i, t in enumerate(nombres)}
-        partidos[cod] = {"teams": nombres, "elo": {str(ix[t]): v for t, v in hist.items()},
-                         "m": [[int(r.Date.strftime("%Y%m%d")), ix[r.HomeTeam], ix[r.AwayTeam], int(r.FTHG), int(r.FTAG)] for r in df.itertuples()]}
-        ligas[cod]["backtest"] = metricas(bt); todo += bt
-        print("OK", cod, len(df), "partidos;", len(bt), "en backtest;", len(ligas[cod]["proximos"]), "próximos")
-    if not ligas:
-        sys.exit("No se pudo cargar ninguna liga")
-    out = {"temporada": temps[-1], "actualizado": hoy.isoformat(), "ligas": ligas,
-           "backtest": {"global": metricas(todo), "cal": calibracion(todo), "desde": f"{ini - 1}-07-01"},
+                     "elo": round(S["elo"].get(t, 1500))}
+        orden = list(eq)
+        L = {"nombre": LIGAS[cod], "avg_h": round(mh, 4), "avg_a": round(ma, 4), "n": len(cur), "equipos": eq, "orden": orden,
+             "proximos": [x for x in prox[cod] if x["h"] in eq and x["a"] in eq]}
+        if ml_ok:   # probabilidades de la IA para todos los cruces posibles (local i, visitante j)
+            pares = [(i, j) for i in range(len(orden)) for j in range(len(orden)) if i != j]
+            X = np.array([feat(S, orden[i], orden[j], hoy_dia)[0] for i, j in pares], float)
+            M = [[None] * len(orden) for _ in orden]
+            for (i, j), q in zip(pares, modelo.predict_proba(X)):
+                M[i][j] = [round(float(v), 3) for v in q]
+            L["ml"] = M
+        mine = [r for r in ev if r["lig"] == cod]
+        L["backtest"] = metricas(vista(mine, "p"))
+        if ml_ok:
+            L["backtest_ml"] = metricas(vista(mine, "ml")); L["backtest_mix"] = metricas(vista(mine, "mix"))
+        ligas[cod] = L
+        d3 = df[df.dia >= tres]; nombres = sorted(set(d3.HomeTeam) | set(d3.AwayTeam)); ix = {t: i for i, t in enumerate(nombres)}
+        partidos[cod] = {"teams": nombres,
+                         "elo": {str(ix[t]): [q for q in v if q[0] >= tres_ymd] for t, v in hist.items() if t in ix},
+                         "m": [[int(r.Date.strftime("%Y%m%d")), ix[r.HomeTeam], ix[r.AwayTeam], int(r.FTHG), int(r.FTAG)] for r in d3.itertuples()]}
+        print("OK", cod, len(df), "partidos;", len(mine), "en backtest;", len(L["proximos"]), "próximos")
+    bt = {"global": metricas(vista(ev, "p")), "desde": f"{ini - 1}-07-01"}
+    mejor, vm = "poisson", "p"
+    if ml_ok:
+        bt["ml"], bt["mix"] = metricas(vista(ev, "ml")), metricas(vista(ev, "mix"))
+        for nombre, m in (("ml", bt["ml"]), ("mix", bt["mix"])):
+            if m and m["ll"] < bt["global"]["ll"] and m["ll"] < (bt[mejor]["ll"] if mejor != "poisson" else 9):
+                mejor = nombre
+        vm = {"poisson": "p"}.get(mejor, mejor)
+    bt["mejor"] = mejor; bt["cal"] = calibracion(vista(ev, vm)) if ev else []
+    out = {"temporada": temps[-1], "actualizado": hoy.isoformat(), "ligas": ligas, "backtest": bt,
            "modelo": {"semivida_dias": HL, "suavizado": K0, "rho": RHO}}
     (DATA / "datos.json").write_text(json.dumps(out, separators=(",", ":")), encoding="utf-8")
     (DATA / "partidos.json").write_text(json.dumps(partidos, separators=(",", ":")), encoding="utf-8")
+    print("Modelo principal para el 1X2:", mejor)
 
 
 if __name__ == "__main__":
