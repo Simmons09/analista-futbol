@@ -1,0 +1,307 @@
+Date,HomeTeam,AwayTeam,FTHG,FTAG,B365H,B365D,B365A
+2024-08-16,Le Havre,Paris SG,1,4,7.0,4.75,1.42
+2024-08-17,Brest,Marseille,1,5,3.0,3.3,2.4
+2024-08-17,Reims,Lille,0,2,3.3,3.4,2.2
+2024-08-17,Monaco,St Etienne,1,0,1.48,4.5,6.25
+2024-08-18,Auxerre,Nice,2,1,3.1,3.25,2.35
+2024-08-18,Angers,Lens,0,1,5.75,3.8,1.62
+2024-08-18,Montpellier,Strasbourg,1,1,2.0,3.3,3.75
+2024-08-18,Toulouse,Nantes,0,0,2.1,3.3,3.7
+2024-08-18,Rennes,Lyon,3,0,2.35,3.5,2.9
+2024-08-23,Paris SG,Montpellier,6,0,1.25,7.0,10.0
+2024-08-24,Lyon,Monaco,0,2,2.5,3.8,2.6
+2024-08-24,Lille,Angers,2,0,1.36,4.75,9.0
+2024-08-24,St Etienne,Le Havre,0,2,2.1,3.4,3.5
+2024-08-25,Lens,Brest,2,0,1.8,3.7,4.5
+2024-08-25,Nantes,Auxerre,2,0,2.25,3.3,3.25
+2024-08-25,Nice,Toulouse,1,1,1.85,3.4,4.5
+2024-08-25,Strasbourg,Rennes,3,1,3.1,3.5,2.25
+2024-08-25,Marseille,Reims,2,2,1.53,4.5,5.5
+2024-08-30,Lyon,Strasbourg,4,3,1.85,3.75,4.0
+2024-08-31,Brest,St Etienne,4,0,1.8,3.8,4.33
+2024-08-31,Montpellier,Nantes,1,3,2.25,3.4,3.2
+2024-08-31,Toulouse,Marseille,1,3,3.8,3.8,1.9
+2024-09-01,Monaco,Lens,1,1,1.85,3.9,3.9
+2024-09-01,Angers,Nice,1,4,4.0,3.3,2.0
+2024-09-01,Le Havre,Auxerre,3,1,2.75,3.3,2.6
+2024-09-01,Reims,Rennes,2,1,2.9,3.5,2.38
+2024-09-01,Lille,Paris SG,1,3,3.9,3.8,1.85
+2024-09-13,St Etienne,Lille,1,0,5.5,3.6,1.7
+2024-09-14,Marseille,Nice,2,0,1.7,3.9,4.5
+2024-09-14,Auxerre,Monaco,0,3,3.9,3.75,1.85
+2024-09-14,Paris SG,Brest,3,1,1.27,6.0,10.0
+2024-09-15,Rennes,Montpellier,3,0,1.62,4.0,5.25
+2024-09-15,Nantes,Reims,1,2,2.38,3.4,3.0
+2024-09-15,Strasbourg,Angers,1,1,1.7,3.8,5.25
+2024-09-15,Toulouse,Le Havre,2,0,1.8,3.6,4.5
+2024-09-15,Lens,Lyon,0,0,1.8,3.75,4.33
+2024-09-20,Nice,St Etienne,8,0,1.53,4.1,6.5
+2024-09-21,Lille,Strasbourg,3,3,1.7,4.0,4.75
+2024-09-21,Rennes,Lens,1,1,2.35,3.4,3.0
+2024-09-21,Reims,Paris SG,1,1,6.5,4.75,1.44
+2024-09-22,Monaco,Le Havre,3,1,1.36,4.75,8.5
+2024-09-22,Angers,Nantes,1,1,3.2,3.3,2.3
+2024-09-22,Brest,Toulouse,2,0,2.15,3.5,3.4
+2024-09-22,Montpellier,Auxerre,3,2,2.3,3.3,3.2
+2024-09-22,Lyon,Marseille,2,3,2.9,3.8,2.2
+2024-09-27,Auxerre,Brest,3,0,2.75,3.4,2.55
+2024-09-27,Paris SG,Rennes,3,1,1.38,5.25,7.5
+2024-09-28,Lens,Nice,0,0,2.05,3.4,3.75
+2024-09-28,Le Havre,Lille,0,3,4.75,3.7,1.75
+2024-09-28,Monaco,Montpellier,2,1,1.33,5.5,7.5
+2024-09-29,Toulouse,Lyon,1,2,2.45,3.4,2.88
+2024-09-29,Angers,Reims,1,3,3.6,3.2,2.2
+2024-09-29,Nantes,St Etienne,2,2,1.73,3.8,4.75
+2024-09-29,Strasbourg,Marseille,1,0,3.4,3.9,2.0
+2024-10-04,Marseille,Angers,1,1,1.25,6.0,12.0
+2024-10-05,St Etienne,Auxerre,3,1,2.7,3.4,2.6
+2024-10-05,Lille,Toulouse,2,1,1.73,4.1,4.5
+2024-10-05,Rennes,Monaco,1,2,2.7,3.5,2.55
+2024-10-06,Lyon,Nantes,2,0,1.75,3.6,4.75
+2024-10-06,Brest,Le Havre,2,0,1.8,3.6,4.5
+2024-10-06,Reims,Montpellier,4,2,1.8,3.8,4.33
+2024-10-06,Strasbourg,Lens,2,2,3.0,3.3,2.4
+2024-10-06,Nice,Paris SG,1,1,4.75,4.0,1.7
+2024-10-18,Monaco,Lille,0,0,1.91,3.6,3.8
+2024-10-19,Brest,Rennes,1,1,2.9,3.25,2.5
+2024-10-19,St Etienne,Lens,0,2,5.25,3.75,1.67
+2024-10-19,Paris SG,Strasbourg,4,2,1.27,5.75,10.0
+2024-10-20,Le Havre,Lyon,0,4,3.75,3.5,2.0
+2024-10-20,Auxerre,Reims,2,1,2.63,3.4,2.6
+2024-10-20,Nantes,Nice,1,1,3.25,3.1,2.38
+2024-10-20,Toulouse,Angers,1,1,1.57,3.75,6.5
+2024-10-20,Montpellier,Marseille,0,5,4.33,4.0,1.73
+2024-10-25,Rennes,Le Havre,1,0,1.45,4.0,7.5
+2024-10-26,Angers,St Etienne,4,2,2.45,3.3,2.9
+2024-10-26,Reims,Brest,1,2,2.15,3.5,3.25
+2024-10-26,Lens,Lille,0,2,2.3,3.4,3.1
+2024-10-27,Lyon,Auxerre,2,2,1.48,5.0,5.5
+2024-10-27,Montpellier,Toulouse,0,3,3.1,3.6,2.2
+2024-10-27,Nice,Monaco,2,1,3.2,3.5,2.2
+2024-10-27,Strasbourg,Nantes,3,1,1.85,3.6,4.2
+2024-10-27,Marseille,Paris SG,0,3,3.9,3.7,1.9
+2024-11-01,Monaco,Angers,0,1,1.22,6.5,12.0
+2024-11-01,Lille,Lyon,1,1,2.15,3.75,3.1
+2024-11-02,Paris SG,Lens,1,0,1.42,5.0,6.25
+2024-11-02,Brest,Nice,0,1,2.63,3.25,2.75
+2024-11-02,St Etienne,Strasbourg,2,0,3.8,3.7,1.91
+2024-11-03,Toulouse,Reims,1,0,2.0,3.5,3.75
+2024-11-03,Auxerre,Rennes,4,0,3.5,3.6,2.05
+2024-11-03,Le Havre,Montpellier,1,0,2.2,3.5,3.2
+2024-11-03,Nantes,Marseille,1,2,3.7,3.5,2.05
+2024-11-08,Marseille,Auxerre,1,3,1.4,5.0,7.5
+2024-11-09,Strasbourg,Monaco,1,3,3.4,3.7,2.0
+2024-11-09,Lens,Nantes,3,2,1.6,3.9,5.75
+2024-11-09,Angers,Paris SG,2,4,12.0,6.25,1.22
+2024-11-10,Nice,Lille,2,2,2.55,3.2,2.9
+2024-11-10,Le Havre,Reims,0,3,3.3,3.2,2.3
+2024-11-10,Montpellier,Brest,3,1,3.25,3.5,2.2
+2024-11-10,Rennes,Toulouse,0,2,2.15,3.4,3.4
+2024-11-10,Lyon,St Etienne,1,0,1.33,5.5,8.0
+2024-11-22,Monaco,Brest,3,2,1.5,4.33,6.5
+2024-11-22,Paris SG,Toulouse,3,0,1.36,5.5,7.0
+2024-11-23,Lens,Marseille,1,3,2.25,3.5,3.1
+2024-11-23,St Etienne,Montpellier,1,0,2.3,3.6,2.9
+2024-11-23,Reims,Lyon,1,1,2.75,3.75,2.35
+2024-11-24,Lille,Rennes,1,0,1.91,3.6,3.9
+2024-11-24,Auxerre,Angers,1,0,1.8,3.7,4.33
+2024-11-24,Nantes,Le Havre,0,2,1.85,3.4,4.5
+2024-11-24,Nice,Strasbourg,2,1,1.75,3.6,4.75
+2024-11-29,Reims,Lens,0,2,3.1,3.3,2.3
+2024-11-30,Rennes,St Etienne,5,0,1.48,4.75,6.0
+2024-11-30,Brest,Strasbourg,3,1,2.2,3.4,3.3
+2024-11-30,Paris SG,Nantes,1,1,1.22,7.0,11.0
+2024-12-01,Montpellier,Lille,2,2,4.5,3.6,1.8
+2024-12-01,Le Havre,Angers,0,1,2.3,3.2,3.3
+2024-12-01,Lyon,Nice,4,1,1.91,3.8,3.7
+2024-12-01,Toulouse,Auxerre,2,0,1.7,3.6,5.25
+2024-12-01,Marseille,Monaco,2,1,2.63,3.4,2.63
+2024-12-06,Lille,Brest,3,1,1.65,3.6,6.0
+2024-12-06,Auxerre,Paris SG,0,0,9.0,5.75,1.3
+2024-12-07,Monaco,Toulouse,2,0,1.7,3.8,5.0
+2024-12-07,Nice,Le Havre,2,1,1.6,3.75,6.0
+2024-12-07,Angers,Lyon,0,3,5.0,4.0,1.67
+2024-12-08,Lens,Montpellier,2,0,1.36,5.25,7.5
+2024-12-08,Nantes,Rennes,1,0,3.0,3.25,2.4
+2024-12-08,Strasbourg,Reims,0,0,2.38,3.3,3.0
+2024-12-08,St Etienne,Marseille,0,2,5.25,3.9,1.65
+2024-12-13,Toulouse,St Etienne,2,1,1.36,5.0,8.5
+2024-12-14,Marseille,Lille,1,1,2.15,3.5,3.3
+2024-12-14,Auxerre,Lens,2,2,3.8,3.6,1.95
+2024-12-14,Reims,Monaco,0,0,3.7,3.6,2.0
+2024-12-15,Montpellier,Nice,2,2,2.9,3.6,2.3
+2024-12-15,Brest,Nantes,4,1,2.05,3.4,3.6
+2024-12-15,Le Havre,Strasbourg,0,3,3.1,3.2,2.4
+2024-12-15,Rennes,Angers,2,0,1.62,4.0,5.5
+2024-12-15,Paris SG,Lyon,3,1,1.4,6.0,5.75
+2024-12-18,Monaco,Paris SG,2,4,4.0,3.8,1.85
+2025-01-03,Nice,Rennes,3,2,2.2,3.3,3.4
+2025-01-04,St Etienne,Reims,3,1,3.6,3.3,2.1
+2025-01-04,Lille,Nantes,1,1,1.5,4.33,6.25
+2025-01-04,Lyon,Montpellier,1,0,1.33,5.5,8.0
+2025-01-05,Angers,Brest,2,0,3.2,3.3,2.3
+2025-01-05,Lens,Toulouse,0,1,1.91,3.4,4.33
+2025-01-05,Strasbourg,Auxerre,3,1,1.85,3.6,4.2
+2025-01-05,Marseille,Le Havre,5,1,1.3,6.0,8.0
+2025-01-10,Nantes,Monaco,2,2,5.0,3.75,1.73
+2025-01-10,Auxerre,Lille,0,0,4.6,3.8,1.75
+2025-01-11,Brest,Lyon,2,1,3.1,3.5,2.25
+2025-01-11,Reims,Nice,2,4,2.6,3.5,2.6
+2025-01-11,Rennes,Marseille,1,2,3.0,3.25,2.4
+2025-01-12,Le Havre,Lens,1,2,5.5,3.8,1.62
+2025-01-12,Montpellier,Angers,1,3,2.1,3.5,3.4
+2025-01-12,Toulouse,Strasbourg,1,2,1.75,3.8,4.5
+2025-01-12,Paris SG,St Etienne,2,1,1.09,9.5,23.0
+2025-01-17,Montpellier,Monaco,2,1,5.25,4.5,1.55
+2025-01-17,Lille,Nice,2,1,2.1,3.4,3.6
+2025-01-18,Lens,Paris SG,1,2,4.5,3.9,1.73
+2025-01-18,Rennes,Brest,1,2,2.0,3.4,3.9
+2025-01-18,Lyon,Toulouse,0,0,1.85,3.9,4.0
+2025-01-19,St Etienne,Nantes,1,1,2.45,3.25,2.9
+2025-01-19,Angers,Auxerre,2,0,2.4,3.2,3.0
+2025-01-19,Reims,Le Havre,1,1,1.62,4.0,5.25
+2025-01-19,Marseille,Strasbourg,1,1,1.57,4.33,5.25
+2025-01-24,Auxerre,St Etienne,1,1,1.91,3.7,3.8
+2025-01-25,Monaco,Rennes,3,2,1.7,3.9,4.75
+2025-01-25,Strasbourg,Lille,2,1,2.75,3.4,2.55
+2025-01-25,Paris SG,Reims,1,1,1.27,6.5,9.0
+2025-01-26,Le Havre,Brest,0,1,3.3,3.1,2.35
+2025-01-26,Lens,Angers,1,0,1.42,4.33,7.5
+2025-01-26,Nantes,Lyon,1,1,3.3,3.5,2.1
+2025-01-26,Toulouse,Montpellier,1,2,1.62,4.0,5.25
+2025-01-26,Nice,Marseille,2,0,2.8,3.5,2.45
+2025-01-31,Montpellier,Lens,0,2,4.33,3.7,1.83
+2025-02-01,Brest,Paris SG,2,5,6.25,5.0,1.44
+2025-02-01,Monaco,Auxerre,4,2,1.33,5.5,8.5
+2025-02-01,Lille,St Etienne,4,1,1.4,4.5,8.0
+2025-02-02,Toulouse,Nice,1,1,2.5,3.4,2.75
+2025-02-02,Angers,Le Havre,1,1,1.95,3.4,3.9
+2025-02-02,Reims,Nantes,1,2,2.15,3.4,3.4
+2025-02-02,Rennes,Strasbourg,1,0,2.05,3.5,3.6
+2025-02-02,Marseille,Lyon,3,2,2.0,3.9,3.3
+2025-02-07,Nantes,Brest,0,2,2.45,3.1,3.1
+2025-02-07,Paris SG,Monaco,4,1,1.38,5.5,6.5
+2025-02-08,Nice,Lens,2,0,2.35,3.3,3.1
+2025-02-08,Lille,Le Havre,1,2,1.36,5.5,8.0
+2025-02-08,St Etienne,Rennes,0,2,3.3,3.4,2.15
+2025-02-09,Lyon,Reims,4,0,1.53,4.5,5.75
+2025-02-09,Auxerre,Toulouse,2,2,3.0,3.4,2.35
+2025-02-09,Strasbourg,Montpellier,2,0,1.75,4.1,4.1
+2025-02-09,Angers,Marseille,0,2,5.5,4.0,1.62
+2025-02-14,Brest,Auxerre,2,2,2.25,3.3,3.3
+2025-02-15,Marseille,St Etienne,5,1,1.25,6.5,9.5
+2025-02-15,Monaco,Nantes,7,1,1.55,4.2,6.0
+2025-02-15,Toulouse,Paris SG,0,1,5.75,4.75,1.5
+2025-02-16,Montpellier,Lyon,1,4,4.75,4.5,1.58
+2025-02-16,Le Havre,Nice,1,3,5.0,4.0,1.62
+2025-02-16,Lens,Strasbourg,0,2,1.72,3.8,4.75
+2025-02-16,Reims,Angers,0,1,2.0,3.4,3.9
+2025-02-16,Rennes,Lille,0,2,2.7,3.25,2.7
+2025-02-21,Rennes,Reims,1,0,2.15,3.4,3.4
+2025-02-22,Lille,Monaco,2,1,2.15,3.7,3.1
+2025-02-22,St Etienne,Angers,3,3,2.4,3.3,3.0
+2025-02-22,Auxerre,Marseille,3,0,5.5,4.33,1.55
+2025-02-23,Nantes,Lens,3,1,3.7,3.4,2.05
+2025-02-23,Le Havre,Toulouse,1,4,4.0,3.4,1.95
+2025-02-23,Nice,Montpellier,2,0,1.38,5.0,7.5
+2025-02-23,Strasbourg,Brest,0,0,2.0,3.6,3.6
+2025-02-23,Lyon,Paris SG,2,3,4.2,4.33,1.7
+2025-02-28,Monaco,Reims,3,0,1.38,5.0,7.5
+2025-03-01,St Etienne,Nice,1,3,5.0,4.0,1.67
+2025-03-01,Lens,Le Havre,3,4,1.38,5.0,7.5
+2025-03-01,Paris SG,Lille,4,1,1.4,4.75,7.5
+2025-03-02,Lyon,Brest,2,1,1.65,3.9,5.25
+2025-03-02,Angers,Toulouse,0,4,3.3,3.1,2.35
+2025-03-02,Auxerre,Strasbourg,0,1,2.8,3.4,2.5
+2025-03-02,Montpellier,Rennes,0,4,3.5,3.4,2.1
+2025-03-02,Marseille,Nantes,2,0,1.4,5.0,7.0
+2025-03-07,Toulouse,Monaco,1,1,3.25,3.5,2.15
+2025-03-08,Rennes,Paris SG,1,4,4.75,3.9,1.7
+2025-03-08,Lille,Montpellier,1,0,1.37,4.75,7.5
+2025-03-08,Marseille,Lens,0,1,1.53,4.33,6.0
+2025-03-09,Brest,Angers,2,0,1.73,3.6,5.0
+2025-03-09,Le Havre,St Etienne,1,1,2.3,3.4,3.1
+2025-03-09,Nantes,Strasbourg,0,1,2.6,3.25,2.75
+2025-03-09,Reims,Auxerre,0,2,2.4,3.3,3.0
+2025-03-09,Nice,Lyon,0,2,2.0,3.7,3.5
+2025-03-14,Nice,Auxerre,1,1,1.57,3.9,6.0
+2025-03-15,Nantes,Lille,1,0,3.6,3.2,2.15
+2025-03-15,Angers,Monaco,0,2,6.5,4.75,1.42
+2025-03-15,Lens,Rennes,1,0,2.05,3.5,3.6
+2025-03-16,Lyon,Le Havre,4,2,1.36,5.5,7.0
+2025-03-16,Brest,Reims,0,0,1.67,3.9,5.0
+2025-03-16,Montpellier,St Etienne,0,2,2.2,3.5,3.2
+2025-03-16,Strasbourg,Toulouse,2,1,2.25,3.25,3.25
+2025-03-16,Paris SG,Marseille,3,1,1.45,5.0,6.0
+2025-03-28,Strasbourg,Lyon,4,2,2.7,3.6,2.45
+2025-03-29,Reims,Marseille,3,1,5.5,4.2,1.57
+2025-03-29,St Etienne,Paris SG,1,6,17.0,8.5,1.14
+2025-03-29,Monaco,Nice,2,1,1.9,3.9,3.75
+2025-03-30,Toulouse,Brest,2,4,2.0,3.25,4.1
+2025-03-30,Angers,Rennes,0,3,4.2,3.6,1.82
+2025-03-30,Auxerre,Montpellier,1,0,1.69,3.8,4.5
+2025-03-30,Le Havre,Nantes,3,2,3.1,3.2,2.37
+2025-03-30,Lille,Lens,1,0,2.0,3.4,3.75
+2025-04-04,Nice,Nantes,1,2,1.5,4.2,6.5
+2025-04-05,Paris SG,Angers,1,0,1.14,8.0,19.0
+2025-04-05,Brest,Monaco,2,1,4.0,3.6,1.9
+2025-04-05,Lyon,Lille,2,1,2.2,3.6,3.1
+2025-04-06,Lens,St Etienne,1,0,1.55,4.1,6.0
+2025-04-06,Montpellier,Le Havre,0,2,2.4,3.25,3.0
+2025-04-06,Reims,Strasbourg,0,1,3.2,3.6,2.15
+2025-04-06,Rennes,Auxerre,0,1,1.85,3.6,4.33
+2025-04-06,Marseille,Toulouse,3,2,1.75,3.8,4.5
+2025-04-11,Lens,Reims,0,2,1.53,4.1,6.25
+2025-04-12,Monaco,Marseille,3,0,2.0,3.8,3.4
+2025-04-12,Toulouse,Lille,1,2,2.8,3.3,2.55
+2025-04-12,Strasbourg,Nice,2,2,2.55,3.3,2.75
+2025-04-13,St Etienne,Brest,3,3,3.5,3.6,2.05
+2025-04-13,Angers,Montpellier,2,0,1.9,3.5,4.1
+2025-04-13,Le Havre,Rennes,1,5,3.5,3.4,2.1
+2025-04-13,Auxerre,Lyon,1,3,3.6,3.6,2.0
+2025-04-18,Rennes,Nantes,2,1,1.8,3.5,4.75
+2025-04-19,Paris SG,Le Havre,2,1,1.13,9.0,17.0
+2025-04-19,Monaco,Strasbourg,0,0,1.57,4.75,4.75
+2025-04-19,Marseille,Montpellier,5,1,1.22,7.0,11.0
+2025-04-20,Lille,Auxerre,3,1,1.5,4.2,7.0
+2025-04-20,Brest,Lens,1,3,2.35,3.3,3.1
+2025-04-20,Nice,Angers,2,1,1.38,5.0,8.0
+2025-04-20,Reims,Toulouse,1,0,3.3,3.25,2.25
+2025-04-20,St Etienne,Lyon,2,1,5.25,4.2,1.62
+2025-04-22,Nantes,Paris SG,1,1,6.25,5.5,1.4
+2025-04-25,Paris SG,Nice,1,3,1.7,4.5,4.1
+2025-04-26,Strasbourg,St Etienne,3,1,1.62,4.2,5.0
+2025-04-26,Le Havre,Monaco,1,1,6.5,5.0,1.42
+2025-04-26,Lyon,Rennes,4,1,1.75,4.2,4.1
+2025-04-27,Angers,Lille,0,2,6.0,3.9,1.57
+2025-04-27,Lens,Auxerre,0,4,1.6,4.0,5.5
+2025-04-27,Montpellier,Reims,0,0,4.5,3.6,1.75
+2025-04-27,Nantes,Toulouse,0,0,2.88,3.25,2.45
+2025-04-27,Marseille,Brest,4,1,1.5,4.5,6.0
+2025-05-02,Nice,Reims,1,0,1.4,4.75,7.5
+2025-05-03,Strasbourg,Paris SG,2,1,2.45,3.75,2.6
+2025-05-03,Toulouse,Rennes,2,1,2.15,3.4,3.4
+2025-05-03,St Etienne,Monaco,1,3,6.5,5.25,1.37
+2025-05-04,Nantes,Angers,0,1,1.9,3.2,4.75
+2025-05-04,Auxerre,Le Havre,1,2,2.1,3.6,3.25
+2025-05-04,Brest,Montpellier,1,0,1.36,5.25,7.5
+2025-05-04,Lyon,Lens,1,2,1.55,4.33,5.75
+2025-05-04,Lille,Marseille,1,1,2.35,3.25,3.1
+2025-05-10,Angers,Strasbourg,2,1,4.2,3.75,1.8
+2025-05-10,Auxerre,Nantes,1,1,2.8,3.4,2.45
+2025-05-10,Brest,Lille,2,0,4.5,3.8,1.75
+2025-05-10,Le Havre,Marseille,1,3,6.0,4.5,1.5
+2025-05-10,Monaco,Lyon,2,0,1.83,4.2,3.7
+2025-05-10,Montpellier,Paris SG,1,4,9.0,7.0,1.25
+2025-05-10,Reims,St Etienne,0,2,2.1,3.7,3.2
+2025-05-10,Rennes,Nice,2,0,3.6,3.8,1.95
+2025-05-10,Toulouse,Lens,1,1,2.25,3.5,3.1
+2025-05-17,Lens,Monaco,4,0,3.9,4.1,1.83
+2025-05-17,Lille,Reims,2,1,1.38,4.75,8.5
+2025-05-17,Lyon,Angers,2,0,1.29,6.0,9.0
+2025-05-17,Marseille,Rennes,4,2,1.75,3.9,4.2
+2025-05-17,Nantes,Montpellier,3,0,1.53,4.5,5.5
+2025-05-17,Nice,Brest,6,0,1.48,4.5,6.5
+2025-05-17,Paris SG,Auxerre,3,1,1.2,7.0,13.0
+2025-05-17,St Etienne,Toulouse,2,3,1.95,4.2,3.25
+2025-05-17,Strasbourg,Le Havre,2,3,1.57,4.75,5.0

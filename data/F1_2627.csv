@@ -1,91 +1,91 @@
-Date,HomeTeam,AwayTeam,FTHG,FTAG
-2026-08-21,Marseille,Strasbourg,4,0
-2026-08-22,Lens,Auxerre,5,2
-2026-08-22,Le Mans,Brest,2,2
-2026-08-22,Nice,Lorient,0,0
-2026-08-22,Toulouse,Lyon,0,2
-2026-08-22,Troyes,Paris FC,0,0
-2026-08-23,Angers,Lille,0,2
-2026-08-23,Le Havre,Monaco,0,1
-2026-08-23,Rennes,Paris SG,2,2
-2026-08-28,Lille,Paris SG,2,2
-2026-08-29,Lyon,Le Havre,1,1
-2026-08-29,Lorient,Troyes,1,2
-2026-08-29,Strasbourg,Lens,2,1
-2026-08-29,Auxerre,Angers,1,3
-2026-08-29,Brest,Toulouse,2,2
-2026-08-30,Paris FC,Nice,3,0
-2026-08-30,Rennes,Le Mans,3,2
-2026-08-30,Monaco,Marseille,2,0
-2026-09-03,Toulouse,Lille,0,1
-2026-09-04,Paris SG,Monaco,1,2
-2026-09-04,Lyon,Auxerre,3,1
-2026-09-05,Nice,Le Mans,1,1
-2026-09-05,Lens,Lorient,0,1
-2026-09-05,Le Havre,Brest,1,2
-2026-09-06,Troyes,Strasbourg,2,6
-2026-09-06,Angers,Rennes,1,2
-2026-09-06,Marseille,Paris FC,2,3
-2026-09-11,Rennes,Marseille,1,0
-2026-09-12,Paris FC,Lyon,0,0
-2026-09-12,Strasbourg,Monaco,1,1
-2026-09-12,Auxerre,Nice,1,0
-2026-09-12,Le Havre,Angers,0,0
-2026-09-12,Lorient,Toulouse,2,2
-2026-09-13,Lille,Troyes,2,0
-2026-09-13,Le Mans,Lens,2,2
-2026-09-13,Brest,Paris SG,0,1
-2026-09-18,Monaco,Lens,2,1
-2026-09-19,Lyon,Rennes,4,0
-2026-09-19,Le Mans,Lorient,2,1
-2026-09-19,Toulouse,Le Havre,3,2
-2026-09-19,Paris FC,Strasbourg,2,1
-2026-09-19,Angers,Troyes,2,0
-2026-09-20,Nice,Lille,2,1
-2026-09-20,Marseille,Paris SG,1,2
-2026-09-20,Auxerre,Brest,2,1
-2026-10-09,Lens,Lyon,2,1
-2026-10-10,Lille,Le Havre,1,0
-2026-10-10,Brest,Angers,5,1
-2026-10-10,Lorient,Paris FC,1,0
-2026-10-10,Monaco,Toulouse,2,2
-2026-10-10,Paris SG,Le Mans,3,1
-2026-10-11,Troyes,Marseille,0,2
-2026-10-11,Nice,Strasbourg,2,1
-2026-10-11,Rennes,Auxerre,4,1
-2026-10-16,Le Mans,Toulouse,0,3
-2026-10-17,Troyes,Lens,1,3
-2026-10-17,Strasbourg,Paris SG,1,3
-2026-10-17,Lille,Brest,1,1
-2026-10-18,Lyon,Nice,2,1
-2026-10-18,Angers,Marseille,2,5
-2026-10-18,Le Havre,Auxerre,1,3
-2026-10-18,Lorient,Monaco,1,0
-2026-10-18,Paris FC,Rennes,4,3
-2026-10-23,Brest,Nice,1,2
-2026-10-24,Lens,Paris FC,2,1
-2026-10-25,Rennes,Strasbourg,3,0
-2026-10-25,Toulouse,Troyes,0,0
-2026-10-25,Marseille,Le Havre,4,3
-2026-10-25,Angers,Lorient,0,0
-2026-10-25,Monaco,Lille,1,1
-2026-10-25,Auxerre,Le Mans,1,1
-2026-10-26,Paris SG,Lyon,2,0
-2026-10-30,Le Havre,Paris SG,1,5
-2026-10-30,Nice,Rennes,5,2
-2026-10-30,Lille,Lens,1,0
-2026-10-31,Troyes,Le Mans,2,0
-2026-11-01,Marseille,Toulouse,2,0
-2026-11-01,Paris FC,Monaco,3,1
-2026-11-01,Lyon,Angers,2,0
-2026-11-01,Strasbourg,Auxerre,5,1
-2026-11-02,Lorient,Brest,0,2
-2026-11-06,Toulouse,Strasbourg,3,1
-2026-11-07,Auxerre,Paris FC,0,1
-2026-11-07,Paris SG,Troyes,1,0
-2026-11-08,Le Havre,Lorient,0,2
-2026-11-08,Brest,Lyon,2,0
-2026-11-08,Le Mans,Monaco,1,1
-2026-11-08,Rennes,Lille,1,2
-2026-11-08,Angers,Nice,0,2
-2026-11-08,Lens,Marseille,1,2
+Date,HomeTeam,AwayTeam,FTHG,FTAG,B365H,B365D,B365A
+2026-08-21,Marseille,Strasbourg,4,0,1.73,4.1,4.33
+2026-08-22,Lens,Auxerre,5,2,1.55,4.5,5.25
+2026-08-22,Le Mans,Brest,2,2,2.55,3.4,2.7
+2026-08-22,Nice,Lorient,0,0,2.1,3.5,3.4
+2026-08-22,Toulouse,Lyon,0,2,2.8,3.4,2.5
+2026-08-22,Troyes,Paris FC,0,0,3.1,3.4,2.3
+2026-08-23,Angers,Lille,0,2,5.0,3.7,1.7
+2026-08-23,Le Havre,Monaco,0,1,3.6,4.0,1.91
+2026-08-23,Rennes,Paris SG,2,2,5.75,4.75,1.5
+2026-08-28,Lille,Paris SG,2,2,5.0,3.8,1.7
+2026-08-29,Strasbourg,Lens,2,1,3.5,3.6,2.05
+2026-08-29,Auxerre,Angers,1,3,1.95,3.5,4.1
+2026-08-29,Brest,Toulouse,2,2,2.63,3.4,2.63
+2026-08-29,Lorient,Troyes,1,2,1.8,3.6,4.5
+2026-08-29,Lyon,Le Havre,1,1,1.44,4.5,7.0
+2026-08-30,Paris FC,Nice,3,0,2.05,3.3,3.8
+2026-08-30,Rennes,Le Mans,3,2,1.44,5.0,6.5
+2026-08-30,Monaco,Marseille,2,0,2.4,3.7,2.75
+2026-09-03,Toulouse,Lille,0,1,3.25,3.25,2.15
+2026-09-04,Lyon,Auxerre,3,1,1.42,4.5,7.5
+2026-09-04,Paris SG,Monaco,1,2,1.33,5.75,7.5
+2026-09-05,Lens,Lorient,0,1,1.45,4.33,7.0
+2026-09-05,Le Havre,Brest,1,2,2.63,3.25,2.7
+2026-09-05,Nice,Le Mans,1,1,1.85,3.6,4.33
+2026-09-06,Troyes,Strasbourg,2,6,3.1,3.4,2.3
+2026-09-06,Angers,Rennes,1,2,4.0,3.75,1.85
+2026-09-06,Marseille,Paris FC,2,3,1.75,3.8,4.33
+2026-09-11,Rennes,Marseille,1,0,2.1,3.8,3.2
+2026-09-12,Strasbourg,Monaco,1,1,3.1,3.75,2.15
+2026-09-12,Auxerre,Nice,1,0,2.63,3.3,2.75
+2026-09-12,Le Havre,Angers,0,0,2.55,3.2,2.88
+2026-09-12,Lorient,Toulouse,2,2,2.63,3.25,2.75
+2026-09-12,Paris FC,Lyon,0,0,2.55,3.6,2.55
+2026-09-13,Lille,Troyes,2,0,1.4,4.75,7.5
+2026-09-13,Le Mans,Lens,2,2,4.75,4.2,1.65
+2026-09-13,Brest,Paris SG,0,1,11.0,5.75,1.27
+2026-09-18,Monaco,Lens,2,1,2.05,3.7,3.4
+2026-09-19,Paris FC,Strasbourg,2,1,1.95,3.75,3.6
+2026-09-19,Angers,Troyes,2,0,2.2,3.3,3.4
+2026-09-19,Le Mans,Lorient,2,1,2.7,3.3,2.63
+2026-09-19,Lyon,Rennes,4,0,2.1,3.7,3.2
+2026-09-19,Toulouse,Le Havre,3,2,1.7,3.75,5.0
+2026-09-20,Auxerre,Brest,2,1,2.88,3.5,2.45
+2026-09-20,Nice,Lille,2,1,3.6,3.5,2.05
+2026-09-20,Marseille,Paris SG,1,2,7.0,5.0,1.4
+2026-10-09,Lens,Lyon,2,1,2.5,3.6,2.63
+2026-10-10,Lille,Le Havre,1,0,1.44,4.5,7.5
+2026-10-10,Brest,Angers,5,1,2.0,3.6,3.75
+2026-10-10,Lorient,Paris FC,1,0,3.25,3.4,2.2
+2026-10-10,Monaco,Toulouse,2,2,1.6,4.1,5.5
+2026-10-10,Paris SG,Le Mans,3,1,1.09,12.0,21.0
+2026-10-11,Nice,Strasbourg,2,1,2.35,3.6,3.0
+2026-10-11,Rennes,Auxerre,4,1,1.44,4.75,7.0
+2026-10-11,Troyes,Marseille,0,2,3.75,3.75,1.91
+2026-10-16,Le Mans,Toulouse,0,3,3.0,3.5,2.3
+2026-10-17,Strasbourg,Paris SG,1,3,6.25,5.5,1.4
+2026-10-17,Lille,Brest,1,1,1.85,3.75,4.0
+2026-10-17,Troyes,Lens,1,3,3.8,4.0,1.85
+2026-10-18,Angers,Marseille,2,5,3.3,3.8,2.05
+2026-10-18,Le Havre,Auxerre,1,3,2.25,3.4,3.2
+2026-10-18,Lorient,Monaco,1,0,3.6,3.5,2.05
+2026-10-18,Paris FC,Rennes,4,3,2.25,3.6,3.0
+2026-10-18,Lyon,Nice,2,1,1.67,4.1,4.75
+2026-10-23,Brest,Nice,1,2,2.2,3.5,3.2
+2026-10-24,Lens,Paris FC,2,1,2.45,3.5,2.8
+2026-10-25,Monaco,Lille,1,1,2.05,3.4,3.7
+2026-10-25,Angers,Lorient,0,0,3.1,3.3,2.35
+2026-10-25,Auxerre,Le Mans,1,1,2.1,3.6,3.3
+2026-10-25,Marseille,Le Havre,4,3,1.57,4.5,5.0
+2026-10-25,Rennes,Strasbourg,3,0,1.8,4.33,3.75
+2026-10-25,Toulouse,Troyes,0,0,1.6,4.0,5.5
+2026-10-26,Paris SG,Lyon,2,0,1.45,4.75,6.5
+2026-10-30,Le Havre,Paris SG,1,5,9.0,5.75,1.3
+2026-10-30,Nice,Rennes,5,2,2.55,3.6,2.6
+2026-10-30,Lille,Lens,1,0,2.75,3.4,2.5
+2026-10-31,Troyes,Le Mans,2,0,2.38,3.5,2.9
+2026-11-01,Strasbourg,Auxerre,5,1,1.8,3.8,4.33
+2026-11-01,Lyon,Angers,2,0,1.4,5.0,7.0
+2026-11-01,Paris FC,Monaco,3,1,2.25,3.5,3.1
+2026-11-01,Marseille,Toulouse,2,0,1.91,4.0,3.6
+2026-11-02,Lorient,Brest,0,2,2.45,3.2,3.0
+2026-11-06,Toulouse,Strasbourg,3,1,2.2,3.7,3.0
+2026-11-07,Auxerre,Paris FC,0,1,4.33,4.0,1.75
+2026-11-07,Paris SG,Troyes,1,0,1.11,9.5,21.0
+2026-11-08,Rennes,Lille,1,2,2.1,3.6,3.3
+2026-11-08,Angers,Nice,0,2,3.6,3.6,2.0
+2026-11-08,Brest,Lyon,2,0,2.75,3.4,2.5
+2026-11-08,Le Havre,Lorient,0,2,2.88,3.3,2.5
+2026-11-08,Le Mans,Monaco,1,1,4.5,4.0,1.73
+2026-11-08,Lens,Marseille,1,2,2.3,3.9,2.8

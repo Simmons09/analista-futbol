@@ -1,0 +1,381 @@
+Date,HomeTeam,AwayTeam,FTHG,FTAG,B365H,B365D,B365A
+2024-08-15,Ath Bilbao,Getafe,1,1,1.48,4.0,8.0
+2024-08-15,Betis,Girona,1,1,2.35,3.4,3.0
+2024-08-16,Celta,Alaves,2,1,2.0,3.2,4.1
+2024-08-16,Las Palmas,Sevilla,2,2,2.8,3.25,2.63
+2024-08-17,Osasuna,Leganes,1,1,1.85,3.3,4.5
+2024-08-17,Valencia,Barcelona,1,2,4.75,3.8,1.73
+2024-08-18,Sociedad,Vallecano,1,2,1.57,3.75,7.0
+2024-08-18,Mallorca,Real Madrid,1,1,8.0,4.2,1.45
+2024-08-19,Valladolid,Espanol,1,0,2.38,3.0,3.4
+2024-08-19,Villarreal,Ath Madrid,2,2,3.3,3.7,2.1
+2024-08-23,Celta,Valencia,3,1,2.1,3.4,3.6
+2024-08-23,Sevilla,Villarreal,1,2,2.4,3.6,2.8
+2024-08-24,Osasuna,Mallorca,1,0,2.45,3.1,3.1
+2024-08-24,Barcelona,Ath Bilbao,2,1,1.62,4.2,5.0
+2024-08-24,Espanol,Sociedad,0,1,3.9,3.2,2.05
+2024-08-24,Getafe,Vallecano,0,0,2.45,3.0,3.2
+2024-08-25,Real Madrid,Valladolid,3,0,1.18,7.5,15.0
+2024-08-25,Leganes,Las Palmas,2,1,2.25,3.0,3.6
+2024-08-25,Alaves,Betis,0,0,2.38,3.1,3.25
+2024-08-25,Ath Madrid,Girona,3,0,1.6,4.1,5.5
+2024-08-26,Villarreal,Celta,4,3,1.91,3.4,3.8
+2024-08-27,Mallorca,Sevilla,0,0,2.38,3.1,3.25
+2024-08-27,Vallecano,Barcelona,1,2,5.25,3.8,1.62
+2024-08-28,Ath Bilbao,Valencia,1,0,1.62,3.9,5.75
+2024-08-28,Valladolid,Leganes,0,0,2.3,3.0,3.6
+2024-08-28,Ath Madrid,Espanol,0,0,1.3,5.25,11.0
+2024-08-28,Sociedad,Alaves,1,2,1.7,3.5,5.75
+2024-08-29,Girona,Osasuna,4,0,1.7,4.0,4.33
+2024-08-29,Las Palmas,Real Madrid,1,1,8.0,5.0,1.38
+2024-08-31,Barcelona,Valladolid,7,0,1.25,6.25,10.0
+2024-08-31,Ath Bilbao,Ath Madrid,0,1,3.0,3.3,2.38
+2024-08-31,Espanol,Vallecano,2,1,2.8,3.0,2.8
+2024-08-31,Leganes,Mallorca,0,1,2.5,3.0,3.2
+2024-08-31,Valencia,Villarreal,1,1,2.8,3.4,2.45
+2024-09-01,Alaves,Las Palmas,2,0,1.95,3.4,4.0
+2024-09-01,Osasuna,Celta,3,2,2.45,3.25,3.0
+2024-09-01,Sevilla,Girona,0,2,2.35,3.8,2.75
+2024-09-01,Getafe,Sociedad,0,0,3.5,2.9,2.38
+2024-09-01,Real Madrid,Betis,2,0,1.29,5.75,9.5
+2024-09-13,Betis,Leganes,2,0,1.62,3.7,6.25
+2024-09-14,Mallorca,Villarreal,1,2,2.45,3.4,2.88
+2024-09-14,Espanol,Alaves,3,2,2.63,3.2,2.8
+2024-09-14,Sevilla,Getafe,1,0,2.2,3.0,3.7
+2024-09-14,Sociedad,Real Madrid,0,2,4.75,3.9,1.67
+2024-09-15,Celta,Valladolid,3,1,1.67,3.75,5.5
+2024-09-15,Girona,Barcelona,1,4,4.2,3.8,1.8
+2024-09-15,Las Palmas,Ath Bilbao,2,3,3.8,3.4,2.0
+2024-09-15,Ath Madrid,Valencia,3,0,1.33,4.5,11.0
+2024-09-16,Vallecano,Osasuna,3,1,2.05,3.1,4.0
+2024-09-17,Mallorca,Sociedad,1,0,2.9,2.75,3.0
+2024-09-18,Betis,Getafe,2,1,1.91,3.0,5.0
+2024-09-19,Leganes,Ath Bilbao,0,2,3.75,3.2,2.05
+2024-09-20,Alaves,Sevilla,2,1,2.15,3.1,3.7
+2024-09-21,Valladolid,Sociedad,0,0,3.9,3.0,2.2
+2024-09-21,Osasuna,Las Palmas,2,1,1.9,3.4,4.2
+2024-09-21,Valencia,Girona,2,0,2.88,3.3,2.5
+2024-09-21,Real Madrid,Espanol,4,1,1.17,7.0,19.0
+2024-09-22,Getafe,Leganes,1,1,2.05,2.8,4.75
+2024-09-22,Ath Bilbao,Celta,3,1,1.7,3.7,5.25
+2024-09-22,Villarreal,Barcelona,1,5,3.9,3.9,1.85
+2024-09-22,Vallecano,Ath Madrid,1,1,5.0,3.4,1.8
+2024-09-23,Betis,Mallorca,1,2,1.85,3.3,4.75
+2024-09-24,Sevilla,Valladolid,2,1,1.65,3.8,5.5
+2024-09-24,Valencia,Osasuna,0,0,2.0,3.1,4.0
+2024-09-24,Real Madrid,Alaves,3,2,1.2,6.5,13.0
+2024-09-25,Girona,Vallecano,0,0,1.73,3.7,4.5
+2024-09-25,Barcelona,Getafe,1,0,1.25,6.25,10.0
+2024-09-26,Espanol,Villarreal,1,2,3.25,3.5,2.15
+2024-09-26,Las Palmas,Betis,1,1,3.1,3.1,2.38
+2024-09-26,Celta,Ath Madrid,0,1,3.8,3.7,1.91
+2024-09-27,Valladolid,Mallorca,1,2,3.0,2.9,2.63
+2024-09-28,Getafe,Alaves,2,0,2.55,2.88,3.1
+2024-09-28,Vallecano,Leganes,1,1,1.9,3.0,5.0
+2024-09-28,Sociedad,Valencia,3,0,1.85,3.25,4.75
+2024-09-28,Osasuna,Barcelona,4,2,7.0,4.5,1.45
+2024-09-29,Celta,Girona,1,1,2.1,3.6,3.25
+2024-09-29,Ath Bilbao,Sevilla,1,1,1.7,3.7,5.0
+2024-09-29,Betis,Espanol,1,0,1.65,3.4,5.75
+2024-09-29,Ath Madrid,Real Madrid,1,1,2.8,3.3,2.5
+2024-09-30,Villarreal,Las Palmas,3,1,1.45,4.33,6.5
+2024-10-04,Leganes,Valencia,0,0,2.9,2.88,2.8
+2024-10-05,Espanol,Mallorca,2,1,3.1,3.0,2.55
+2024-10-05,Getafe,Osasuna,1,1,2.2,2.9,3.9
+2024-10-05,Las Palmas,Celta,0,1,3.1,3.5,2.25
+2024-10-05,Valladolid,Vallecano,1,2,3.1,3.0,2.5
+2024-10-05,Real Madrid,Villarreal,2,0,1.27,6.25,8.5
+2024-10-06,Girona,Ath Bilbao,2,1,2.35,3.3,3.1
+2024-10-06,Alaves,Barcelona,0,3,5.25,4.5,1.57
+2024-10-06,Sevilla,Betis,1,0,2.45,3.2,3.0
+2024-10-06,Sociedad,Ath Madrid,1,1,3.3,3.2,2.3
+2024-10-18,Alaves,Valladolid,2,3,1.62,3.9,5.75
+2024-10-19,Ath Bilbao,Espanol,4,1,1.45,4.2,7.5
+2024-10-19,Osasuna,Betis,1,2,2.5,3.4,2.7
+2024-10-19,Girona,Sociedad,0,1,2.4,3.4,2.88
+2024-10-19,Celta,Real Madrid,1,2,4.75,4.5,1.6
+2024-10-20,Mallorca,Vallecano,1,0,2.05,3.1,4.0
+2024-10-20,Ath Madrid,Leganes,3,1,1.33,4.75,10.0
+2024-10-20,Villarreal,Getafe,1,1,1.67,3.8,5.0
+2024-10-20,Barcelona,Sevilla,5,1,1.3,5.75,8.0
+2024-10-21,Valencia,Las Palmas,2,3,1.62,3.8,5.5
+2024-10-25,Espanol,Sevilla,0,2,3.0,3.25,2.4
+2024-10-26,Valladolid,Villarreal,1,2,3.5,3.75,2.0
+2024-10-26,Vallecano,Alaves,1,0,2.25,3.1,3.5
+2024-10-26,Las Palmas,Girona,1,0,2.88,3.4,2.45
+2024-10-26,Real Madrid,Barcelona,0,4,2.0,4.1,3.25
+2024-10-27,Leganes,Celta,3,0,3.25,3.25,2.3
+2024-10-27,Getafe,Valencia,1,1,2.1,3.1,3.8
+2024-10-27,Betis,Ath Madrid,1,0,3.1,3.4,2.3
+2024-10-27,Sociedad,Osasuna,0,2,1.75,3.6,5.0
+2024-10-28,Mallorca,Ath Bilbao,0,0,2.9,3.1,2.55
+2024-11-01,Alaves,Mallorca,1,0,2.25,3.0,3.4
+2024-11-02,Osasuna,Valladolid,1,0,1.6,3.7,6.25
+2024-11-02,Girona,Leganes,4,3,1.7,3.5,5.5
+2024-11-03,Ath Madrid,Las Palmas,2,0,1.27,6.0,9.5
+2024-11-03,Barcelona,Espanol,3,1,1.13,9.0,19.0
+2024-11-03,Sevilla,Sociedad,0,2,2.9,3.0,2.63
+2024-11-03,Ath Bilbao,Betis,1,1,1.91,3.5,4.0
+2024-11-04,Celta,Getafe,1,0,1.95,3.2,4.5
+2024-11-08,Vallecano,Las Palmas,1,3,1.83,3.4,4.5
+2024-11-09,Real Madrid,Osasuna,4,0,1.2,7.0,13.0
+2024-11-09,Villarreal,Alaves,3,0,1.62,4.0,5.5
+2024-11-09,Leganes,Sevilla,1,0,2.88,3.2,2.55
+2024-11-10,Betis,Celta,2,2,1.95,3.4,4.0
+2024-11-10,Mallorca,Ath Madrid,0,1,3.6,3.1,2.2
+2024-11-10,Getafe,Girona,0,1,2.45,3.2,3.0
+2024-11-10,Valladolid,Ath Bilbao,1,1,4.5,3.4,1.85
+2024-11-10,Sociedad,Barcelona,1,0,4.75,4.1,1.65
+2024-11-22,Getafe,Valladolid,2,0,1.65,3.4,6.5
+2024-11-23,Valencia,Betis,4,2,3.0,3.0,2.6
+2024-11-23,Ath Madrid,Alaves,2,1,1.36,4.75,9.0
+2024-11-23,Girona,Espanol,4,1,1.67,3.9,5.25
+2024-11-23,Las Palmas,Mallorca,2,3,2.8,3.0,2.7
+2024-11-23,Celta,Barcelona,2,2,4.75,4.33,1.65
+2024-11-24,Osasuna,Villarreal,2,2,2.55,3.4,2.75
+2024-11-24,Sevilla,Vallecano,1,0,2.3,3.2,3.3
+2024-11-24,Leganes,Real Madrid,0,3,7.5,4.5,1.42
+2024-11-24,Ath Bilbao,Sociedad,1,0,2.25,3.0,3.6
+2024-11-29,Mallorca,Valencia,2,1,2.0,3.0,4.5
+2024-11-30,Barcelona,Las Palmas,1,2,1.17,8.5,13.0
+2024-11-30,Alaves,Leganes,1,1,1.8,3.4,5.0
+2024-11-30,Espanol,Celta,3,1,3.3,3.4,2.2
+2024-11-30,Valladolid,Ath Madrid,0,5,6.0,4.2,1.53
+2024-12-01,Villarreal,Girona,2,2,1.83,3.7,4.2
+2024-12-01,Real Madrid,Getafe,2,0,1.36,4.5,10.0
+2024-12-01,Vallecano,Ath Bilbao,1,2,2.8,3.1,2.7
+2024-12-01,Sociedad,Betis,2,0,1.8,3.6,4.5
+2024-12-02,Sevilla,Osasuna,1,1,2.1,3.4,3.5
+2024-12-03,Mallorca,Barcelona,1,5,5.75,4.33,1.53
+2024-12-04,Ath Bilbao,Real Madrid,2,1,3.2,3.3,2.25
+2024-12-06,Celta,Mallorca,2,0,1.85,3.4,4.5
+2024-12-07,Las Palmas,Valladolid,2,1,1.8,3.6,4.5
+2024-12-07,Betis,Barcelona,2,2,5.0,4.5,1.57
+2024-12-07,Valencia,Vallecano,0,1,2.25,2.9,3.75
+2024-12-07,Girona,Real Madrid,0,3,4.5,3.9,1.73
+2024-12-08,Leganes,Sociedad,0,3,4.75,3.1,1.91
+2024-12-08,Ath Bilbao,Villarreal,2,0,1.95,3.6,3.8
+2024-12-08,Osasuna,Alaves,2,2,2.05,3.3,3.75
+2024-12-08,Ath Madrid,Sevilla,4,3,1.38,4.75,8.5
+2024-12-09,Getafe,Espanol,1,0,1.8,3.1,5.75
+2024-12-13,Valladolid,Valencia,1,0,3.1,3.1,2.38
+2024-12-14,Espanol,Osasuna,0,0,2.75,3.2,2.6
+2024-12-14,Mallorca,Girona,2,1,2.3,3.1,3.25
+2024-12-14,Sevilla,Celta,1,0,2.2,3.25,3.3
+2024-12-14,Vallecano,Real Madrid,3,3,6.0,3.8,1.57
+2024-12-15,Ath Madrid,Getafe,1,0,1.4,4.33,9.0
+2024-12-15,Alaves,Ath Bilbao,1,1,3.6,3.1,2.15
+2024-12-15,Sociedad,Las Palmas,0,0,1.4,4.33,8.0
+2024-12-15,Villarreal,Betis,1,2,1.75,3.8,4.33
+2024-12-15,Barcelona,Leganes,0,1,1.13,8.0,19.0
+2024-12-18,Espanol,Valencia,1,1,2.6,3.0,3.0
+2024-12-18,Villarreal,Vallecano,1,1,1.8,3.6,4.5
+2024-12-20,Girona,Valladolid,3,0,1.38,5.0,8.0
+2024-12-21,Getafe,Mallorca,0,1,2.3,2.75,3.9
+2024-12-21,Celta,Sociedad,2,0,2.9,3.1,2.6
+2024-12-21,Osasuna,Ath Bilbao,1,2,3.9,3.1,2.1
+2024-12-21,Barcelona,Ath Madrid,1,2,1.9,3.8,3.9
+2024-12-22,Valencia,Alaves,2,2,2.25,3.1,3.5
+2024-12-22,Real Madrid,Sevilla,4,2,1.33,5.5,9.0
+2024-12-22,Las Palmas,Espanol,1,0,1.85,3.6,4.33
+2024-12-22,Leganes,Villarreal,2,5,4.2,3.4,1.91
+2024-12-22,Betis,Vallecano,1,1,1.8,3.5,4.75
+2025-01-03,Valencia,Real Madrid,1,2,7.0,4.5,1.42
+2025-01-10,Vallecano,Celta,2,1,2.75,3.1,2.7
+2025-01-11,Alaves,Girona,0,1,2.75,3.1,2.75
+2025-01-11,Valladolid,Betis,1,0,4.5,3.5,1.83
+2025-01-11,Espanol,Leganes,1,1,2.1,3.0,4.0
+2025-01-11,Sevilla,Valencia,1,1,2.0,3.3,4.0
+2025-01-12,Las Palmas,Getafe,1,2,2.45,2.9,3.3
+2025-01-12,Ath Madrid,Osasuna,1,0,1.33,5.0,10.0
+2025-01-13,Sociedad,Villarreal,1,0,2.0,3.3,4.0
+2025-01-17,Espanol,Valladolid,2,1,1.75,3.4,5.25
+2025-01-18,Girona,Sevilla,1,2,1.91,3.5,4.0
+2025-01-18,Leganes,Ath Madrid,1,0,7.0,4.0,1.5
+2025-01-18,Betis,Alaves,1,3,1.75,3.6,4.75
+2025-01-18,Getafe,Barcelona,1,1,6.5,4.2,1.5
+2025-01-19,Celta,Ath Bilbao,1,2,2.8,3.2,2.6
+2025-01-19,Real Madrid,Las Palmas,4,1,1.14,7.5,17.0
+2025-01-19,Osasuna,Vallecano,1,1,2.15,3.0,3.8
+2025-01-19,Valencia,Sociedad,1,0,3.1,3.0,2.55
+2025-01-20,Villarreal,Mallorca,4,0,1.73,3.5,5.25
+2025-01-24,Las Palmas,Osasuna,1,1,2.5,3.1,3.0
+2025-01-25,Mallorca,Betis,0,1,2.25,3.0,3.5
+2025-01-25,Ath Madrid,Villarreal,1,1,1.7,4.0,4.75
+2025-01-25,Sevilla,Espanol,1,1,1.7,3.8,4.75
+2025-01-25,Valladolid,Real Madrid,0,3,10.0,6.0,1.27
+2025-01-26,Vallecano,Girona,2,1,2.75,2.9,2.88
+2025-01-26,Sociedad,Getafe,0,3,1.75,3.4,5.5
+2025-01-26,Ath Bilbao,Leganes,0,0,1.38,5.0,7.5
+2025-01-26,Barcelona,Valencia,7,1,1.22,7.5,10.0
+2025-01-27,Alaves,Celta,1,1,2.63,3.0,3.0
+2025-01-31,Leganes,Vallecano,0,1,3.3,3.0,2.38
+2025-02-01,Getafe,Sevilla,0,0,2.45,2.9,3.25
+2025-02-01,Villarreal,Valladolid,5,1,1.22,7.0,10.0
+2025-02-01,Ath Madrid,Mallorca,2,0,1.4,4.33,8.5
+2025-02-01,Espanol,Real Madrid,1,0,9.0,5.75,1.3
+2025-02-02,Barcelona,Alaves,1,0,1.2,7.5,13.0
+2025-02-02,Valencia,Celta,2,1,2.3,3.1,3.25
+2025-02-02,Osasuna,Sociedad,2,1,3.0,3.0,2.55
+2025-02-02,Betis,Ath Bilbao,2,2,2.9,3.3,2.45
+2025-02-03,Girona,Las Palmas,2,1,1.6,4.2,5.0
+2025-02-07,Vallecano,Valladolid,1,0,1.5,4.1,7.0
+2025-02-08,Celta,Betis,3,2,2.25,3.4,3.2
+2025-02-08,Ath Bilbao,Girona,3,0,1.65,4.0,5.0
+2025-02-08,Las Palmas,Villarreal,1,2,4.75,3.9,1.7
+2025-02-08,Real Madrid,Ath Madrid,1,1,1.85,3.6,4.2
+2025-02-09,Alaves,Getafe,0,1,2.3,2.9,3.6
+2025-02-09,Valencia,Leganes,2,0,1.73,3.4,5.5
+2025-02-09,Sociedad,Espanol,2,1,1.6,3.9,5.75
+2025-02-09,Sevilla,Barcelona,1,4,5.25,4.5,1.55
+2025-02-10,Mallorca,Osasuna,1,1,2.0,3.0,4.33
+2025-02-14,Girona,Getafe,1,2,1.95,3.25,4.33
+2025-02-15,Leganes,Alaves,3,3,3.1,2.9,2.6
+2025-02-15,Osasuna,Real Madrid,1,1,5.75,4.1,1.57
+2025-02-15,Ath Madrid,Celta,1,1,1.39,4.5,8.0
+2025-02-15,Villarreal,Valencia,1,1,1.5,4.5,5.5
+2025-02-16,Espanol,Ath Bilbao,1,1,5.5,3.4,1.73
+2025-02-16,Valladolid,Sevilla,0,4,4.0,3.4,1.95
+2025-02-16,Mallorca,Las Palmas,3,1,1.73,3.5,5.25
+2025-02-16,Betis,Sociedad,3,0,2.55,3.1,2.9
+2025-02-17,Barcelona,Vallecano,1,0,1.22,7.0,11.0
+2025-02-21,Celta,Osasuna,1,0,1.67,3.75,5.25
+2025-02-22,Alaves,Espanol,0,1,1.8,3.25,5.25
+2025-02-22,Vallecano,Villarreal,0,1,2.88,3.5,2.38
+2025-02-22,Valencia,Ath Madrid,0,3,4.2,3.4,1.91
+2025-02-22,Las Palmas,Barcelona,0,2,8.5,7.0,1.25
+2025-02-23,Ath Bilbao,Valladolid,7,1,1.17,7.0,19.0
+2025-02-23,Real Madrid,Girona,2,0,1.29,6.25,8.5
+2025-02-23,Getafe,Betis,1,2,2.6,3.1,2.9
+2025-02-23,Sociedad,Leganes,3,0,1.55,3.75,7.0
+2025-02-24,Sevilla,Mallorca,1,1,2.05,3.2,3.9
+2025-02-28,Valladolid,Las Palmas,1,1,3.1,3.2,2.4
+2025-03-01,Girona,Celta,2,2,2.2,3.5,3.25
+2025-03-01,Vallecano,Sevilla,1,1,2.3,3.2,3.3
+2025-03-01,Betis,Real Madrid,2,1,4.33,4.0,1.73
+2025-03-01,Ath Madrid,Ath Bilbao,1,0,2.05,3.5,3.6
+2025-03-02,Leganes,Getafe,1,0,3.1,2.88,2.6
+2025-03-02,Barcelona,Sociedad,4,0,1.25,5.75,12.0
+2025-03-02,Mallorca,Alaves,1,1,2.25,3.1,3.5
+2025-03-02,Osasuna,Valencia,3,3,2.3,3.2,3.3
+2025-03-08,Celta,Leganes,2,1,1.55,3.8,7.0
+2025-03-08,Alaves,Villarreal,1,0,3.1,3.25,2.38
+2025-03-08,Valencia,Valladolid,2,1,1.38,4.5,9.0
+2025-03-09,Getafe,Ath Madrid,2,1,4.5,3.1,1.95
+2025-03-09,Real Madrid,Vallecano,2,1,1.29,5.75,9.5
+2025-03-09,Ath Bilbao,Mallorca,1,1,1.62,3.7,6.0
+2025-03-09,Betis,Las Palmas,1,0,1.42,4.5,7.5
+2025-03-09,Sociedad,Sevilla,0,1,2.2,3.2,3.5
+2025-03-10,Espanol,Girona,1,1,3.1,3.2,2.4
+2025-03-14,Las Palmas,Alaves,2,2,2.88,3.0,2.75
+2025-03-15,Valladolid,Celta,0,1,5.0,3.8,1.63
+2025-03-15,Mallorca,Espanol,2,1,1.77,3.3,5.0
+2025-03-15,Villarreal,Real Madrid,1,2,3.1,3.75,2.15
+2025-03-15,Girona,Valencia,1,1,1.92,3.5,3.9
+2025-03-16,Leganes,Betis,2,3,3.8,3.3,2.05
+2025-03-16,Sevilla,Ath Bilbao,0,1,2.9,3.2,2.5
+2025-03-16,Osasuna,Getafe,1,2,2.25,2.88,3.8
+2025-03-16,Vallecano,Sociedad,2,2,2.5,3.0,3.1
+2025-03-16,Ath Madrid,Barcelona,2,4,3.1,3.6,2.2
+2025-03-27,Barcelona,Osasuna,3,0,1.29,7.0,7.0
+2025-03-29,Sociedad,Valladolid,2,1,1.33,4.75,11.0
+2025-03-29,Espanol,Ath Madrid,1,1,5.5,3.75,1.62
+2025-03-29,Alaves,Vallecano,0,2,2.15,2.9,4.1
+2025-03-29,Real Madrid,Leganes,3,2,1.14,8.0,17.0
+2025-03-30,Getafe,Villarreal,1,2,3.25,3.1,2.35
+2025-03-30,Barcelona,Girona,4,1,1.25,6.5,10.0
+2025-03-30,Ath Bilbao,Osasuna,0,0,1.45,4.1,7.0
+2025-03-30,Valencia,Mallorca,1,0,2.15,3.1,3.75
+2025-03-30,Betis,Sevilla,2,1,1.83,3.5,4.33
+2025-03-31,Celta,Las Palmas,1,1,1.57,4.1,5.5
+2025-04-04,Vallecano,Espanol,0,4,1.65,3.5,6.0
+2025-04-05,Girona,Alaves,0,1,2.05,3.4,3.6
+2025-04-05,Real Madrid,Valencia,1,2,1.3,5.75,8.5
+2025-04-05,Mallorca,Celta,1,2,2.63,3.2,2.8
+2025-04-05,Barcelona,Betis,1,1,1.36,5.5,7.0
+2025-04-06,Las Palmas,Sociedad,1,3,3.2,3.2,2.35
+2025-04-06,Sevilla,Ath Madrid,1,2,3.5,3.2,2.2
+2025-04-06,Valladolid,Getafe,0,4,4.75,3.1,1.9
+2025-04-06,Villarreal,Ath Bilbao,0,0,2.2,3.3,3.25
+2025-04-07,Leganes,Osasuna,1,1,2.7,3.1,2.75
+2025-04-11,Valencia,Sevilla,1,0,2.3,3.1,3.4
+2025-04-12,Sociedad,Mallorca,0,2,1.75,3.4,5.5
+2025-04-12,Getafe,Las Palmas,1,3,1.75,3.3,5.5
+2025-04-12,Celta,Espanol,0,2,1.62,3.7,6.0
+2025-04-12,Leganes,Barcelona,0,1,8.5,6.0,1.3
+2025-04-13,Osasuna,Girona,2,1,2.45,3.2,3.1
+2025-04-13,Alaves,Real Madrid,0,1,5.25,4.1,1.62
+2025-04-13,Betis,Villarreal,1,2,2.35,3.3,3.1
+2025-04-13,Ath Bilbao,Vallecano,3,1,1.75,3.4,5.5
+2025-04-14,Ath Madrid,Valladolid,4,2,1.14,8.0,19.0
+2025-04-18,Espanol,Getafe,1,0,2.88,2.63,3.0
+2025-04-19,Vallecano,Valencia,1,1,2.25,3.0,3.4
+2025-04-19,Barcelona,Celta,4,3,1.3,5.75,8.0
+2025-04-19,Mallorca,Leganes,0,0,1.85,3.1,5.0
+2025-04-19,Las Palmas,Ath Madrid,1,0,5.75,4.2,1.55
+2025-04-20,Valladolid,Osasuna,2,3,4.5,3.4,1.83
+2025-04-20,Villarreal,Sociedad,2,2,1.7,3.7,5.0
+2025-04-20,Sevilla,Alaves,1,1,2.0,3.1,4.2
+2025-04-20,Real Madrid,Ath Bilbao,1,0,1.65,3.9,5.25
+2025-04-21,Girona,Betis,1,3,2.88,3.3,2.45
+2025-04-22,Valencia,Espanol,1,1,1.95,3.3,4.1
+2025-04-22,Barcelona,Mallorca,1,0,1.2,7.0,13.0
+2025-04-23,Ath Bilbao,Las Palmas,1,0,1.36,5.25,7.0
+2025-04-23,Celta,Villarreal,3,0,2.5,3.4,2.8
+2025-04-23,Alaves,Sociedad,1,0,2.35,3.0,3.4
+2025-04-23,Getafe,Real Madrid,0,1,4.75,3.6,1.75
+2025-04-24,Leganes,Girona,1,1,2.75,3.1,2.75
+2025-04-24,Osasuna,Sevilla,1,0,2.5,3.0,3.2
+2025-04-24,Ath Madrid,Vallecano,3,0,1.53,4.0,6.5
+2025-04-24,Betis,Valladolid,5,1,1.2,7.0,13.0
+2025-04-27,Villarreal,Espanol,1,0,1.44,5.0,6.25
+2025-05-02,Vallecano,Getafe,1,0,2.38,3.0,3.4
+2025-05-03,Alaves,Ath Madrid,0,0,3.7,3.1,2.15
+2025-05-03,Villarreal,Osasuna,4,2,1.53,4.2,6.0
+2025-05-03,Las Palmas,Valencia,2,3,2.63,3.3,2.7
+2025-05-03,Valladolid,Barcelona,1,2,15.0,8.0,1.14
+2025-05-04,Real Madrid,Celta,3,2,1.33,5.75,7.0
+2025-05-04,Sevilla,Leganes,2,2,1.77,3.5,4.75
+2025-05-04,Espanol,Betis,1,2,3.3,3.0,2.38
+2025-05-04,Sociedad,Ath Bilbao,0,0,2.55,3.0,3.0
+2025-05-05,Girona,Mallorca,1,0,2.0,3.1,4.2
+2025-05-09,Las Palmas,Vallecano,0,1,2.45,3.25,3.0
+2025-05-10,Valencia,Getafe,3,0,2.0,3.0,4.33
+2025-05-10,Celta,Sevilla,3,2,1.8,3.6,4.5
+2025-05-10,Girona,Villarreal,0,1,3.1,3.8,2.1
+2025-05-10,Mallorca,Valladolid,2,1,1.33,5.25,9.0
+2025-05-10,Ath Madrid,Sociedad,4,0,1.67,3.7,5.0
+2025-05-11,Leganes,Espanol,3,2,2.4,3.0,3.2
+2025-05-11,Barcelona,Real Madrid,4,3,1.9,3.7,3.2
+2025-05-11,Ath Bilbao,Alaves,1,0,1.8,2.9,4.5
+2025-05-11,Betis,Osasuna,1,1,1.62,3.75,5.75
+2025-05-13,Valladolid,Girona,0,1,4.75,3.9,1.73
+2025-05-13,Sociedad,Celta,0,1,2.3,3.3,3.1
+2025-05-13,Sevilla,Las Palmas,1,0,1.67,3.7,5.25
+2025-05-14,Alaves,Valencia,1,0,2.1,3.1,3.7
+2025-05-14,Villarreal,Leganes,3,0,1.33,5.75,8.0
+2025-05-14,Real Madrid,Mallorca,2,1,1.38,5.25,7.0
+2025-05-15,Vallecano,Betis,2,2,3.0,3.2,2.4
+2025-05-15,Osasuna,Ath Madrid,2,0,3.6,3.3,2.1
+2025-05-15,Espanol,Barcelona,0,2,9.0,5.75,1.3
+2025-05-15,Getafe,Ath Bilbao,0,2,3.2,2.75,2.63
+2025-05-18,Ath Madrid,Betis,4,1,1.91,3.6,3.8
+2025-05-18,Barcelona,Villarreal,2,3,1.83,4.1,3.75
+2025-05-18,Celta,Vallecano,1,2,1.75,3.9,4.33
+2025-05-18,Las Palmas,Leganes,0,1,2.9,3.5,2.35
+2025-05-18,Mallorca,Getafe,1,2,2.0,3.2,4.2
+2025-05-18,Osasuna,Espanol,2,0,1.8,3.3,4.75
+2025-05-18,Sevilla,Real Madrid,0,2,4.2,4.0,1.75
+2025-05-18,Sociedad,Girona,3,2,2.05,3.1,4.1
+2025-05-18,Valencia,Ath Bilbao,0,1,2.2,3.0,3.8
+2025-05-18,Valladolid,Alaves,0,1,6.0,3.75,1.6
+2025-05-23,Betis,Valencia,1,1,1.91,3.75,3.75
+2025-05-24,Real Madrid,Sociedad,2,0,1.42,5.0,6.5
+2025-05-24,Espanol,Las Palmas,2,0,1.38,4.75,8.0
+2025-05-24,Leganes,Valladolid,3,0,1.3,5.5,9.5
+2025-05-24,Alaves,Osasuna,1,1,3.2,3.2,2.35
+2025-05-24,Getafe,Celta,1,2,4.1,3.75,1.85
+2025-05-24,Vallecano,Mallorca,0,0,1.53,4.2,6.25
+2025-05-25,Girona,Ath Madrid,0,4,3.8,3.75,1.91
+2025-05-25,Villarreal,Sevilla,4,2,1.48,5.0,6.0
+2025-05-25,Ath Bilbao,Barcelona,0,3,3.2,3.75,2.1
