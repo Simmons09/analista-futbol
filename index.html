@@ -114,9 +114,9 @@ function renderTabla(){const h=$('h').value,a=$('a').value,f=names.map(n=>({n,..
 function cargarLiga(){lig=$('liga').value;L=D.ligas[lig];EQ=L.equipos;names=Object.keys(EQ);const o=names.map(n=>`<option>${n}</option>`).join('');
  ['h','a','ca','cb'].forEach(i=>$(i).innerHTML=o);$('a').selectedIndex=$('cb').selectedIndex=Math.min(1,names.length-1);
  $('meta').textContent=`Temporada ${D.temporada} · ${L.n} partidos · datos al ${D.actualizado}`;renderProx();renderPred();renderComp()}
-fetch('data/datos.json').then(r=>r.json()).then(d=>{D=d;$('liga').innerHTML=Object.entries(d.ligas).map(([k,v])=>`<option value="${k}">${v.nombre}</option>`).join('');
+fetch('data/datos.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{D=d;$('liga').innerHTML=Object.entries(d.ligas).map(([k,v])=>`<option value="${k}">${v.nombre}</option>`).join('');
  $('liga').onchange=cargarLiga;$('h').onchange=$('a').onchange=renderPred;$('ca').onchange=$('cb').onchange=renderComp;
  document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>go(b.dataset.t));renderPrec();cargarLiga();
- fetch('data/partidos.json').then(r=>r.json()).then(p=>{P=p;renderComp()}).catch(()=>{$('cmpTab').innerHTML='<div class="nota">No se pudo cargar el historial.</div>'})
+ fetch('data/partidos.json',{cache:'no-cache'}).then(r=>r.json()).then(p=>{P=p;renderComp()}).catch(()=>{$('cmpTab').innerHTML='<div class="nota">No se pudo cargar el historial.</div>'})
 }).catch(()=>{$('meta').textContent='No se pudieron cargar los datos'});
 </script></body></html>
