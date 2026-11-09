@@ -3,68 +3,120 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Analista de fútbol</title>
 <style>
-:root{--bg:#0f1720;--card:#18232f;--line:#263545;--txt:#e6edf3;--mut:#8aa0b4;--ac:#2ecc71;--emp:#f1c40f;--vis:#e74c3c}
+:root{--bg:#0f1720;--card:#18232f;--line:#263545;--txt:#e6edf3;--mut:#8aa0b4;--ac:#2ecc71;--emp:#f1c40f;--vis:#e74c3c;--b:#4aa3ff}
 *{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,Segoe UI,Arial;background:var(--bg);color:var(--txt)}
-header{padding:18px 24px;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header{padding:16px 24px 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 h1{margin:0;font-size:20px}header small{color:var(--mut)}header select{width:auto;margin-left:auto}
-main{max-width:1100px;margin:auto;padding:20px;display:grid;gap:20px;grid-template-columns:1fr 1fr}
-@media(max-width:850px){main{grid-template-columns:1fr}}
+nav{display:flex;gap:4px;padding:12px 24px 0;border-bottom:1px solid var(--line);overflow-x:auto}
+nav button{background:none;border:0;color:var(--mut);font:inherit;padding:8px 14px;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+nav button.on{color:var(--txt);border-color:var(--ac)}
+main{max-width:1100px;margin:auto;padding:20px}.tab{display:none;gap:20px;grid-template-columns:1fr 1fr}.tab.on{display:grid}
+@media(max-width:850px){.tab{grid-template-columns:1fr}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;overflow-x:auto}
-.full{grid-column:1/-1}h2{margin:0 0 12px;font-size:16px}
+.full{grid-column:1/-1}h2{margin:0 0 12px;font-size:16px}h3{margin:14px 0 6px;font-size:13px;color:var(--mut);font-weight:600}
 select{background:#0f1720;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px;width:100%;font-size:15px}
 .sel{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-bottom:14px}
-.bar{display:flex;height:34px;border-radius:8px;overflow:hidden;margin:10px 0;font-weight:600;font-size:13px}
+.bar{display:flex;height:30px;border-radius:8px;overflow:hidden;margin:8px 0;font-weight:600;font-size:13px}
 .bar div{display:flex;align-items:center;justify-content:center;color:#0b1117;min-width:0}
 .l{background:var(--ac)}.e{background:var(--emp)}.v{background:var(--vis)}
-.kpi{display:flex;gap:10px}.kpi div{flex:1;background:#0f1720;border-radius:8px;padding:10px;text-align:center}
+.kpi{display:flex;gap:10px;flex-wrap:wrap}.kpi div{flex:1;min-width:110px;background:#0f1720;border-radius:8px;padding:10px;text-align:center}
 .kpi b{display:block;font-size:22px}.kpi span{color:var(--mut);font-size:12px}
 table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}
-th{color:var(--mut);font-weight:600}td.n{text-align:left}tr.s1 td{background:#1f3a2c}tr.s2 td{background:#3a2323}
-.f{display:inline-block;width:18px;height:18px;line-height:18px;border-radius:4px;font-size:11px;color:#0b1117;margin-right:2px}
+th{color:var(--mut);font-weight:600}td.n,th.n{text-align:left}tr.s1 td{background:#1f3a2c}tr.s2 td{background:#3a2323}
+.f{display:inline-block;width:18px;height:18px;line-height:18px;border-radius:4px;font-size:11px;color:#0b1117;margin-right:2px;text-align:center}
 .f.G{background:var(--ac)}.f.E{background:var(--emp)}.f.P{background:var(--vis)}
 .heat td{width:34px;height:30px;font-size:11px;border:1px solid var(--bg)}
 .nota{color:var(--mut);font-size:12px;margin-top:10px}
+.pm{padding:10px;border-bottom:1px solid var(--line);cursor:pointer}.pm:hover{background:#1d2b3a}
+.pm .t{display:flex;justify-content:space-between;gap:8px}.pm small{color:var(--mut)}
+.dia{color:var(--mut);font-size:12px;text-transform:capitalize;margin:14px 0 4px}
+.leg span{margin-right:14px;font-size:12px}.leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px}
+svg text{fill:var(--mut);font-size:10px}
 </style></head><body>
 <header><h1>Analista de fútbol</h1><small id="meta">Cargando…</small><select id="liga"></select></header>
+<nav id="nav"><button data-t="prox" class="on">Próximos partidos</button><button data-t="pred">Predicción</button><button data-t="comp">Comparador</button><button data-t="prec">Precisión del modelo</button><button data-t="tabla">Tabla</button></nav>
 <main>
+<div class="tab on" id="t-prox"><section class="card full"><h2>Próximos partidos</h2><div id="prox"></div><div class="nota">Toca un partido para ver su análisis completo. Las predicciones son estadísticas, no garantías. Mercado = probabilidad implícita de las cuotas (solo como referencia).</div></section></div>
+<div class="tab" id="t-pred">
 <section class="card"><h2>Predicción de partido</h2>
  <div class="sel"><select id="h"></select><span>vs</span><select id="a"></select></div>
  <div class="kpi"><div><b id="xh">-</b><span>goles esperados local</span></div><div><b id="xa">-</b><span>goles esperados visitante</span></div></div>
  <div class="bar"><div class="l" id="pl"></div><div class="e" id="pe"></div><div class="v" id="pv"></div></div>
- <div class="nota">Local · Empate · Visitante. Modelo de Poisson: línea base estadística, no una garantía.</div>
-</section>
-<section class="card"><h2>Marcadores más probables</h2><table id="topt"></table><div style="height:12px"></div><table class="heat" id="heat"></table></section>
-<section class="card full"><h2>Tabla y forma (últimos 5)</h2><table id="tabla"></table></section>
+ <table id="mk"></table><div class="nota" id="eloN"></div></section>
+<section class="card"><h2>Marcadores más probables</h2><table id="topt"></table><div style="height:12px"></div><table class="heat" id="heat"></table></section></div>
+<div class="tab" id="t-comp">
+<section class="card full"><h2>Comparador de equipos</h2><div class="sel"><select id="ca"></select><span>vs</span><select id="cb"></select></div><div id="cmpTab"></div></section>
+<section class="card"><h2>Rating Elo</h2><div id="chElo"></div></section>
+<section class="card"><h2>Puntos por partido (media móvil de 5)</h2><div id="chPts"></div></section>
+<section class="card full"><h2>Historial directo</h2><div id="h2h"></div></section></div>
+<div class="tab" id="t-prec"><section class="card full"><h2>¿Qué tan bien predice el modelo?</h2><div id="precK"></div><div class="nota" id="precN"></div></section>
+<section class="card"><h2>Por liga</h2><table id="precT"></table></section>
+<section class="card"><h2>Calibración</h2><div id="chCal"></div><div class="nota">Si el modelo está bien calibrado, los puntos siguen la diagonal: cuando dice 40 %, ocurre cerca del 40 % de las veces.</div></section></div>
+<div class="tab" id="t-tabla"><section class="card full"><h2>Tabla y forma (últimos 5)</h2><table id="tabla"></table></section></div>
 </main>
 <script>
-const $=id=>document.getElementById(id);const MAXG=6;let L,EQ,names,DATOS;
-const fact=n=>{let r=1;for(let i=2;i<=n;i++)r*=i;return r};
-const pois=(k,l)=>Math.exp(-l)*Math.pow(l,k)/fact(k);
-function predecir(){
- const h=$('h').value,a=$('a').value,H=EQ[h],A=EQ[a];
- const lh=H.ataque_l*A.defensa_v*L.avg_h,la=A.ataque_v*H.defensa_l*L.avg_a;
- let pl=0,pe=0,pv=0;const m=[];
- for(let i=0;i<=MAXG;i++){m[i]=[];for(let j=0;j<=MAXG;j++){const p=pois(i,lh)*pois(j,la);m[i][j]=p;i>j?pl+=p:i===j?pe+=p:pv+=p}}
- const s=pl+pe+pv;pl/=s;pe/=s;pv/=s;
- $('xh').textContent=lh.toFixed(2);$('xa').textContent=la.toFixed(2);
- [['pl',pl],['pe',pe],['pv',pv]].forEach(([id,p])=>{$(id).style.width=p*100+'%';$(id).textContent=(p*100).toFixed(0)+'%'});
- const lista=[];m.forEach((r,i)=>r.forEach((p,j)=>lista.push([i,j,p])));lista.sort((x,y)=>y[2]-x[2]);
- $('topt').innerHTML='<tr><th>Marcador</th><th>Prob.</th></tr>'+lista.slice(0,5).map(x=>`<tr><td>${x[0]} - ${x[1]}</td><td>${(x[2]*100).toFixed(1)}%</td></tr>`).join('');
- const mx=lista[0][2];
- $('heat').innerHTML='<tr><th></th>'+m[0].map((_,j)=>`<th>${j}</th>`).join('')+'</tr>'+m.map((r,i)=>`<tr><th>${i}</th>`+r.map(p=>`<td style="background:rgba(46,204,113,${(p/mx).toFixed(2)})">${(p*100).toFixed(0)}</td>`).join('')+'</tr>').join('');
- const f=names.map(n=>({n,...EQ[n]})).sort((x,y)=>y.pts-x.pts||(y.gf-y.gc)-(x.gf-x.gc)||y.gf-x.gf);
- $('tabla').innerHTML='<tr><th>#</th><th class="n">Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GF</th><th>GC</th><th>DG</th><th>Pts</th><th>Forma</th></tr>'+
- f.map((t,i)=>`<tr class="${t.n===h?'s1':t.n===a?'s2':''}"><td>${i+1}</td><td class="n">${t.n}</td><td>${t.pj}</td><td>${t.g}</td><td>${t.e}</td><td>${t.p}</td><td>${t.gf}</td><td>${t.gc}</td><td>${t.gf-t.gc}</td><td><b>${t.pts}</b></td><td>${t.forma.map(x=>`<span class="f ${x}">${x}</span>`).join('')}</td></tr>`).join('');
-}
-function cargarLiga(){
- L=DATOS.ligas[$('liga').value];EQ=L.equipos;names=Object.keys(EQ);
- [$('h'),$('a')].forEach(s=>s.innerHTML=names.map(n=>`<option>${n}</option>`).join(''));
- $('a').selectedIndex=Math.min(1,names.length-1);
- $('meta').textContent=`Temporada ${DATOS.temporada} · ${L.n} partidos · datos al ${DATOS.actualizado}`;
- predecir();
-}
-fetch('data/datos.json').then(r=>r.json()).then(d=>{
- DATOS=d;$('liga').innerHTML=Object.entries(d.ligas).map(([k,v])=>`<option value="${k}">${v.nombre}</option>`).join('');
- $('liga').onchange=cargarLiga;$('h').onchange=$('a').onchange=predecir;cargarLiga();
-}).catch(e=>{$('meta').textContent='No se pudieron cargar los datos'});
+const $=id=>document.getElementById(id);let D,P=null,L,EQ,names,lig;
+const pct=x=>(x*100).toFixed(0)+'%',pct1=x=>(x*100).toFixed(1)+'%';
+const ymdDia=n=>Date.UTC(n/1e4|0,(n/100%100|0)-1,n%100)/864e5,diaStr=d=>new Date(d*864e5).toISOString().slice(0,10);
+function matriz(lh,la){const N=8,r=D.modelo.rho,f=[1];for(let i=1;i<=N;i++)f[i]=f[i-1]*i;
+ const ph=[],pa=[];for(let k=0;k<=N;k++){ph[k]=Math.exp(-lh)*Math.pow(lh,k)/f[k];pa[k]=Math.exp(-la)*Math.pow(la,k)/f[k]}
+ const m=ph.map(x=>pa.map(y=>x*y));m[0][0]*=1-lh*la*r;m[0][1]*=1+lh*r;m[1][0]*=1+la*r;m[1][1]*=1-r;
+ let s=0;m.forEach(a=>a.forEach(x=>s+=x));let pl=0,pe=0,pv=0,o=0,bt=0;
+ m.forEach((a,i)=>a.forEach((x,j)=>{x/=s;m[i][j]=x;i>j?pl+=x:i===j?pe+=x:pv+=x;if(i+j>2)o+=x;if(i>0&&j>0)bt+=x}));
+ return{m,pl,pe,pv,o,bt,lh,la}}
+const pred=(h,a)=>{const H=EQ[h],A=EQ[a];return matriz(H.ataque_l*A.defensa_v*L.avg_h,A.ataque_v*H.defensa_l*L.avg_a)};
+const barra=(a,b,c,x=1)=>`<div class="bar" style="height:${x?30:22}px"><div class="l" style="width:${a*100}%">${pct(a)}</div><div class="e" style="width:${b*100}%">${pct(b)}</div><div class="v" style="width:${c*100}%">${pct(c)}</div></div>`;
+function chart(ser,o={}){const w=520,h=210,pd={l:44,r:12,t:10,b:22},xf=o.xf||diaStr,yf=o.yf||(v=>v.toFixed(0));
+ const xs=ser.flatMap(s=>s.pts.map(p=>p[0])),ys=ser.flatMap(s=>s.pts.map(p=>p[1]));if(!xs.length)return'<div class="nota">Sin datos suficientes.</div>';
+ let x0=o.x0??Math.min(...xs),x1=o.x1??Math.max(...xs),y0=o.y0??Math.min(...ys),y1=o.y1??Math.max(...ys);if(y0===y1){y0-=1;y1+=1}
+ const sx=x=>pd.l+(x-x0)/((x1-x0)||1)*(w-pd.l-pd.r),sy=y=>h-pd.b-(y-y0)/(y1-y0)*(h-pd.t-pd.b);let g='';
+ for(let i=0;i<=4;i++){const v=y0+(y1-y0)*i/4,y=sy(v);g+=`<line x1="${pd.l}" x2="${w-pd.r}" y1="${y}" y2="${y}" stroke="#263545"/><text x="${pd.l-6}" y="${y+3}" text-anchor="end">${yf(v)}</text>`}
+ g+=`<text x="${pd.l}" y="${h-6}">${xf(x0)}</text><text x="${w-pd.r}" y="${h-6}" text-anchor="end">${xf(x1)}</text>`;
+ ser.forEach(s=>{const pts=s.pts.map(p=>sx(p[0]).toFixed(1)+','+sy(p[1]).toFixed(1));
+  g+=s.dots?s.pts.map(p=>`<circle cx="${sx(p[0])}" cy="${sy(p[1])}" r="${s.r||4}" fill="${s.c}"/>`).join(''):`<polyline fill="none" stroke="${s.c}" stroke-width="2" ${s.dash?'stroke-dasharray="4 4"':''} points="${pts.join(' ')}"/>`});
+ return`<svg viewBox="0 0 ${w} ${h}" style="width:100%">${g}</svg><div class="leg">${ser.filter(s=>s.n).map(s=>`<span><i style="background:${s.c}"></i>${s.n}</span>`).join('')}</div>`}
+function go(t){document.querySelectorAll('.tab').forEach(e=>e.classList.toggle('on',e.id==='t-'+t));document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t))}
+function renderProx(){const p=L.proximos;if(!p.length){$('prox').innerHTML='<div class="nota">La fuente no tiene partidos próximos publicados para esta liga por ahora (se actualiza cada día).</div>';return}
+ let dia='',html='';p.forEach((x,i)=>{if(x.f!==dia){dia=x.f;html+=`<div class="dia">${new Date(x.f+'T12:00:00').toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long'})}</div>`}
+  const r=pred(x.h,x.a);html+=`<div class="pm" data-i="${i}"><div class="t"><b>${x.h} vs ${x.a}</b><small>${x.t||''}</small></div>${barra(r.pl,r.pe,r.pv,0)}
+  <small>Goles esperados ${r.lh.toFixed(1)}–${r.la.toFixed(1)} · Más de 2.5: ${pct(r.o)} · Ambos anotan: ${pct(r.bt)}${x.mk?` · Mercado: ${x.mk.map(pct).join(' / ')}`:''}</small></div>`});
+ $('prox').innerHTML=html;document.querySelectorAll('.pm').forEach(e=>e.onclick=()=>{const x=p[e.dataset.i];$('h').value=x.h;$('a').value=x.a;renderPred();go('pred')})}
+function renderPred(){const h=$('h').value,a=$('a').value,r=pred(h,a);$('xh').textContent=r.lh.toFixed(2);$('xa').textContent=r.la.toFixed(2);
+ [['pl',r.pl],['pe',r.pe],['pv',r.pv]].forEach(([i,p])=>{$(i).style.width=p*100+'%';$(i).textContent=pct(p)});
+ const row=(n,v)=>`<tr><td class="n">${n}</td><td><b>${pct1(v)}</b></td><td>${(1/v).toFixed(2)}</td></tr>`;
+ $('mk').innerHTML='<tr><th class="n">Mercado</th><th>Prob.</th><th>Cuota justa</th></tr>'+row('Gana '+h,r.pl)+row('Empate',r.pe)+row('Gana '+a,r.pv)+row('Doble oportunidad 1X',r.pl+r.pe)+row('Doble oportunidad X2',r.pe+r.pv)+row('Más de 2.5 goles',r.o)+row('Menos de 2.5 goles',1-r.o)+row('Ambos anotan: sí',r.bt)+row('Ambos anotan: no',1-r.bt);
+ const eh=EQ[h].elo,ea=EQ[a].elo,ex=1/(1+Math.pow(10,-(eh+60-ea)/400));$('eloN').textContent=`Elo: ${h} ${eh} · ${a} ${ea}. Elo espera que el local puntúe ${pct(ex)} (victoria = 1, empate = 0.5).`;
+ const lista=[];r.m.forEach((q,i)=>q.forEach((p,j)=>lista.push([i,j,p])));lista.sort((x,y)=>y[2]-x[2]);const mx=lista[0][2];
+ $('topt').innerHTML='<tr><th>Marcador</th><th>Prob.</th></tr>'+lista.slice(0,5).map(x=>`<tr><td>${x[0]} - ${x[1]}</td><td>${pct1(x[2])}</td></tr>`).join('');
+ const M=r.m.slice(0,7).map(q=>q.slice(0,7));$('heat').innerHTML='<tr><th></th>'+M[0].map((_,j)=>`<th>${j}</th>`).join('')+'</tr>'+M.map((q,i)=>`<tr><th>${i}</th>`+q.map(p=>`<td style="background:rgba(46,204,113,${(p/mx).toFixed(2)})">${(p*100).toFixed(0)}</td>`).join('')+'</tr>').join('');renderTabla()}
+const partidosDe=t=>{const p=P[lig],i=p.teams.indexOf(t),o=[];p.m.forEach(([d,h,a,hg,ag])=>{if(h===i)o.push({d,loc:1,gf:hg,ga:ag,o:a});else if(a===i)o.push({d,loc:0,gf:ag,ga:hg,o:h})});return o};
+function renderComp(){if(!P){$('cmpTab').innerHTML='<div class="nota">Cargando historial…</div>';return}
+ const A=$('ca').value,B=$('cb').value,ini=+('20'+D.temporada.slice(0,2)+'0701'),pa=partidosDe(A),pb=partidosDe(B),p=P[lig];
+ const st=(t,ps)=>{const c=ps.filter(x=>x.d>=ini),n=c.length||1,s=(f,k)=>c.filter(f).reduce((a,x)=>a+x[k],0),loc=c.filter(x=>x.loc),vis=c.filter(x=>!x.loc),av=(l,k)=>l.length?(l.reduce((a,x)=>a+x[k],0)/l.length).toFixed(2):'-';
+  return{t,e:EQ[t],n:c.length,ppp:(EQ[t].pts/(EQ[t].pj||1)).toFixed(2),gf:(s(()=>1,'gf')/n).toFixed(2),gc:(s(()=>1,'ga')/n).toFixed(2),lf:av(loc,'gf'),lc:av(loc,'ga'),vf:av(vis,'gf'),vc:av(vis,'ga')}};
+ const a=st(A,pa),b=st(B,pb),r=(n,x,y)=>`<tr><td>${x}</td><td class="n" style="text-align:center;color:var(--mut)">${n}</td><td>${y}</td></tr>`;
+ $('cmpTab').innerHTML=`<table><tr><th style="color:var(--ac)">${A}</th><th></th><th style="color:var(--b)">${B}</th></tr>`+r('Rating Elo',a.e.elo,b.e.elo)+r('Puntos',a.e.pts,b.e.pts)+r('Puntos por partido',a.ppp,b.ppp)+r('Goles a favor / partido',a.gf,b.gf)+r('Goles en contra / partido',a.gc,b.gc)+r('De local: GF – GC',a.lf+' – '+a.lc,b.lf+' – '+b.lc)+r('De visitante: GF – GC',a.vf+' – '+a.vc,b.vf+' – '+b.vc)+r('Ataque (1.00 = promedio)',((a.e.ataque_l+a.e.ataque_v)/2).toFixed(2),((b.e.ataque_l+b.e.ataque_v)/2).toFixed(2))+r('Defensa (menor = mejor)',((a.e.defensa_l+a.e.defensa_v)/2).toFixed(2),((b.e.defensa_l+b.e.defensa_v)/2).toFixed(2))+r('Forma',a.e.forma.map(x=>`<span class="f ${x}">${x}</span>`).join(''),b.e.forma.map(x=>`<span class="f ${x}">${x}</span>`).join(''))+'</table>';
+ const ia=p.teams.indexOf(A),ib=p.teams.indexOf(B),el=(i,c,n)=>({n,c,pts:(p.elo[i]||[]).map(q=>[ymdDia(q[0]),q[1]])});
+ $('chElo').innerHTML=chart([el(ia,'#2ecc71',A),el(ib,'#4aa3ff',B)]);
+ const roll=(ps,c,n)=>({n,c,pts:ps.map((x,k)=>{if(k<4)return null;let s=0;for(let j=k-4;j<=k;j++)s+=ps[j].gf>ps[j].ga?3:ps[j].gf===ps[j].ga?1:0;return[ymdDia(x.d),s/5]}).filter(Boolean)});
+ $('chPts').innerHTML=chart([roll(pa,'#2ecc71',A),roll(pb,'#4aa3ff',B)],{yf:v=>v.toFixed(1),y0:0,y1:3});
+ const hh=p.m.filter(([d,h,a])=>(h===ia&&a===ib)||(h===ib&&a===ia)).reverse();let wa=0,wd=0,wb=0;
+ hh.forEach(([d,h,a,hg,ag])=>{const ga=h===ia?hg:ag,gb=h===ia?ag:hg;ga>gb?wa++:ga===gb?wd++:wb++});
+ $('h2h').innerHTML=hh.length?`<div class="kpi"><div><b style="color:var(--ac)">${wa}</b><span>victorias ${A}</span></div><div><b>${wd}</b><span>empates</span></div><div><b style="color:var(--b)">${wb}</b><span>victorias ${B}</span></div></div><h3>Partidos en las últimas 3 temporadas</h3><table>`+hh.slice(0,8).map(([d,h,a,hg,ag])=>`<tr><td>${diaStr(ymdDia(d))}</td><td class="n">${p.teams[h]}</td><td><b>${hg} - ${ag}</b></td><td class="n">${p.teams[a]}</td></tr>`).join('')+'</table>':'<div class="nota">No se han enfrentado en las últimas 3 temporadas de esta liga.</div>'}
+function renderPrec(){const B=D.backtest,g=B.global;if(!g){$('precK').innerHTML='<div class="nota">Aún no hay suficientes partidos para evaluar.</div>';return}
+ const k=(v,t)=>`<div><b>${v}</b><span>${t}</span></div>`;
+ $('precK').innerHTML='<div class="kpi">'+k(g.n.toLocaleString('es-CO'),'partidos evaluados')+k(pct1(g.acc),'acierto del modelo (1X2)')+(g.accB!=null?k(pct1(g.accB),'acierto del mercado (cuotas)'):'')+k(pct1(g.acc_local),'acierto si siempre eligiera local')+k(g.ll.toFixed(3),'log loss del modelo')+(g.llB!=null?k(g.llB.toFixed(3),'log loss del mercado'):'')+k(g.ll0.toFixed(3),'log loss de referencia')+'</div>';
+ $('precN').innerHTML=`Evaluación honesta (walk-forward): cada partido desde ${B.desde} se predice usando solo datos anteriores a esa fecha. <b>Acierto</b> = el resultado más probable fue el real. <b>Log loss</b>: menor es mejor; el mercado de cuotas suele ser una vara muy exigente. Tomado sobre ${g.nb} partidos con cuotas${g.llM!=null?`, el modelo tiene log loss ${g.llM.toFixed(3)} y acierto ${pct1(g.accM)} frente a ${g.llB.toFixed(3)} y ${pct1(g.accB)} del mercado`:''}.`;
+ $('precT').innerHTML='<tr><th class="n">Liga</th><th>Partidos</th><th>Acierto</th><th>Mercado</th><th>Log loss</th></tr>'+Object.values(D.ligas).filter(l=>l.backtest).map(l=>{const b=l.backtest;return`<tr><td class="n">${l.nombre}</td><td>${b.n}</td><td>${pct1(b.acc)}</td><td>${b.accB!=null?pct1(b.accB):'-'}</td><td>${b.ll.toFixed(3)}</td></tr>`}).join('');
+ $('chCal').innerHTML=chart([{c:'#8aa0b4',dash:1,pts:[[0,0],[1,1]]},{n:'Observado',c:'#2ecc71',pts:B.cal.map(q=>[q[0],q[1]])},{c:'#2ecc71',dots:1,pts:B.cal.map(q=>[q[0],q[1]])}],{xf:v=>pct(v),yf:v=>pct(v),x0:0,x1:1,y0:0,y1:1})}
+function renderTabla(){const h=$('h').value,a=$('a').value,f=names.map(n=>({n,...EQ[n]})).sort((x,y)=>y.pts-x.pts||(y.gf-y.gc)-(x.gf-x.gc)||y.gf-x.gf);
+ $('tabla').innerHTML='<tr><th>#</th><th class="n">Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GF</th><th>GC</th><th>DG</th><th>Pts</th><th>Elo</th><th>Forma</th></tr>'+f.map((t,i)=>`<tr class="${t.n===h?'s1':t.n===a?'s2':''}"><td>${i+1}</td><td class="n">${t.n}</td><td>${t.pj}</td><td>${t.g}</td><td>${t.e}</td><td>${t.p}</td><td>${t.gf}</td><td>${t.gc}</td><td>${t.gf-t.gc}</td><td><b>${t.pts}</b></td><td>${t.elo}</td><td>${t.forma.map(x=>`<span class="f ${x}">${x}</span>`).join('')}</td></tr>`).join('')}
+function cargarLiga(){lig=$('liga').value;L=D.ligas[lig];EQ=L.equipos;names=Object.keys(EQ);const o=names.map(n=>`<option>${n}</option>`).join('');
+ ['h','a','ca','cb'].forEach(i=>$(i).innerHTML=o);$('a').selectedIndex=$('cb').selectedIndex=Math.min(1,names.length-1);
+ $('meta').textContent=`Temporada ${D.temporada} · ${L.n} partidos · datos al ${D.actualizado}`;renderProx();renderPred();renderComp()}
+fetch('data/datos.json').then(r=>r.json()).then(d=>{D=d;$('liga').innerHTML=Object.entries(d.ligas).map(([k,v])=>`<option value="${k}">${v.nombre}</option>`).join('');
+ $('liga').onchange=cargarLiga;$('h').onchange=$('a').onchange=renderPred;$('ca').onchange=$('cb').onchange=renderComp;
+ document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>go(b.dataset.t));renderPrec();cargarLiga();
+ fetch('data/partidos.json').then(r=>r.json()).then(p=>{P=p;renderComp()}).catch(()=>{$('cmpTab').innerHTML='<div class="nota">No se pudo cargar el historial.</div>'})
+}).catch(()=>{$('meta').textContent='No se pudieron cargar los datos'});
 </script></body></html>
