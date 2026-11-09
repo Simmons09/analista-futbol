@@ -22,6 +22,7 @@ def fechas():
 
 def leer(src):
     d = pd.read_csv(src, encoding="latin-1")
+    d.columns = [str(c).replace("ï»¿", "").replace("\ufeff", "").strip() for c in d.columns]  # quita el BOM
     for c in ODDS:
         if c not in d.columns:
             d[c] = float("nan")
