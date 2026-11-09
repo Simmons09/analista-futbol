@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Analista de fútbol</title>
+<style>
+:root{--bg:#0f1720;--card:#18232f;--line:#263545;--txt:#e6edf3;--mut:#8aa0b4;--ac:#2ecc71;--emp:#f1c40f;--vis:#e74c3c}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,Segoe UI,Arial;background:var(--bg);color:var(--txt)}
+header{padding:18px 24px;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+h1{margin:0;font-size:20px}header small{color:var(--mut)}header select{width:auto;margin-left:auto}
+main{max-width:1100px;margin:auto;padding:20px;display:grid;gap:20px;grid-template-columns:1fr 1fr}
+@media(max-width:850px){main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;overflow-x:auto}
+.full{grid-column:1/-1}h2{margin:0 0 12px;font-size:16px}
+select{background:#0f1720;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px;width:100%;font-size:15px}
+.sel{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-bottom:14px}
+.bar{display:flex;height:34px;border-radius:8px;overflow:hidden;margin:10px 0;font-weight:600;font-size:13px}
+.bar div{display:flex;align-items:center;justify-content:center;color:#0b1117;min-width:0}
+.l{background:var(--ac)}.e{background:var(--emp)}.v{background:var(--vis)}
+.kpi{display:flex;gap:10px}.kpi div{flex:1;background:#0f1720;border-radius:8px;padding:10px;text-align:center}
+.kpi b{display:block;font-size:22px}.kpi span{color:var(--mut);font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}
+th{color:var(--mut);font-weight:600}td.n{text-align:left}tr.s1 td{background:#1f3a2c}tr.s2 td{background:#3a2323}
+.f{display:inline-block;width:18px;height:18px;line-height:18px;border-radius:4px;font-size:11px;color:#0b1117;margin-right:2px}
+.f.G{background:var(--ac)}.f.E{background:var(--emp)}.f.P{background:var(--vis)}
+.heat td{width:34px;height:30px;font-size:11px;border:1px solid var(--bg)}
+.nota{color:var(--mut);font-size:12px;margin-top:10px}
+</style></head><body>
+<header><h1>Analista de fútbol</h1><small id="meta">Cargando…</small><select id="liga"></select></header>
+<main>
+<section class="card"><h2>Predicción de partido</h2>
+ <div class="sel"><select id="h"></select><span>vs</span><select id="a"></select></div>
+ <div class="kpi"><div><b id="xh">-</b><span>goles esperados local</span></div><div><b id="xa">-</b><span>goles esperados visitante</span></div></div>
+ <div class="bar"><div class="l" id="pl"></div><div class="e" id="pe"></div><div class="v" id="pv"></div></div>
+ <div class="nota">Local · Empate · Visitante. Modelo de Poisson: línea base estadística, no una garantía.</div>
+</section>
+<section class="card"><h2>Marcadores más probables</h2><table id="topt"></table><div style="height:12px"></div><table class="heat" id="heat"></table></section>
+<section class="card full"><h2>Tabla y forma (últimos 5)</h2><table id="tabla"></table></section>
+</main>
+<script>
+const $=id=>document.getElementById(id);const MAXG=6;let L,EQ,names,DATOS;
+const fact=n=>{let r=1;for(let i=2;i<=n;i++)r*=i;return r};
+const pois=(k,l)=>Math.exp(-l)*Math.pow(l,k)/fact(k);
+function predecir(){
+ const h=$('h').value,a=$('a').value,H=EQ[h],A=EQ[a];
+ const lh=H.ataque_l*A.defensa_v*L.avg_h,la=A.ataque_v*H.defensa_l*L.avg_a;
+ let pl=0,pe=0,pv=0;const m=[];
+ for(let i=0;i<=MAXG;i++){m[i]=[];for(let j=0;j<=MAXG;j++){const p=pois(i,lh)*pois(j,la);m[i][j]=p;i>j?pl+=p:i===j?pe+=p:pv+=p}}
+ const s=pl+pe+pv;pl/=s;pe/=s;pv/=s;
+ $('xh').textContent=lh.toFixed(2);$('xa').textContent=la.toFixed(2);
+ [['pl',pl],['pe',pe],['pv',pv]].forEach(([id,p])=>{$(id).style.width=p*100+'%';$(id).textContent=(p*100).toFixed(0)+'%'});
+ const lista=[];m.forEach((r,i)=>r.forEach((p,j)=>lista.push([i,j,p])));lista.sort((x,y)=>y[2]-x[2]);
+ $('topt').innerHTML='<tr><th>Marcador</th><th>Prob.</th></tr>'+lista.slice(0,5).map(x=>`<tr><td>${x[0]} - ${x[1]}</td><td>${(x[2]*100).toFixed(1)}%</td></tr>`).join('');
+ const mx=lista[0][2];
+ $('heat').innerHTML='<tr><th></th>'+m[0].map((_,j)=>`<th>${j}</th>`).join('')+'</tr>'+m.map((r,i)=>`<tr><th>${i}</th>`+r.map(p=>`<td style="background:rgba(46,204,113,${(p/mx).toFixed(2)})">${(p*100).toFixed(0)}</td>`).join('')+'</tr>').join('');
+ const f=names.map(n=>({n,...EQ[n]})).sort((x,y)=>y.pts-x.pts||(y.gf-y.gc)-(x.gf-x.gc)||y.gf-x.gf);
+ $('tabla').innerHTML='<tr><th>#</th><th class="n">Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GF</th><th>GC</th><th>DG</th><th>Pts</th><th>Forma</th></tr>'+
+ f.map((t,i)=>`<tr class="${t.n===h?'s1':t.n===a?'s2':''}"><td>${i+1}</td><td class="n">${t.n}</td><td>${t.pj}</td><td>${t.g}</td><td>${t.e}</td><td>${t.p}</td><td>${t.gf}</td><td>${t.gc}</td><td>${t.gf-t.gc}</td><td><b>${t.pts}</b></td><td>${t.forma.map(x=>`<span class="f ${x}">${x}</span>`).join('')}</td></tr>`).join('');
+}
+function cargarLiga(){
+ L=DATOS.ligas[$('liga').value];EQ=L.equipos;names=Object.keys(EQ);
+ [$('h'),$('a')].forEach(s=>s.innerHTML=names.map(n=>`<option>${n}</option>`).join(''));
+ $('a').selectedIndex=Math.min(1,names.length-1);
+ $('meta').textContent=`Temporada ${DATOS.temporada} · ${L.n} partidos · datos al ${DATOS.actualizado}`;
+ predecir();
+}
+fetch('data/datos.json').then(r=>r.json()).then(d=>{
+ DATOS=d;$('liga').innerHTML=Object.entries(d.ligas).map(([k,v])=>`<option value="${k}">${v.nombre}</option>`).join('');
+ $('liga').onchange=cargarLiga;$('h').onchange=$('a').onchange=predecir;cargarLiga();
+}).catch(e=>{$('meta').textContent='No se pudieron cargar los datos'});
+</script></body></html>
