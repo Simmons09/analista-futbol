@@ -32,27 +32,28 @@ th{color:var(--mut);font-weight:600}td.n,th.n{text-align:left}tr.s1 td{backgroun
 .dia{color:var(--mut);font-size:12px;text-transform:capitalize;margin:14px 0 4px}
 .leg span{margin-right:14px;font-size:12px}.leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px}
 svg text{fill:var(--mut);font-size:10px}
+.ayuda{margin:-4px 0 12px;font-size:13px;color:var(--mut);line-height:1.45}
 </style></head><body>
 <header><h1>Analista de fútbol</h1><small id="meta">Cargando…</small><select id="liga"></select></header>
 <nav id="nav"><button data-t="prox" class="on">Próximos partidos</button><button data-t="pred">Predicción</button><button data-t="comp">Comparador</button><button data-t="prec">Precisión del modelo</button><button data-t="tabla">Tabla</button></nav>
 <main>
-<div class="tab on" id="t-prox"><section class="card full"><h2>Próximos partidos</h2><div id="prox"></div><div class="nota">Toca un partido para ver su análisis completo. Las predicciones son estadísticas, no garantías. Mercado = probabilidad implícita de las cuotas (solo como referencia).</div></section></div>
+<div class="tab on" id="t-prox"><section class="card full"><h2>Próximos partidos</h2><p class="ayuda">Los partidos que vienen y qué tan probable es cada resultado: <b style="color:var(--ac)">verde</b> = gana el local, <b style="color:var(--emp)">amarillo</b> = empate, <b style="color:var(--vis)">rojo</b> = gana el visitante. Toca un partido para ver el detalle.</p><div id="prox"></div><div class="nota">Toca un partido para ver su análisis completo. Las predicciones son estadísticas, no garantías. Mercado = probabilidad implícita de las cuotas (solo como referencia).</div></section></div>
 <div class="tab" id="t-pred">
-<section class="card"><h2>Predicción de partido</h2>
+<section class="card"><h2>Predicción de partido</h2><p class="ayuda">Elige dos equipos. El modelo calcula cuántos goles haría cada uno según su ataque, su defensa y si juega de local, y de ahí saca las probabilidades. La cuota justa es 1 dividido entre la probabilidad.</p>
  <div class="sel"><select id="h"></select><span>vs</span><select id="a"></select></div>
  <div class="kpi"><div><b id="xh">-</b><span>goles esperados local</span></div><div><b id="xa">-</b><span>goles esperados visitante</span></div></div>
  <div class="bar"><div class="l" id="pl"></div><div class="e" id="pe"></div><div class="v" id="pv"></div></div>
  <table id="mk"></table><div class="nota" id="eloN"></div></section>
-<section class="card"><h2>Marcadores más probables</h2><table id="topt"></table><div style="height:12px"></div><table class="heat" id="heat"></table></section></div>
+<section class="card"><h2>Marcadores más probables</h2><p class="ayuda">Los resultados exactos que más se esperan. En el cuadro, las filas son los goles del local y las columnas los del visitante: mientras más verde, más probable.</p><table id="topt"></table><div style="height:12px"></div><table class="heat" id="heat"></table></section></div>
 <div class="tab" id="t-comp">
-<section class="card full"><h2>Comparador de equipos</h2><div class="sel"><select id="ca"></select><span>vs</span><select id="cb"></select></div><div id="cmpTab"></div></section>
-<section class="card"><h2>Rating Elo</h2><div id="chElo"></div></section>
-<section class="card"><h2>Puntos por partido (media móvil de 5)</h2><div id="chPts"></div></section>
-<section class="card full"><h2>Historial directo</h2><div id="h2h"></div></section></div>
-<div class="tab" id="t-prec"><section class="card full"><h2>¿Qué tan bien predice el modelo?</h2><div id="precK"></div><div class="nota" id="precN"></div></section>
-<section class="card"><h2>Por liga</h2><table id="precT"></table></section>
-<section class="card"><h2>Calibración</h2><div id="chCal"></div><div class="nota">Si el modelo está bien calibrado, los puntos siguen la diagonal: cuando dice 40 %, ocurre cerca del 40 % de las veces.</div></section></div>
-<div class="tab" id="t-tabla"><section class="card full"><h2>Tabla y forma (últimos 5)</h2><table id="tabla"></table></section></div>
+<section class="card full"><h2>Comparador de equipos</h2><p class="ayuda">Elige dos equipos de la misma liga para ver cómo les va esta temporada, uno al lado del otro.</p><div class="sel"><select id="ca"></select><span>vs</span><select id="cb"></select></div><div id="cmpTab"></div></section>
+<section class="card"><h2>Rating Elo</h2><p class="ayuda">Una nota de fuerza: sube cuando el equipo gana (más si vence a un rival fuerte) y baja cuando pierde. Más alto significa más fuerte.</p><div id="chElo"></div></section>
+<section class="card"><h2>Puntos por partido (media móvil de 5)</h2><p class="ayuda">Cómo le ha ido a cada equipo en sus últimos 5 partidos: 3 puntos por victoria, 1 por empate. El máximo es 3.</p><div id="chPts"></div></section>
+<section class="card full"><h2>Historial directo</h2><p class="ayuda">Los últimos partidos entre estos dos equipos en las últimas 3 temporadas.</p><div id="h2h"></div></section></div>
+<div class="tab" id="t-prec"><section class="card full"><h2>¿Qué tan bien predice el modelo?</h2><p class="ayuda">Para saber si el modelo sirve, lo probamos con partidos que ya se jugaron, usando solo lo que se sabía antes de cada uno. Así se ve si acierta de verdad.</p><div id="precK"></div><div class="nota" id="precN"></div></section>
+<section class="card"><h2>Por liga</h2><p class="ayuda">El mismo examen, separado por liga.</p><table id="precT"></table></section>
+<section class="card"><h2>Calibración</h2><p class="ayuda">Compara lo que el modelo dice con lo que realmente pasó.</p><div id="chCal"></div><div class="nota">Si el modelo está bien calibrado, los puntos siguen la diagonal: cuando dice 40 %, ocurre cerca del 40 % de las veces.</div></section></div>
+<div class="tab" id="t-tabla"><section class="card full"><h2>Tabla y forma (últimos 5)</h2><p class="ayuda">Posiciones de la temporada. G = ganados, E = empatados, P = perdidos, GF y GC = goles a favor y en contra, DG = diferencia de goles, Elo = fuerza. La forma muestra los últimos 5 partidos.</p><table id="tabla"></table></section></div>
 </main>
 <script>
 const $=id=>document.getElementById(id);let D,P=null,L,EQ,names,lig;
