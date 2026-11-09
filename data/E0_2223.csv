@@ -1,0 +1,381 @@
+Date,HomeTeam,AwayTeam,FTHG,FTAG,B365H,B365D,B365A
+2022-08-05,Crystal Palace,Arsenal,0,2,4.2,3.6,1.85
+2022-08-06,Fulham,Liverpool,2,2,11.0,6.0,1.25
+2022-08-06,Bournemouth,Aston Villa,2,0,3.75,3.5,2.0
+2022-08-06,Leeds,Wolves,2,1,2.25,3.4,3.2
+2022-08-06,Newcastle,Nott'm Forest,2,0,1.66,3.8,5.25
+2022-08-06,Tottenham,Southampton,4,1,1.33,5.5,8.5
+2022-08-06,Everton,Chelsea,0,1,5.5,4.0,1.61
+2022-08-07,Leicester,Brentford,2,2,2.0,3.75,3.5
+2022-08-07,Man United,Brighton,1,2,1.6,4.2,5.25
+2022-08-07,West Ham,Man City,0,2,8.0,5.0,1.36
+2022-08-13,Aston Villa,Everton,2,1,1.8,3.5,4.75
+2022-08-13,Arsenal,Leicester,4,2,1.53,4.33,5.75
+2022-08-13,Brighton,Newcastle,0,0,2.45,3.2,3.0
+2022-08-13,Man City,Bournemouth,4,0,1.06,13.0,29.0
+2022-08-13,Southampton,Leeds,2,2,2.25,3.5,3.1
+2022-08-13,Wolves,Fulham,0,0,2.3,3.3,3.2
+2022-08-13,Brentford,Man United,4,0,3.75,3.5,2.0
+2022-08-14,Nott'm Forest,West Ham,1,0,4.2,3.6,1.85
+2022-08-14,Chelsea,Tottenham,2,2,2.25,3.4,3.2
+2022-08-15,Liverpool,Crystal Palace,1,1,1.18,6.75,16.0
+2022-08-20,Tottenham,Wolves,1,0,1.4,4.75,7.5
+2022-08-20,Crystal Palace,Aston Villa,3,1,2.5,3.25,2.9
+2022-08-20,Everton,Nott'm Forest,1,1,1.9,3.6,4.0
+2022-08-20,Fulham,Brentford,3,2,2.45,3.4,2.9
+2022-08-20,Leicester,Southampton,1,2,1.83,4.0,4.0
+2022-08-20,Bournemouth,Arsenal,0,3,8.0,4.75,1.4
+2022-08-21,Leeds,Chelsea,3,0,5.75,4.5,1.53
+2022-08-21,West Ham,Brighton,0,2,2.3,3.4,3.1
+2022-08-21,Newcastle,Man City,3,3,7.5,5.0,1.36
+2022-08-22,Man United,Liverpool,2,1,5.25,4.33,1.6
+2022-08-27,Southampton,Man United,0,1,4.2,4.0,1.8
+2022-08-27,Brentford,Everton,1,1,2.0,3.5,3.75
+2022-08-27,Brighton,Leeds,1,0,1.9,3.8,3.8
+2022-08-27,Chelsea,Leicester,2,1,1.4,5.0,7.0
+2022-08-27,Liverpool,Bournemouth,9,0,1.1,10.0,26.0
+2022-08-27,Man City,Crystal Palace,4,2,1.18,7.5,13.0
+2022-08-27,Arsenal,Fulham,2,1,1.3,5.75,9.0
+2022-08-28,Aston Villa,West Ham,0,1,2.3,3.4,3.1
+2022-08-28,Wolves,Newcastle,1,1,2.7,3.3,2.7
+2022-08-28,Nott'm Forest,Tottenham,0,2,7.0,4.6,1.44
+2022-08-30,Crystal Palace,Brentford,1,1,2.05,3.4,3.6
+2022-08-30,Fulham,Brighton,2,1,3.1,3.3,2.3
+2022-08-30,Southampton,Chelsea,2,1,5.25,4.0,1.61
+2022-08-30,Leeds,Everton,1,1,2.15,3.5,3.3
+2022-08-31,Arsenal,Aston Villa,2,1,1.45,4.5,6.0
+2022-08-31,Bournemouth,Wolves,0,0,3.5,3.3,2.15
+2022-08-31,Man City,Nott'm Forest,6,0,1.06,13.0,29.0
+2022-08-31,West Ham,Tottenham,1,1,3.6,3.8,1.95
+2022-08-31,Liverpool,Newcastle,2,1,1.33,5.25,9.0
+2022-09-01,Leicester,Man United,0,1,3.4,3.75,2.05
+2022-09-03,Everton,Liverpool,0,0,7.0,4.75,1.4
+2022-09-03,Brentford,Leeds,5,2,2.1,3.5,3.4
+2022-09-03,Chelsea,West Ham,2,1,1.55,4.5,5.5
+2022-09-03,Newcastle,Crystal Palace,0,0,2.0,3.5,3.75
+2022-09-03,Nott'm Forest,Bournemouth,2,3,1.95,3.5,3.8
+2022-09-03,Tottenham,Fulham,2,1,1.5,4.5,6.5
+2022-09-03,Wolves,Southampton,1,0,2.2,3.4,3.25
+2022-09-03,Aston Villa,Man City,1,1,8.0,5.5,1.33
+2022-09-04,Brighton,Leicester,5,2,1.83,3.5,4.5
+2022-09-04,Man United,Arsenal,3,1,2.5,3.5,2.7
+2022-09-16,Aston Villa,Southampton,1,0,2.1,3.5,3.5
+2022-09-16,Nott'm Forest,Fulham,2,3,2.75,3.3,2.62
+2022-09-17,Wolves,Man City,0,3,9.5,5.0,1.33
+2022-09-17,Newcastle,Bournemouth,1,1,1.44,4.4,7.5
+2022-09-17,Tottenham,Leicester,6,2,1.45,4.5,7.0
+2022-09-18,Brentford,Arsenal,0,3,4.2,3.8,1.8
+2022-09-18,Everton,West Ham,1,0,2.9,3.25,2.5
+2022-10-01,Arsenal,Tottenham,3,1,2.05,3.75,3.3
+2022-10-01,Bournemouth,Brentford,0,0,3.3,3.4,2.2
+2022-10-01,Crystal Palace,Chelsea,1,2,4.2,3.6,1.85
+2022-10-01,Fulham,Newcastle,1,4,3.0,3.4,2.37
+2022-10-01,Liverpool,Brighton,3,3,1.33,5.25,8.5
+2022-10-01,Southampton,Everton,1,2,2.15,3.4,3.4
+2022-10-01,West Ham,Wolves,2,0,1.95,3.5,4.2
+2022-10-02,Man City,Man United,6,3,1.33,5.75,7.5
+2022-10-02,Leeds,Aston Villa,0,0,2.35,3.4,3.0
+2022-10-03,Leicester,Nott'm Forest,4,0,1.75,4.0,4.33
+2022-10-08,Bournemouth,Leicester,2,1,3.6,3.4,2.05
+2022-10-08,Chelsea,Wolves,3,0,1.4,4.5,8.0
+2022-10-08,Man City,Southampton,4,0,1.11,10.0,17.0
+2022-10-08,Newcastle,Brentford,5,1,1.83,3.8,4.2
+2022-10-08,Brighton,Tottenham,0,1,2.8,3.4,2.5
+2022-10-09,Crystal Palace,Leeds,2,1,2.05,3.5,3.6
+2022-10-09,West Ham,Fulham,3,1,1.72,3.8,4.75
+2022-10-09,Arsenal,Liverpool,3,2,2.5,3.6,2.62
+2022-10-09,Everton,Man United,1,2,3.6,3.5,2.05
+2022-10-10,Nott'm Forest,Aston Villa,1,1,3.3,3.4,2.2
+2022-10-14,Brentford,Brighton,2,0,3.1,3.4,2.3
+2022-10-15,Leicester,Crystal Palace,0,0,2.3,3.4,3.1
+2022-10-15,Fulham,Bournemouth,2,2,1.85,3.75,4.0
+2022-10-15,Wolves,Nott'm Forest,1,0,1.7,3.75,5.0
+2022-10-15,Tottenham,Everton,2,0,1.5,4.5,6.5
+2022-10-16,Aston Villa,Chelsea,0,2,4.33,3.75,1.8
+2022-10-16,Leeds,Arsenal,0,1,6.0,4.2,1.55
+2022-10-16,Man United,Newcastle,0,0,1.95,3.8,3.5
+2022-10-16,Southampton,West Ham,1,1,2.9,3.4,2.4
+2022-10-16,Liverpool,Man City,1,0,3.6,4.0,1.9
+2022-10-18,Brighton,Nott'm Forest,0,0,1.4,4.75,7.0
+2022-10-18,Crystal Palace,Wolves,2,1,2.25,3.1,3.4
+2022-10-19,Bournemouth,Southampton,0,1,2.62,3.3,2.62
+2022-10-19,Brentford,Chelsea,0,0,4.75,3.8,1.72
+2022-10-19,Liverpool,West Ham,1,0,1.4,5.0,7.0
+2022-10-19,Newcastle,Everton,1,0,1.6,3.8,5.75
+2022-10-19,Man United,Tottenham,2,0,2.45,3.5,2.75
+2022-10-20,Fulham,Aston Villa,3,0,2.9,3.3,2.5
+2022-10-20,Leicester,Leeds,2,0,2.25,3.6,3.0
+2022-10-22,Nott'm Forest,Liverpool,1,0,11.0,6.0,1.25
+2022-10-22,Everton,Crystal Palace,3,0,2.6,3.2,2.87
+2022-10-22,Man City,Brighton,3,1,1.2,7.0,13.0
+2022-10-22,Chelsea,Man United,1,1,2.05,3.5,3.5
+2022-10-23,Aston Villa,Brentford,4,0,2.1,3.5,3.5
+2022-10-23,Leeds,Fulham,2,3,2.05,3.5,3.6
+2022-10-23,Southampton,Arsenal,1,1,6.0,4.0,1.57
+2022-10-23,Wolves,Leicester,0,4,2.25,3.25,3.25
+2022-10-23,Tottenham,Newcastle,1,2,2.05,3.5,3.5
+2022-10-24,West Ham,Bournemouth,2,0,1.55,4.0,6.0
+2022-10-29,Leicester,Man City,0,1,10.0,6.5,1.25
+2022-10-29,Bournemouth,Tottenham,2,3,5.0,3.8,1.7
+2022-10-29,Brentford,Wolves,1,1,2.2,3.4,3.3
+2022-10-29,Brighton,Chelsea,4,1,3.0,3.3,2.4
+2022-10-29,Crystal Palace,Southampton,1,0,1.9,3.6,4.0
+2022-10-29,Newcastle,Aston Villa,4,0,1.8,3.75,4.5
+2022-10-29,Fulham,Everton,0,0,2.37,3.4,3.0
+2022-10-29,Liverpool,Leeds,1,2,1.3,6.0,9.0
+2022-10-30,Arsenal,Nott'm Forest,5,0,1.2,7.0,12.0
+2022-10-30,Man United,West Ham,1,0,1.66,4.0,4.8
+2022-11-05,Leeds,Bournemouth,4,3,1.72,3.8,4.75
+2022-11-05,Man City,Fulham,2,1,1.11,9.5,19.0
+2022-11-05,Nott'm Forest,Brentford,2,2,2.75,3.3,2.6
+2022-11-05,Wolves,Brighton,2,3,3.3,3.3,2.25
+2022-11-05,Everton,Leicester,0,2,2.4,3.3,3.0
+2022-11-06,Chelsea,Arsenal,0,1,2.55,3.4,2.7
+2022-11-06,Aston Villa,Man United,3,1,3.3,3.8,2.1
+2022-11-06,Southampton,Newcastle,1,4,4.0,3.6,1.9
+2022-11-06,West Ham,Crystal Palace,1,2,1.9,3.4,4.2
+2022-11-06,Tottenham,Liverpool,1,2,3.3,3.6,2.1
+2022-11-12,Man City,Brentford,1,2,1.14,8.0,17.0
+2022-11-12,Bournemouth,Everton,3,0,2.8,3.25,2.6
+2022-11-12,Liverpool,Southampton,3,1,1.25,6.5,11.0
+2022-11-12,Nott'm Forest,Crystal Palace,1,0,3.1,3.1,2.45
+2022-11-12,Tottenham,Leeds,4,3,1.65,4.2,4.75
+2022-11-12,West Ham,Leicester,0,2,2.05,3.4,3.75
+2022-11-12,Newcastle,Chelsea,1,0,2.35,3.4,3.0
+2022-11-12,Wolves,Arsenal,0,2,6.0,4.2,1.55
+2022-11-13,Brighton,Aston Villa,1,2,1.83,3.75,4.2
+2022-11-13,Fulham,Man United,1,2,3.8,3.8,1.9
+2022-12-26,Brentford,Tottenham,2,2,4.0,3.6,1.91
+2022-12-26,Crystal Palace,Fulham,0,3,2.05,3.6,3.5
+2022-12-26,Everton,Wolves,1,2,2.3,3.25,3.2
+2022-12-26,Leicester,Newcastle,0,3,3.25,3.5,2.2
+2022-12-26,Southampton,Brighton,1,3,3.3,3.5,2.15
+2022-12-26,Aston Villa,Liverpool,1,3,4.75,4.0,1.7
+2022-12-26,Arsenal,West Ham,3,1,1.5,4.33,6.5
+2022-12-27,Chelsea,Bournemouth,2,0,1.3,5.5,10.0
+2022-12-27,Man United,Nott'm Forest,3,0,1.29,5.5,11.0
+2022-12-28,Leeds,Man City,1,3,9.5,6.0,1.29
+2022-12-30,West Ham,Brentford,0,2,2.0,3.6,3.6
+2022-12-30,Liverpool,Leicester,2,1,1.29,6.0,9.5
+2022-12-31,Wolves,Man United,0,1,4.0,3.6,1.91
+2022-12-31,Bournemouth,Crystal Palace,0,2,2.8,3.3,2.5
+2022-12-31,Fulham,Southampton,2,1,1.95,3.6,3.75
+2022-12-31,Man City,Everton,1,1,1.13,9.0,19.0
+2022-12-31,Newcastle,Leeds,0,0,1.45,4.5,7.0
+2022-12-31,Brighton,Arsenal,2,4,3.4,3.5,2.1
+2023-01-01,Tottenham,Aston Villa,0,2,1.67,4.0,5.0
+2023-01-01,Nott'm Forest,Chelsea,1,1,5.0,3.8,1.7
+2023-01-02,Brentford,Liverpool,3,1,5.5,4.33,1.55
+2023-01-03,Arsenal,Newcastle,0,0,1.8,3.8,4.33
+2023-01-03,Everton,Brighton,1,4,3.5,3.5,2.1
+2023-01-03,Leicester,Fulham,0,1,2.2,3.6,3.1
+2023-01-03,Man United,Bournemouth,3,0,1.29,5.5,11.0
+2023-01-04,Southampton,Nott'm Forest,0,1,2.0,3.5,3.8
+2023-01-04,Leeds,West Ham,2,2,2.6,3.5,2.6
+2023-01-04,Aston Villa,Wolves,1,1,1.95,3.6,4.0
+2023-01-04,Crystal Palace,Tottenham,0,4,3.4,3.5,2.15
+2023-01-05,Chelsea,Man City,0,1,5.0,4.0,1.67
+2023-01-12,Fulham,Chelsea,2,1,3.3,3.5,2.15
+2023-01-13,Aston Villa,Leeds,2,1,1.91,3.6,4.0
+2023-01-14,Man United,Man City,2,1,4.2,3.6,1.85
+2023-01-14,Brighton,Liverpool,3,0,3.4,3.6,2.1
+2023-01-14,Everton,Southampton,1,2,2.25,3.25,3.3
+2023-01-14,Nott'm Forest,Leicester,2,0,2.7,3.3,2.63
+2023-01-14,Wolves,West Ham,1,0,2.63,3.3,2.7
+2023-01-14,Brentford,Bournemouth,2,0,1.65,4.0,5.25
+2023-01-15,Chelsea,Crystal Palace,1,0,1.62,4.0,5.25
+2023-01-15,Newcastle,Fulham,1,0,1.5,4.33,6.5
+2023-01-15,Tottenham,Arsenal,0,2,3.1,3.6,2.2
+2023-01-18,Crystal Palace,Man United,1,1,4.5,3.6,1.8
+2023-01-19,Man City,Tottenham,4,2,1.36,5.0,8.5
+2023-01-21,Liverpool,Chelsea,0,0,1.85,3.75,4.0
+2023-01-21,Bournemouth,Nott'm Forest,1,1,2.75,3.1,2.75
+2023-01-21,Leicester,Brighton,2,2,3.6,3.5,2.05
+2023-01-21,Southampton,Aston Villa,0,1,2.88,3.25,2.55
+2023-01-21,West Ham,Everton,2,0,1.8,3.75,4.75
+2023-01-21,Crystal Palace,Newcastle,0,0,4.4,3.5,1.85
+2023-01-22,Leeds,Brentford,0,0,2.38,3.6,2.88
+2023-01-22,Man City,Wolves,3,0,1.2,8.0,11.0
+2023-01-22,Arsenal,Man United,3,2,1.8,3.8,4.2
+2023-01-23,Fulham,Tottenham,0,1,3.3,3.6,2.1
+2023-02-03,Chelsea,Fulham,0,0,1.62,4.0,5.25
+2023-02-04,Everton,Arsenal,1,0,8.5,4.5,1.4
+2023-02-04,Aston Villa,Leicester,2,4,1.95,3.6,3.8
+2023-02-04,Brentford,Southampton,3,0,1.85,3.6,4.2
+2023-02-04,Brighton,Bournemouth,1,0,1.33,5.25,8.5
+2023-02-04,Man United,Crystal Palace,2,1,1.4,4.75,8.0
+2023-02-04,Wolves,Liverpool,3,0,4.0,3.8,1.85
+2023-02-04,Newcastle,West Ham,1,1,1.6,3.8,6.0
+2023-02-05,Nott'm Forest,Leeds,1,0,2.63,3.3,2.7
+2023-02-05,Tottenham,Man City,1,0,4.33,4.2,1.73
+2023-02-08,Man United,Leeds,2,2,1.45,5.0,6.0
+2023-02-11,West Ham,Chelsea,1,1,3.3,3.3,2.25
+2023-02-11,Arsenal,Brentford,1,1,1.44,4.75,7.0
+2023-02-11,Crystal Palace,Brighton,1,1,3.8,3.5,2.0
+2023-02-11,Fulham,Nott'm Forest,2,0,1.91,3.5,4.33
+2023-02-11,Leicester,Tottenham,4,1,3.4,3.6,2.1
+2023-02-11,Southampton,Wolves,1,2,2.9,3.2,2.55
+2023-02-11,Bournemouth,Newcastle,1,1,6.5,4.0,1.53
+2023-02-12,Leeds,Man United,0,2,3.75,3.8,1.91
+2023-02-12,Man City,Aston Villa,3,1,1.25,6.5,11.0
+2023-02-13,Liverpool,Everton,2,0,1.5,4.33,6.5
+2023-02-15,Arsenal,Man City,1,3,2.9,3.5,2.35
+2023-02-18,Aston Villa,Arsenal,2,4,4.5,3.6,1.5
+2023-02-18,Brentford,Crystal Palace,1,1,1.83,3.5,4.5
+2023-02-18,Brighton,Fulham,0,1,1.65,3.8,5.5
+2023-02-18,Chelsea,Southampton,0,1,1.4,4.75,8.5
+2023-02-18,Everton,Leeds,1,0,2.4,3.3,3.0
+2023-02-18,Nott'm Forest,Man City,1,1,8.5,5.5,1.3
+2023-02-18,Wolves,Bournemouth,0,1,1.67,3.6,6.0
+2023-02-18,Newcastle,Liverpool,0,2,2.5,3.5,2.7
+2023-02-19,Man United,Leicester,3,0,1.62,4.33,5.25
+2023-02-19,Tottenham,West Ham,2,0,1.75,3.6,4.75
+2023-02-24,Fulham,Wolves,1,1,2.5,3.2,3.0
+2023-02-25,Everton,Aston Villa,0,2,2.5,3.2,3.0
+2023-02-25,Leeds,Southampton,1,0,1.95,3.5,4.0
+2023-02-25,Leicester,Arsenal,0,1,4.75,4.0,1.7
+2023-02-25,West Ham,Nott'm Forest,4,0,1.75,3.6,5.0
+2023-02-25,Bournemouth,Man City,1,4,10.0,5.75,1.29
+2023-02-25,Crystal Palace,Liverpool,0,0,4.75,3.8,1.73
+2023-02-26,Tottenham,Chelsea,2,0,2.55,3.25,2.9
+2023-03-01,Arsenal,Everton,4,0,1.36,4.75,10.0
+2023-03-01,Liverpool,Wolves,2,0,1.5,4.75,6.0
+2023-03-04,Man City,Newcastle,2,0,1.45,4.5,7.0
+2023-03-04,Arsenal,Bournemouth,3,2,1.22,7.0,12.0
+2023-03-04,Aston Villa,Crystal Palace,1,0,2.05,3.3,3.8
+2023-03-04,Brighton,West Ham,4,0,1.8,3.6,4.5
+2023-03-04,Chelsea,Leeds,1,0,1.62,4.0,5.5
+2023-03-04,Wolves,Tottenham,1,0,3.3,3.4,2.2
+2023-03-04,Southampton,Leicester,1,0,2.75,3.3,2.6
+2023-03-05,Nott'm Forest,Everton,2,2,2.7,3.0,2.88
+2023-03-05,Liverpool,Man United,7,0,2.38,3.6,2.88
+2023-03-06,Brentford,Fulham,3,2,1.95,3.6,3.75
+2023-03-11,Bournemouth,Liverpool,1,0,7.5,5.0,1.4
+2023-03-11,Everton,Brentford,1,0,2.7,3.25,2.7
+2023-03-11,Leeds,Brighton,2,2,3.75,3.6,1.95
+2023-03-11,Leicester,Chelsea,1,3,3.75,3.5,1.95
+2023-03-11,Tottenham,Nott'm Forest,3,1,1.44,4.75,7.0
+2023-03-11,Crystal Palace,Man City,0,1,9.0,4.75,1.36
+2023-03-12,Fulham,Arsenal,0,3,6.0,4.0,1.57
+2023-03-12,Man United,Southampton,0,0,1.36,5.0,9.0
+2023-03-12,West Ham,Aston Villa,1,1,2.2,3.3,3.4
+2023-03-12,Newcastle,Wolves,2,1,1.65,3.75,5.5
+2023-03-15,Brighton,Crystal Palace,1,0,1.44,4.2,8.0
+2023-03-15,Southampton,Brentford,0,2,2.88,3.25,2.5
+2023-03-17,Nott'm Forest,Newcastle,1,2,5.5,3.8,1.62
+2023-03-18,Aston Villa,Bournemouth,3,0,1.7,3.8,5.0
+2023-03-18,Brentford,Leicester,1,1,1.91,3.6,3.75
+2023-03-18,Southampton,Tottenham,3,3,4.75,3.6,1.75
+2023-03-18,Wolves,Leeds,2,4,2.25,3.2,3.3
+2023-03-18,Chelsea,Everton,2,2,1.5,4.2,7.5
+2023-03-19,Arsenal,Crystal Palace,4,1,1.25,5.5,15.0
+2023-04-01,Man City,Liverpool,4,1,1.62,4.2,5.0
+2023-04-01,Arsenal,Leeds,4,1,1.29,6.0,9.0
+2023-04-01,Bournemouth,Fulham,2,1,2.55,3.3,2.8
+2023-04-01,Brighton,Brentford,3,3,1.67,4.0,5.0
+2023-04-01,Crystal Palace,Leicester,2,1,2.5,3.25,2.9
+2023-04-01,Nott'm Forest,Wolves,1,1,3.0,3.1,2.55
+2023-04-01,Chelsea,Aston Villa,0,2,1.67,3.8,5.25
+2023-04-02,West Ham,Southampton,1,0,1.73,3.6,5.0
+2023-04-02,Newcastle,Man United,2,0,2.4,3.4,2.9
+2023-04-03,Everton,Tottenham,1,1,3.4,3.3,2.2
+2023-04-04,Bournemouth,Brighton,0,2,6.0,4.2,1.53
+2023-04-04,Leeds,Nott'm Forest,2,1,1.7,3.75,5.0
+2023-04-04,Leicester,Aston Villa,1,2,2.55,3.3,2.75
+2023-04-04,Chelsea,Liverpool,0,0,2.2,3.4,3.25
+2023-04-05,Man United,Brentford,1,0,1.65,4.0,5.0
+2023-04-05,West Ham,Newcastle,1,5,3.6,3.25,2.15
+2023-04-08,Man United,Everton,2,0,1.5,4.33,6.5
+2023-04-08,Aston Villa,Nott'm Forest,2,0,1.6,4.2,5.25
+2023-04-08,Brentford,Newcastle,1,2,3.6,3.4,2.05
+2023-04-08,Fulham,West Ham,0,1,2.8,3.25,2.63
+2023-04-08,Leicester,Bournemouth,0,1,1.83,3.75,4.2
+2023-04-08,Tottenham,Brighton,2,1,2.55,3.5,2.7
+2023-04-08,Wolves,Chelsea,1,0,4.2,3.5,1.91
+2023-04-08,Southampton,Man City,1,4,11.0,6.0,1.25
+2023-04-09,Leeds,Crystal Palace,1,5,2.1,3.4,3.6
+2023-04-09,Liverpool,Arsenal,2,2,2.88,3.6,2.38
+2023-04-15,Aston Villa,Newcastle,3,0,3.6,3.4,2.05
+2023-04-15,Chelsea,Brighton,1,2,2.63,3.4,2.63
+2023-04-15,Everton,Fulham,1,3,2.05,3.4,3.7
+2023-04-15,Southampton,Crystal Palace,0,2,2.8,3.1,2.7
+2023-04-15,Tottenham,Bournemouth,2,3,1.45,4.5,7.0
+2023-04-15,Wolves,Brentford,2,0,2.45,3.1,3.0
+2023-04-15,Man City,Leicester,3,1,1.14,8.5,15.0
+2023-04-16,West Ham,Arsenal,2,2,6.0,4.2,1.55
+2023-04-16,Nott'm Forest,Man United,0,2,5.5,4.0,1.62
+2023-04-17,Leeds,Liverpool,1,6,4.2,4.2,1.73
+2023-04-21,Arsenal,Southampton,3,3,1.2,7.0,13.0
+2023-04-22,Fulham,Leeds,2,1,2.3,3.4,3.1
+2023-04-22,Brentford,Aston Villa,1,1,2.5,3.25,2.88
+2023-04-22,Crystal Palace,Everton,0,0,2.05,3.2,3.75
+2023-04-22,Leicester,Wolves,2,1,2.38,3.3,3.0
+2023-04-22,Liverpool,Nott'm Forest,3,2,1.17,7.5,17.0
+2023-04-23,Bournemouth,West Ham,0,4,2.88,3.2,2.55
+2023-04-23,Newcastle,Tottenham,6,1,1.83,3.75,4.2
+2023-04-25,Wolves,Crystal Palace,2,0,2.45,3.2,3.0
+2023-04-25,Aston Villa,Fulham,1,0,1.75,4.0,4.2
+2023-04-25,Leeds,Leicester,1,1,2.3,3.5,3.0
+2023-04-26,Nott'm Forest,Brighton,3,1,6.0,4.2,1.53
+2023-04-26,Chelsea,Brentford,0,2,1.7,4.0,4.75
+2023-04-26,West Ham,Liverpool,1,2,3.9,3.9,1.85
+2023-04-26,Man City,Arsenal,4,1,1.55,4.5,5.25
+2023-04-27,Everton,Newcastle,1,4,4.75,3.6,1.73
+2023-04-27,Southampton,Bournemouth,0,1,2.25,3.4,3.2
+2023-04-27,Tottenham,Man United,2,2,2.8,3.6,2.4
+2023-04-29,Crystal Palace,West Ham,4,3,2.63,3.25,2.75
+2023-04-29,Brentford,Nott'm Forest,2,1,1.65,3.8,5.5
+2023-04-29,Brighton,Wolves,6,0,1.5,4.33,6.5
+2023-04-30,Bournemouth,Leeds,4,1,2.55,3.5,2.7
+2023-04-30,Fulham,Man City,1,2,12.0,6.0,1.25
+2023-04-30,Man United,Aston Villa,1,0,1.73,3.9,4.6
+2023-04-30,Newcastle,Southampton,3,1,1.3,5.25,10.0
+2023-04-30,Liverpool,Tottenham,4,3,1.53,4.5,5.75
+2023-05-01,Leicester,Everton,2,2,2.0,3.5,3.75
+2023-05-02,Arsenal,Chelsea,3,1,1.6,4.0,5.5
+2023-05-03,Liverpool,Fulham,1,0,1.25,5.75,11.0
+2023-05-03,Man City,West Ham,3,0,1.2,7.0,13.0
+2023-05-04,Brighton,Man United,1,0,1.95,3.5,3.75
+2023-05-06,Bournemouth,Chelsea,1,3,3.3,3.5,2.15
+2023-05-06,Man City,Leeds,2,1,1.17,8.5,15.0
+2023-05-06,Tottenham,Crystal Palace,1,0,1.8,3.8,4.2
+2023-05-06,Wolves,Aston Villa,1,0,2.88,3.3,2.5
+2023-05-06,Liverpool,Brentford,1,0,1.44,5.0,6.0
+2023-05-07,Newcastle,Arsenal,0,2,2.45,3.75,2.63
+2023-05-07,West Ham,Man United,1,0,3.4,3.75,2.05
+2023-05-08,Fulham,Leicester,5,3,2.63,3.5,2.6
+2023-05-08,Brighton,Everton,1,5,1.33,5.25,9.0
+2023-05-08,Nott'm Forest,Southampton,4,3,2.1,3.6,3.4
+2023-05-13,Leeds,Newcastle,2,2,4.33,4.2,1.7
+2023-05-13,Aston Villa,Tottenham,2,1,2.25,3.6,2.9
+2023-05-13,Chelsea,Nott'm Forest,2,2,1.5,4.5,6.0
+2023-05-13,Crystal Palace,Bournemouth,2,0,1.83,3.6,4.2
+2023-05-13,Man United,Wolves,2,0,1.36,5.0,7.5
+2023-05-13,Southampton,Fulham,0,2,2.75,3.3,2.5
+2023-05-14,Brentford,West Ham,2,0,2.0,3.5,3.6
+2023-05-14,Everton,Man City,0,3,9.0,4.75,1.36
+2023-05-14,Arsenal,Brighton,0,3,1.73,4.2,4.2
+2023-05-15,Leicester,Liverpool,0,3,5.25,4.33,1.57
+2023-05-18,Newcastle,Brighton,4,1,2.0,3.8,3.5
+2023-05-20,Tottenham,Brentford,1,3,1.83,3.9,4.0
+2023-05-20,Bournemouth,Man United,0,1,6.0,4.75,1.5
+2023-05-20,Fulham,Crystal Palace,2,2,2.45,3.4,2.9
+2023-05-20,Liverpool,Aston Villa,1,1,1.45,5.0,6.25
+2023-05-20,Wolves,Everton,1,1,2.75,3.3,2.6
+2023-05-20,Nott'm Forest,Arsenal,1,0,5.25,4.33,1.57
+2023-05-21,West Ham,Leeds,3,1,2.4,3.5,2.88
+2023-05-21,Brighton,Southampton,3,1,1.22,7.0,11.0
+2023-05-21,Man City,Chelsea,1,0,1.25,6.0,11.0
+2023-05-22,Newcastle,Leicester,0,0,1.36,5.5,7.0
+2023-05-24,Brighton,Man City,1,1,4.0,4.33,1.75
+2023-05-25,Man United,Chelsea,4,1,1.6,4.33,5.0
+2023-05-28,Arsenal,Wolves,5,0,1.36,5.25,8.0
+2023-05-28,Aston Villa,Brighton,2,1,2.0,3.6,3.5
+2023-05-28,Brentford,Man City,1,0,3.8,4.0,1.83
+2023-05-28,Chelsea,Newcastle,1,1,2.9,3.5,2.38
+2023-05-28,Crystal Palace,Nott'm Forest,1,1,1.67,4.0,5.0
+2023-05-28,Everton,Bournemouth,1,0,1.5,4.5,6.5
+2023-05-28,Leeds,Tottenham,1,4,2.75,3.8,2.3
+2023-05-28,Leicester,West Ham,2,1,1.91,3.8,3.6
+2023-05-28,Man United,Fulham,2,1,1.5,4.33,6.0
+2023-05-28,Southampton,Liverpool,4,4,6.5,4.75,1.44

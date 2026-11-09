@@ -1,0 +1,307 @@
+Date,HomeTeam,AwayTeam,FTHG,FTAG,B365H,B365D,B365A
+2023-08-18,Werder Bremen,Bayern Munich,0,4,7.5,6.5,1.3
+2023-08-19,Augsburg,M'gladbach,4,4,2.7,3.6,2.45
+2023-08-19,Hoffenheim,Freiburg,1,2,2.3,3.6,2.9
+2023-08-19,Leverkusen,RB Leipzig,3,2,2.45,3.6,2.75
+2023-08-19,Stuttgart,Bochum,5,0,1.65,4.33,4.5
+2023-08-19,Wolfsburg,Heidenheim,2,0,1.6,4.2,5.25
+2023-08-19,Dortmund,FC Koln,1,0,1.4,5.0,7.0
+2023-08-20,Union Berlin,Mainz,4,1,1.95,3.5,3.9
+2023-08-20,Ein Frankfurt,Darmstadt,1,0,1.36,5.25,7.5
+2023-08-25,RB Leipzig,Stuttgart,5,1,1.5,4.75,5.75
+2023-08-26,Bochum,Dortmund,1,1,7.0,5.0,1.4
+2023-08-26,Darmstadt,Union Berlin,1,4,4.0,3.3,1.95
+2023-08-26,FC Koln,Wolfsburg,1,2,2.3,3.4,3.0
+2023-08-26,Freiburg,Werder Bremen,1,0,1.7,3.75,4.75
+2023-08-26,Heidenheim,Hoffenheim,2,3,3.0,3.6,2.25
+2023-08-26,M'gladbach,Leverkusen,0,3,3.8,3.8,1.85
+2023-08-27,Mainz,Ein Frankfurt,1,1,2.38,3.5,2.88
+2023-08-27,Bayern Munich,Augsburg,3,1,1.08,12.0,19.0
+2023-09-01,Dortmund,Heidenheim,2,2,1.25,7.0,9.5
+2023-09-02,Augsburg,Bochum,2,2,2.0,3.75,3.75
+2023-09-02,Hoffenheim,Wolfsburg,3,1,2.5,3.6,2.63
+2023-09-02,Leverkusen,Darmstadt,5,1,1.2,7.0,12.0
+2023-09-02,Stuttgart,Freiburg,5,0,2.2,3.5,3.2
+2023-09-02,Werder Bremen,Mainz,4,0,2.63,3.5,2.55
+2023-09-02,M'gladbach,Bayern Munich,1,2,8.5,5.75,1.3
+2023-09-03,Ein Frankfurt,FC Koln,1,1,2.1,3.4,3.5
+2023-09-03,Union Berlin,RB Leipzig,0,3,3.4,3.25,2.2
+2023-09-15,Bayern Munich,Leverkusen,2,2,1.65,4.5,4.5
+2023-09-16,FC Koln,Hoffenheim,1,3,2.25,3.6,3.1
+2023-09-16,Freiburg,Dortmund,2,4,3.1,3.8,2.1
+2023-09-16,Mainz,Stuttgart,1,3,2.63,3.4,2.7
+2023-09-16,RB Leipzig,Augsburg,3,0,1.25,7.0,10.0
+2023-09-16,Wolfsburg,Union Berlin,2,1,2.25,3.4,3.2
+2023-09-16,Bochum,Ein Frankfurt,1,1,2.88,3.6,2.38
+2023-09-17,Heidenheim,Werder Bremen,4,2,2.3,4.0,2.7
+2023-09-17,Darmstadt,M'gladbach,3,3,2.9,3.5,2.38
+2023-09-22,Stuttgart,Darmstadt,3,1,1.36,4.5,8.0
+2023-09-23,Augsburg,Mainz,2,1,2.55,3.5,2.63
+2023-09-23,Bayern Munich,Bochum,7,0,1.11,10.0,19.0
+2023-09-23,Dortmund,Wolfsburg,1,0,1.65,4.0,4.75
+2023-09-23,M'gladbach,RB Leipzig,0,1,4.75,4.75,1.57
+2023-09-23,Union Berlin,Hoffenheim,0,2,2.05,3.6,3.4
+2023-09-23,Werder Bremen,FC Koln,2,1,2.5,3.6,2.6
+2023-09-24,Leverkusen,Heidenheim,4,1,1.22,6.5,12.0
+2023-09-24,Ein Frankfurt,Freiburg,0,0,2.05,3.6,3.4
+2023-09-29,Hoffenheim,Dortmund,1,3,3.1,4.0,2.05
+2023-09-30,Bochum,M'gladbach,1,3,2.3,3.75,2.9
+2023-09-30,FC Koln,Stuttgart,0,2,2.88,3.5,2.38
+2023-09-30,Heidenheim,Union Berlin,1,0,3.0,3.6,2.25
+2023-09-30,Mainz,Leverkusen,0,3,5.75,4.5,1.53
+2023-09-30,Wolfsburg,Ein Frankfurt,2,0,2.05,3.5,3.5
+2023-09-30,RB Leipzig,Bayern Munich,2,2,3.4,4.2,1.91
+2023-10-01,Darmstadt,Werder Bremen,4,2,2.8,3.8,2.3
+2023-10-01,Freiburg,Augsburg,2,0,1.73,4.0,4.75
+2023-10-06,M'gladbach,Mainz,2,2,2.05,3.75,3.4
+2023-10-07,Augsburg,Darmstadt,1,2,1.85,3.75,4.0
+2023-10-07,Dortmund,Union Berlin,4,2,1.57,4.33,5.25
+2023-10-07,RB Leipzig,Bochum,0,0,1.25,6.0,11.0
+2023-10-07,Stuttgart,Wolfsburg,3,1,2.0,3.5,3.75
+2023-10-07,Werder Bremen,Hoffenheim,2,3,2.75,3.75,2.4
+2023-10-08,Leverkusen,FC Koln,3,0,1.33,5.5,8.0
+2023-10-08,Bayern Munich,Freiburg,3,0,1.14,8.5,17.0
+2023-10-08,Ein Frankfurt,Heidenheim,2,0,1.7,4.0,4.75
+2023-10-20,Dortmund,Werder Bremen,1,0,1.29,6.5,8.0
+2023-10-21,Darmstadt,RB Leipzig,1,3,6.5,4.75,1.44
+2023-10-21,Freiburg,Bochum,2,1,1.7,3.75,5.0
+2023-10-21,Hoffenheim,Ein Frankfurt,1,3,2.1,3.5,3.4
+2023-10-21,Union Berlin,Stuttgart,0,3,2.5,3.5,2.7
+2023-10-21,Wolfsburg,Leverkusen,1,2,4.33,4.0,1.75
+2023-10-21,Mainz,Bayern Munich,1,3,9.0,6.0,1.29
+2023-10-22,FC Koln,M'gladbach,3,1,2.4,3.6,2.88
+2023-10-22,Heidenheim,Augsburg,2,5,2.45,3.5,2.8
+2023-10-27,Bochum,Mainz,2,2,2.7,3.3,2.55
+2023-10-28,Augsburg,Wolfsburg,3,2,2.9,3.5,2.38
+2023-10-28,Bayern Munich,Darmstadt,8,0,1.06,12.0,26.0
+2023-10-28,M'gladbach,Heidenheim,2,1,1.8,4.0,4.0
+2023-10-28,Stuttgart,Hoffenheim,2,3,1.85,4.0,3.8
+2023-10-28,Werder Bremen,Union Berlin,2,0,2.7,3.3,2.6
+2023-10-28,RB Leipzig,FC Koln,6,0,1.44,4.75,7.0
+2023-10-29,Ein Frankfurt,Dortmund,3,3,3.4,3.4,2.15
+2023-10-29,Leverkusen,Freiburg,2,1,1.29,5.5,11.0
+2023-11-03,Darmstadt,Bochum,1,2,2.3,3.75,2.88
+2023-11-04,FC Koln,Augsburg,1,1,2.3,3.6,2.9
+2023-11-04,Freiburg,M'gladbach,3,3,2.1,3.8,3.2
+2023-11-04,Hoffenheim,Leverkusen,2,3,5.0,4.5,1.57
+2023-11-04,Mainz,RB Leipzig,2,0,5.75,4.2,1.6
+2023-11-04,Union Berlin,Ein Frankfurt,0,3,2.55,3.1,2.9
+2023-11-04,Dortmund,Bayern Munich,0,4,4.0,4.33,1.75
+2023-11-05,Wolfsburg,Werder Bremen,2,2,1.7,4.33,4.33
+2023-11-05,Heidenheim,Stuttgart,2,0,4.5,4.33,1.65
+2023-11-10,M'gladbach,Wolfsburg,4,0,2.3,3.8,2.7
+2023-11-11,Augsburg,Hoffenheim,1,1,2.63,3.6,2.55
+2023-11-11,Bayern Munich,Heidenheim,4,2,1.06,17.0,21.0
+2023-11-11,Darmstadt,Mainz,0,0,3.1,3.5,2.25
+2023-11-11,Stuttgart,Dortmund,2,1,2.55,3.75,2.55
+2023-11-11,Bochum,FC Koln,1,1,2.45,3.4,2.88
+2023-11-12,Leverkusen,Union Berlin,4,0,1.29,6.0,9.0
+2023-11-12,Werder Bremen,Ein Frankfurt,2,2,3.1,3.4,2.3
+2023-11-12,RB Leipzig,Freiburg,3,1,1.44,5.0,6.5
+2023-11-24,FC Koln,Bayern Munich,0,1,9.0,7.0,1.25
+2023-11-25,Dortmund,M'gladbach,4,2,1.45,5.5,5.25
+2023-11-25,Freiburg,Darmstadt,1,1,1.55,4.33,5.75
+2023-11-25,Union Berlin,Augsburg,1,1,1.95,3.6,3.8
+2023-11-25,Werder Bremen,Leverkusen,0,3,6.5,5.0,1.45
+2023-11-25,Wolfsburg,RB Leipzig,2,1,3.6,4.0,1.91
+2023-11-25,Ein Frankfurt,Stuttgart,1,2,2.6,3.6,2.6
+2023-11-26,Heidenheim,Bochum,0,0,2.2,3.6,3.1
+2023-11-26,Hoffenheim,Mainz,1,1,1.85,3.8,3.8
+2023-12-01,Darmstadt,FC Koln,0,1,2.63,3.4,2.6
+2023-12-02,Bochum,Wolfsburg,3,1,2.63,3.6,2.55
+2023-12-02,M'gladbach,Hoffenheim,2,1,2.2,4.0,2.88
+2023-12-02,RB Leipzig,Heidenheim,2,1,1.25,7.0,9.0
+2023-12-02,Stuttgart,Werder Bremen,2,0,1.4,5.25,6.5
+2023-12-03,Mainz,Freiburg,0,1,2.3,3.4,3.1
+2023-12-03,Leverkusen,Dortmund,1,1,1.62,4.5,4.75
+2023-12-03,Augsburg,Ein Frankfurt,2,1,2.63,3.6,2.55
+2023-12-08,Hoffenheim,Bochum,3,1,1.67,4.2,4.75
+2023-12-09,Ein Frankfurt,Bayern Munich,5,1,9.0,5.5,1.3
+2023-12-09,Heidenheim,Darmstadt,3,2,2.05,3.5,3.5
+2023-12-09,Union Berlin,M'gladbach,3,1,2.1,3.5,3.4
+2023-12-09,Werder Bremen,Augsburg,2,0,2.38,3.6,2.8
+2023-12-09,Wolfsburg,Freiburg,0,1,2.25,3.5,3.1
+2023-12-09,Dortmund,RB Leipzig,2,3,2.6,3.6,2.55
+2023-12-10,Stuttgart,Leverkusen,1,1,2.9,3.6,2.3
+2023-12-10,FC Koln,Mainz,0,0,2.3,3.5,3.0
+2023-12-15,M'gladbach,Werder Bremen,2,2,2.0,4.0,3.3
+2023-12-16,Augsburg,Dortmund,1,1,3.5,4.2,1.91
+2023-12-16,Bochum,Union Berlin,3,0,2.7,3.4,2.6
+2023-12-16,Darmstadt,Wolfsburg,0,1,3.1,3.6,2.2
+2023-12-16,Mainz,Heidenheim,0,1,1.67,4.2,4.75
+2023-12-16,RB Leipzig,Hoffenheim,3,1,1.45,5.0,6.0
+2023-12-17,Freiburg,FC Koln,2,0,1.8,3.8,4.2
+2023-12-17,Leverkusen,Ein Frankfurt,3,0,1.36,5.0,8.5
+2023-12-17,Bayern Munich,Stuttgart,3,0,1.45,5.25,5.5
+2023-12-19,Werder Bremen,RB Leipzig,1,1,5.0,4.5,1.57
+2023-12-19,Dortmund,Mainz,1,1,1.55,4.75,5.25
+2023-12-19,Hoffenheim,Darmstadt,3,3,1.44,5.0,6.5
+2023-12-20,Union Berlin,FC Koln,2,0,1.95,3.6,3.8
+2023-12-20,Ein Frankfurt,M'gladbach,2,1,1.83,4.0,3.8
+2023-12-20,Heidenheim,Freiburg,3,2,2.8,3.6,2.38
+2023-12-20,Leverkusen,Bochum,4,0,1.17,8.0,15.0
+2023-12-20,Stuttgart,Augsburg,3,0,1.36,5.25,7.5
+2023-12-20,Wolfsburg,Bayern Munich,1,2,6.5,5.75,1.36
+2024-01-12,Bayern Munich,Hoffenheim,3,0,1.14,9.0,12.0
+2024-01-13,Augsburg,Leverkusen,0,1,5.25,4.75,1.5
+2024-01-13,FC Koln,Heidenheim,1,1,2.05,3.6,3.4
+2024-01-13,Freiburg,Union Berlin,0,0,2.05,3.6,3.5
+2024-01-13,Mainz,Wolfsburg,1,1,2.2,3.4,3.25
+2024-01-13,RB Leipzig,Ein Frankfurt,0,1,1.45,4.5,7.5
+2024-01-13,Darmstadt,Dortmund,0,3,5.25,4.5,1.53
+2024-01-14,Bochum,Werder Bremen,1,1,2.15,3.6,3.1
+2024-01-14,M'gladbach,Stuttgart,3,1,3.5,4.0,1.91
+2024-01-20,Bochum,Stuttgart,1,0,3.6,3.8,1.95
+2024-01-20,Darmstadt,Ein Frankfurt,2,2,3.8,3.75,1.91
+2024-01-20,FC Koln,Dortmund,0,4,4.5,4.0,1.73
+2024-01-20,Freiburg,Hoffenheim,3,2,2.0,3.8,3.4
+2024-01-20,Heidenheim,Wolfsburg,1,1,2.7,3.5,2.55
+2024-01-20,RB Leipzig,Leverkusen,2,3,2.4,3.8,2.7
+2024-01-21,Bayern Munich,Werder Bremen,0,1,1.09,11.0,21.0
+2024-01-21,M'gladbach,Augsburg,1,2,1.91,3.8,3.8
+2024-01-24,Bayern Munich,Union Berlin,1,0,1.18,7.0,17.0
+2024-01-26,Ein Frankfurt,Mainz,1,0,2.15,3.4,3.5
+2024-01-27,Augsburg,Bayern Munich,2,3,8.5,5.75,1.3
+2024-01-27,Hoffenheim,Heidenheim,1,1,1.67,4.5,4.33
+2024-01-27,Stuttgart,RB Leipzig,5,2,2.63,3.8,2.4
+2024-01-27,Werder Bremen,Freiburg,3,1,2.4,3.5,2.88
+2024-01-27,Wolfsburg,FC Koln,1,1,1.83,3.75,4.2
+2024-01-27,Leverkusen,M'gladbach,0,0,1.29,5.5,10.0
+2024-01-28,Union Berlin,Darmstadt,1,0,1.62,3.8,5.75
+2024-01-28,Dortmund,Bochum,3,1,1.36,5.5,7.5
+2024-02-02,Heidenheim,Dortmund,0,0,3.75,4.5,1.8
+2024-02-03,Bayern Munich,M'gladbach,3,1,1.14,9.5,13.0
+2024-02-03,Bochum,Augsburg,1,1,2.15,3.4,3.4
+2024-02-03,Darmstadt,Leverkusen,0,2,9.5,6.5,1.25
+2024-02-03,Freiburg,Stuttgart,1,3,3.1,3.6,2.2
+2024-02-03,Mainz,Werder Bremen,0,1,2.1,3.5,3.5
+2024-02-03,FC Koln,Ein Frankfurt,2,0,3.25,3.4,2.2
+2024-02-04,Wolfsburg,Hoffenheim,2,2,2.1,3.75,3.2
+2024-02-04,RB Leipzig,Union Berlin,2,0,1.4,5.0,7.5
+2024-02-07,Mainz,Union Berlin,1,1,2.15,3.3,3.5
+2024-02-09,Dortmund,Freiburg,3,0,1.45,4.75,6.5
+2024-02-10,Augsburg,RB Leipzig,2,2,4.0,4.2,1.75
+2024-02-10,Ein Frankfurt,Bochum,1,1,1.73,3.8,4.75
+2024-02-10,M'gladbach,Darmstadt,0,0,1.6,4.5,5.0
+2024-02-10,Union Berlin,Wolfsburg,1,0,2.25,3.4,3.2
+2024-02-10,Werder Bremen,Heidenheim,1,2,1.8,3.8,4.33
+2024-02-10,Leverkusen,Bayern Munich,3,0,2.63,3.8,2.4
+2024-02-11,Stuttgart,Mainz,3,1,1.44,4.5,7.5
+2024-02-11,Hoffenheim,FC Koln,1,1,1.8,3.8,4.33
+2024-02-16,FC Koln,Werder Bremen,0,1,2.4,3.4,2.88
+2024-02-17,Darmstadt,Stuttgart,1,2,6.5,4.75,1.44
+2024-02-17,Heidenheim,Leverkusen,1,2,8.0,5.75,1.33
+2024-02-17,Hoffenheim,Union Berlin,0,1,2.0,3.6,3.6
+2024-02-17,Mainz,Augsburg,1,0,2.0,3.5,3.8
+2024-02-17,Wolfsburg,Dortmund,1,1,3.2,3.8,2.1
+2024-02-17,RB Leipzig,M'gladbach,2,0,1.36,5.5,7.0
+2024-02-18,Freiburg,Ein Frankfurt,3,3,2.3,3.4,3.1
+2024-02-18,Bochum,Bayern Munich,3,2,8.0,5.75,1.33
+2024-02-23,Leverkusen,Mainz,2,1,1.22,6.5,13.0
+2024-02-24,M'gladbach,Bochum,5,2,2.0,3.8,3.5
+2024-02-24,Stuttgart,FC Koln,1,1,1.3,5.25,10.0
+2024-02-24,Union Berlin,Heidenheim,2,2,2.0,3.5,3.75
+2024-02-24,Werder Bremen,Darmstadt,1,1,1.65,4.2,5.0
+2024-02-24,Bayern Munich,RB Leipzig,2,1,1.67,4.33,4.5
+2024-02-25,Ein Frankfurt,Wolfsburg,2,2,2.25,3.4,3.2
+2024-02-25,Dortmund,Hoffenheim,2,3,1.5,5.0,5.5
+2024-02-25,Augsburg,Freiburg,2,1,2.2,3.6,3.1
+2024-03-01,Freiburg,Bayern Munich,2,2,5.75,4.75,1.5
+2024-03-02,Bochum,RB Leipzig,1,4,5.0,4.2,1.62
+2024-03-02,Darmstadt,Augsburg,0,6,2.9,3.3,2.4
+2024-03-02,Heidenheim,Ein Frankfurt,1,2,2.8,3.3,2.5
+2024-03-02,Mainz,M'gladbach,1,1,1.91,3.75,3.75
+2024-03-02,Union Berlin,Dortmund,0,2,3.4,3.6,2.05
+2024-03-02,Wolfsburg,Stuttgart,2,3,3.3,3.5,2.15
+2024-03-03,FC Koln,Leverkusen,0,2,9.0,4.75,1.36
+2024-03-03,Hoffenheim,Werder Bremen,2,1,1.91,4.0,3.6
+2024-03-08,Stuttgart,Union Berlin,2,0,1.45,4.5,7.0
+2024-03-09,Augsburg,Heidenheim,1,0,1.85,4.2,3.5
+2024-03-09,Bayern Munich,Mainz,8,1,1.25,7.0,10.0
+2024-03-09,M'gladbach,FC Koln,3,3,1.83,4.0,4.0
+2024-03-09,RB Leipzig,Darmstadt,2,0,1.14,8.5,15.0
+2024-03-09,Werder Bremen,Dortmund,1,2,3.5,4.33,1.85
+2024-03-10,Bochum,Freiburg,1,2,2.2,3.75,3.0
+2024-03-10,Ein Frankfurt,Hoffenheim,3,1,2.0,4.0,3.3
+2024-03-10,Leverkusen,Wolfsburg,2,0,1.33,5.75,8.5
+2024-03-15,FC Koln,RB Leipzig,1,5,6.5,4.75,1.45
+2024-03-16,Darmstadt,Bayern Munich,2,5,17.0,8.0,1.14
+2024-03-16,Heidenheim,M'gladbach,1,1,2.45,3.6,2.7
+2024-03-16,Mainz,Bochum,2,0,1.8,3.8,4.33
+2024-03-16,Union Berlin,Werder Bremen,2,1,2.05,3.4,3.8
+2024-03-16,Wolfsburg,Augsburg,1,3,2.05,3.5,3.5
+2024-03-16,Hoffenheim,Stuttgart,0,3,3.8,4.0,1.83
+2024-03-17,Freiburg,Leverkusen,2,3,6.0,4.33,1.53
+2024-03-17,Dortmund,Ein Frankfurt,3,1,1.62,4.2,5.0
+2024-03-30,Ein Frankfurt,Union Berlin,0,0,2.0,3.5,3.8
+2024-03-30,Leverkusen,Hoffenheim,2,1,1.2,7.5,12.0
+2024-03-30,M'gladbach,Freiburg,0,3,2.2,3.6,3.2
+2024-03-30,RB Leipzig,Mainz,0,0,1.4,5.25,7.5
+2024-03-30,Werder Bremen,Wolfsburg,0,2,2.88,3.5,2.4
+2024-03-30,Bayern Munich,Dortmund,0,2,1.4,5.75,6.0
+2024-03-31,Augsburg,FC Koln,1,1,1.75,4.0,4.5
+2024-03-31,Stuttgart,Heidenheim,3,3,1.25,6.0,10.0
+2024-03-31,Bochum,Darmstadt,2,2,1.62,4.0,5.25
+2024-04-05,Ein Frankfurt,Werder Bremen,1,1,1.75,3.8,4.5
+2024-04-06,FC Koln,Bochum,2,1,2.25,3.5,3.1
+2024-04-06,Freiburg,RB Leipzig,1,4,4.75,4.33,1.65
+2024-04-06,Heidenheim,Bayern Munich,3,2,6.5,6.0,1.36
+2024-04-06,Mainz,Darmstadt,4,0,1.4,5.0,7.5
+2024-04-06,Union Berlin,Leverkusen,0,1,5.75,4.33,1.55
+2024-04-06,Dortmund,Stuttgart,0,1,2.25,4.0,2.8
+2024-04-07,Hoffenheim,Augsburg,3,1,2.2,4.0,2.9
+2024-04-07,Wolfsburg,M'gladbach,1,3,1.85,4.0,3.8
+2024-04-12,Augsburg,Union Berlin,2,0,2.1,3.4,3.4
+2024-04-13,Bayern Munich,FC Koln,2,0,1.22,7.5,11.0
+2024-04-13,Bochum,Heidenheim,1,1,2.05,3.75,3.3
+2024-04-13,Mainz,Hoffenheim,4,1,1.95,4.0,3.4
+2024-04-13,M'gladbach,Dortmund,1,2,3.25,4.0,2.0
+2024-04-13,RB Leipzig,Wolfsburg,3,0,1.36,5.0,8.0
+2024-04-13,Stuttgart,Ein Frankfurt,3,0,1.53,4.5,5.5
+2024-04-14,Darmstadt,Freiburg,0,1,4.0,3.8,1.83
+2024-04-14,Leverkusen,Werder Bremen,5,0,1.2,7.0,13.0
+2024-04-19,Ein Frankfurt,Augsburg,3,1,2.0,3.75,3.5
+2024-04-20,FC Koln,Darmstadt,0,2,1.5,4.75,5.75
+2024-04-20,Heidenheim,RB Leipzig,1,2,5.75,5.25,1.45
+2024-04-20,Hoffenheim,M'gladbach,4,3,2.1,4.0,3.1
+2024-04-20,Wolfsburg,Bochum,1,0,1.75,4.0,4.33
+2024-04-20,Union Berlin,Bayern Munich,1,5,4.75,4.5,1.62
+2024-04-21,Werder Bremen,Stuttgart,2,1,4.75,4.75,1.57
+2024-04-21,Dortmund,Leverkusen,1,1,2.55,3.8,2.55
+2024-04-21,Freiburg,Mainz,1,1,2.6,3.5,2.6
+2024-04-26,Bochum,Hoffenheim,3,2,2.15,4.0,2.9
+2024-04-27,Augsburg,Werder Bremen,0,3,1.8,4.0,4.0
+2024-04-27,Bayern Munich,Ein Frankfurt,2,1,1.4,5.25,7.0
+2024-04-27,Freiburg,Wolfsburg,1,2,2.3,3.6,2.88
+2024-04-27,RB Leipzig,Dortmund,4,1,1.67,4.33,4.5
+2024-04-27,Leverkusen,Stuttgart,2,2,1.75,4.2,4.33
+2024-04-28,M'gladbach,Union Berlin,0,0,2.3,3.5,3.0
+2024-04-28,Mainz,FC Koln,1,1,1.55,4.33,6.0
+2024-04-28,Darmstadt,Heidenheim,0,1,3.3,3.75,2.1
+2024-05-03,Hoffenheim,RB Leipzig,1,1,5.25,5.0,1.5
+2024-05-04,Dortmund,Augsburg,5,1,1.85,4.33,3.6
+2024-05-04,Stuttgart,Bayern Munich,3,1,2.1,4.0,3.1
+2024-05-04,Werder Bremen,M'gladbach,2,2,2.25,3.75,3.0
+2024-05-04,Wolfsburg,Darmstadt,3,0,1.4,5.0,8.0
+2024-05-04,FC Koln,Freiburg,0,0,2.3,3.75,2.88
+2024-05-05,Union Berlin,Bochum,3,4,1.95,3.5,4.0
+2024-05-05,Ein Frankfurt,Leverkusen,1,5,3.2,3.5,2.2
+2024-05-05,Heidenheim,Mainz,1,1,3.0,3.5,2.3
+2024-05-10,Augsburg,Stuttgart,0,1,4.0,4.2,1.75
+2024-05-11,FC Koln,Union Berlin,3,2,2.8,3.3,2.55
+2024-05-11,Freiburg,Heidenheim,1,1,1.7,4.0,4.5
+2024-05-11,M'gladbach,Ein Frankfurt,1,1,2.45,3.75,2.63
+2024-05-11,RB Leipzig,Werder Bremen,1,1,1.29,6.5,8.0
+2024-05-11,Mainz,Dortmund,3,0,2.2,3.6,3.1
+2024-05-12,Darmstadt,Hoffenheim,0,6,4.75,4.5,1.62
+2024-05-12,Bayern Munich,Wolfsburg,2,0,1.33,6.0,7.5
+2024-05-12,Bochum,Leverkusen,0,5,4.2,4.33,1.7
+2024-05-18,Dortmund,Darmstadt,4,0,1.17,8.5,13.0
+2024-05-18,Ein Frankfurt,RB Leipzig,2,2,2.8,3.8,2.3
+2024-05-18,Heidenheim,FC Koln,4,1,2.3,4.0,2.7
+2024-05-18,Hoffenheim,Bayern Munich,4,2,2.88,4.5,2.0
+2024-05-18,Leverkusen,Augsburg,2,1,1.3,6.0,9.0
+2024-05-18,Stuttgart,M'gladbach,4,0,1.29,6.25,8.5
+2024-05-18,Union Berlin,Freiburg,2,1,2.1,3.4,3.5
+2024-05-18,Werder Bremen,Bochum,4,1,2.38,3.6,2.8
+2024-05-18,Wolfsburg,Mainz,1,3,3.2,3.5,2.2
