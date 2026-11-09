@@ -33,17 +33,18 @@ th{color:var(--mut);font-weight:600}td.n,th.n{text-align:left}tr.s1 td{backgroun
 .leg span{margin-right:14px;font-size:12px}.leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px}
 svg text{fill:var(--mut);font-size:10px}
 .ayuda{margin:-4px 0 12px;font-size:13px;color:var(--mut);line-height:1.45}
+.ia{margin-top:8px;padding:8px 10px;background:#0f1720;border-left:3px solid var(--b);border-radius:6px;font-size:13px}
 </style></head><body>
 <header><h1>Analista de fútbol</h1><small id="meta">Cargando…</small><select id="liga"></select></header>
 <nav id="nav"><button data-t="prox" class="on">Próximos partidos</button><button data-t="pred">Predicción</button><button data-t="comp">Comparador</button><button data-t="prec">Precisión del modelo</button><button data-t="tabla">Tabla</button></nav>
 <main>
 <div class="tab on" id="t-prox"><section class="card full"><h2>Próximos partidos</h2><p class="ayuda">Los partidos que vienen y qué tan probable es cada resultado: <b style="color:var(--ac)">verde</b> = gana el local, <b style="color:var(--emp)">amarillo</b> = empate, <b style="color:var(--vis)">rojo</b> = gana el visitante. Toca un partido para ver el detalle.</p><div id="prox"></div><div class="nota">Toca un partido para ver su análisis completo. Las predicciones son estadísticas, no garantías. Mercado = probabilidad implícita de las cuotas (solo como referencia).</div></section></div>
 <div class="tab" id="t-pred">
-<section class="card"><h2>Predicción de partido</h2><p class="ayuda">Elige dos equipos. El modelo calcula cuántos goles haría cada uno según su ataque, su defensa y si juega de local, y de ahí saca las probabilidades. La cuota justa es 1 dividido entre la probabilidad.</p>
+<section class="card"><h2>Predicción de partido</h2><p class="ayuda">Elige dos equipos. El modelo calcula cuántos goles haría cada uno según su ataque, su defensa y si juega de local, y de ahí saca las probabilidades. La cuota justa es 1 dividido entre la probabilidad. El resultado 1X2 usa el modelo que mejor puntúa en la pestaña Precisión (estadístico, IA o mixto).</p>
  <div class="sel"><select id="h"></select><span>vs</span><select id="a"></select></div>
  <div class="kpi"><div><b id="xh">-</b><span>goles esperados local</span></div><div><b id="xa">-</b><span>goles esperados visitante</span></div></div>
  <div class="bar"><div class="l" id="pl"></div><div class="e" id="pe"></div><div class="v" id="pv"></div></div>
- <table id="mk"></table><div class="nota" id="eloN"></div></section>
+ <table id="mk"></table><div class="nota" id="eloN"></div><div id="iaP"></div></section>
 <section class="card"><h2>Marcadores más probables</h2><p class="ayuda">Los resultados exactos que más se esperan. En el cuadro, las filas son los goles del local y las columnas los del visitante: mientras más verde, más probable.</p><table id="topt"></table><div style="height:12px"></div><table class="heat" id="heat"></table></section></div>
 <div class="tab" id="t-comp">
 <section class="card full"><h2>Comparador de equipos</h2><p class="ayuda">Elige dos equipos de la misma liga para ver cómo les va esta temporada, uno al lado del otro.</p><div class="sel"><select id="ca"></select><span>vs</span><select id="cb"></select></div><div id="cmpTab"></div></section>
@@ -56,7 +57,7 @@ svg text{fill:var(--mut);font-size:10px}
 <div class="tab" id="t-tabla"><section class="card full"><h2>Tabla y forma (últimos 5)</h2><p class="ayuda">Posiciones de la temporada. G = ganados, E = empatados, P = perdidos, GF y GC = goles a favor y en contra, DG = diferencia de goles, Elo = fuerza. La forma muestra los últimos 5 partidos.</p><table id="tabla"></table></section></div>
 </main>
 <script>
-const $=id=>document.getElementById(id);let D,P=null,L,EQ,names,lig;
+const $=id=>document.getElementById(id);let D,P=null,L,EQ,names,lig,AN={};
 const pct=x=>(x*100).toFixed(0)+'%',pct1=x=>(x*100).toFixed(1)+'%';
 const ymdDia=n=>Date.UTC(n/1e4|0,(n/100%100|0)-1,n%100)/864e5,diaStr=d=>new Date(d*864e5).toISOString().slice(0,10);
 function matriz(lh,la){const N=8,r=D.modelo.rho,f=[1];for(let i=1;i<=N;i++)f[i]=f[i-1]*i;
@@ -66,6 +67,10 @@ function matriz(lh,la){const N=8,r=D.modelo.rho,f=[1];for(let i=1;i<=N;i++)f[i]=
  m.forEach((a,i)=>a.forEach((x,j)=>{x/=s;m[i][j]=x;i>j?pl+=x:i===j?pe+=x:pv+=x;if(i+j>2)o+=x;if(i>0&&j>0)bt+=x}));
  return{m,pl,pe,pv,o,bt,lh,la}}
 const pred=(h,a)=>{const H=EQ[h],A=EQ[a];return matriz(H.ataque_l*A.defensa_v*L.avg_h,A.ataque_v*H.defensa_l*L.avg_a)};
+const MN={poisson:'Poisson',ml:'IA (aprendizaje automático)',mix:'Mixto (Poisson + IA)'},mej=()=>(D.backtest&&D.backtest.mejor)||'poisson',esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function p1(h,a,r){const m=mej(),o=L.orden||[],i=o.indexOf(h),j=o.indexOf(a),q=L.ml&&L.ml[i]&&L.ml[i][j];if(m==='poisson'||!q)return[r.pl,r.pe,r.pv];return m==='ml'?q:[(q[0]+r.pl)/2,(q[1]+r.pe)/2,(q[2]+r.pv)/2]}
+const an=x=>{const t=AN[lig+'|'+x.f+'|'+x.h+'|'+x.a];return t?`<div class="ia"><b>Análisis con IA:</b> ${esc(t.t)}<div class="nota">Redactado por Claude solo con los números del modelo. No es una garantía.</div></div>`:''};
+const cmpML=B=>{if(!B.ml)return'';const f=(n,m)=>m?`<tr><td class="n">${n}</td><td>${pct1(m.acc)}</td><td>${m.ll.toFixed(3)}</td></tr>`:'';return`<h3>Comparación de modelos (mismos partidos)</h3><table><tr><th class="n">Modelo</th><th>Acierto</th><th>Log loss</th></tr>${f('Poisson (estadístico)',B.global)}${f('IA: gradient boosting',B.ml)}${f('Mixto (promedio de los dos)',B.mix)}${B.global.llB!=null?`<tr><td class="n">Mercado (cuotas)</td><td>${pct1(B.global.accB)}</td><td>${B.global.llB.toFixed(3)}</td></tr>`:''}</table><div class="nota">Para el 1X2 el sitio usa el modelo con menor log loss: <b>${MN[B.mejor]}</b>. Se vuelve a decidir cada día con datos nuevos.</div>`};
 const barra=(a,b,c,x=1)=>`<div class="bar" style="height:${x?30:22}px"><div class="l" style="width:${a*100}%">${pct(a)}</div><div class="e" style="width:${b*100}%">${pct(b)}</div><div class="v" style="width:${c*100}%">${pct(c)}</div></div>`;
 function chart(ser,o={}){const w=520,h=210,pd={l:44,r:12,t:10,b:22},xf=o.xf||diaStr,yf=o.yf||(v=>v.toFixed(0));
  const xs=ser.flatMap(s=>s.pts.map(p=>p[0])),ys=ser.flatMap(s=>s.pts.map(p=>p[1]));if(!xs.length)return'<div class="nota">Sin datos suficientes.</div>';
@@ -79,17 +84,17 @@ function chart(ser,o={}){const w=520,h=210,pd={l:44,r:12,t:10,b:22},xf=o.xf||dia
 function go(t){document.querySelectorAll('.tab').forEach(e=>e.classList.toggle('on',e.id==='t-'+t));document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t))}
 function renderProx(){const hoy=new Date().toLocaleDateString('en-CA'),p=L.proximos.filter(x=>x.f>=hoy);if(!p.length){$('prox').innerHTML='<div class="nota">La fuente no tiene partidos próximos publicados para esta liga por ahora (se actualiza cada día).</div>';return}
  let dia='',html='';p.forEach((x,i)=>{if(x.f!==dia){dia=x.f;html+=`<div class="dia">${new Date(x.f+'T12:00:00').toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long'})}</div>`}
-  const r=pred(x.h,x.a);html+=`<div class="pm" data-i="${i}"><div class="t"><b>${x.h} vs ${x.a}</b><small>${x.t||''}</small></div>${barra(r.pl,r.pe,r.pv,0)}
-  <small>Goles esperados ${r.lh.toFixed(1)}–${r.la.toFixed(1)} · Más de 2.5: ${pct(r.o)} · Ambos anotan: ${pct(r.bt)}${x.mk?` · Mercado: ${x.mk.map(pct).join(' / ')}`:''}</small></div>`});
+  const r=pred(x.h,x.a),q=p1(x.h,x.a,r);html+=`<div class="pm" data-i="${i}"><div class="t"><b>${x.h} vs ${x.a}</b><small>${x.t||''}</small></div>${barra(q[0],q[1],q[2],0)}
+  <small>Goles esperados ${r.lh.toFixed(1)}–${r.la.toFixed(1)} · Más de 2.5: ${pct(r.o)} · Ambos anotan: ${pct(r.bt)}${x.mk?` · Mercado: ${x.mk.map(pct).join(' / ')}`:''}</small>${an(x)}</div>`});
  $('prox').innerHTML=html;document.querySelectorAll('.pm').forEach(e=>e.onclick=()=>{const x=p[e.dataset.i];$('h').value=x.h;$('a').value=x.a;renderPred();go('pred')})}
-function renderPred(){const h=$('h').value,a=$('a').value,r=pred(h,a);$('xh').textContent=r.lh.toFixed(2);$('xa').textContent=r.la.toFixed(2);
- [['pl',r.pl],['pe',r.pe],['pv',r.pv]].forEach(([i,p])=>{$(i).style.width=p*100+'%';$(i).textContent=pct(p)});
+function renderPred(){const h=$('h').value,a=$('a').value,r=pred(h,a),q=p1(h,a,r);$('xh').textContent=r.lh.toFixed(2);$('xa').textContent=r.la.toFixed(2);
+ [['pl',q[0]],['pe',q[1]],['pv',q[2]]].forEach(([i,p])=>{$(i).style.width=p*100+'%';$(i).textContent=pct(p)});
  const row=(n,v)=>`<tr><td class="n">${n}</td><td><b>${pct1(v)}</b></td><td>${(1/v).toFixed(2)}</td></tr>`;
- $('mk').innerHTML='<tr><th class="n">Mercado</th><th>Prob.</th><th>Cuota justa</th></tr>'+row('Gana '+h,r.pl)+row('Empate',r.pe)+row('Gana '+a,r.pv)+row('Doble oportunidad 1X',r.pl+r.pe)+row('Doble oportunidad X2',r.pe+r.pv)+row('Más de 2.5 goles',r.o)+row('Menos de 2.5 goles',1-r.o)+row('Ambos anotan: sí',r.bt)+row('Ambos anotan: no',1-r.bt);
+ $('mk').innerHTML='<tr><th class="n">Mercado · 1X2 con '+MN[mej()]+'</th><th>Prob.</th><th>Cuota justa</th></tr>'+row('Gana '+h,q[0])+row('Empate',q[1])+row('Gana '+a,q[2])+row('Doble oportunidad 1X',q[0]+q[1])+row('Doble oportunidad X2',q[1]+q[2])+row('Más de 2.5 goles',r.o)+row('Menos de 2.5 goles',1-r.o)+row('Ambos anotan: sí',r.bt)+row('Ambos anotan: no',1-r.bt);
  const eh=EQ[h].elo,ea=EQ[a].elo,ex=1/(1+Math.pow(10,-(eh+60-ea)/400));$('eloN').textContent=`Elo: ${h} ${eh} · ${a} ${ea}. Elo espera que el local puntúe ${pct(ex)} (victoria = 1, empate = 0.5).`;
  const lista=[];r.m.forEach((q,i)=>q.forEach((p,j)=>lista.push([i,j,p])));lista.sort((x,y)=>y[2]-x[2]);const mx=lista[0][2];
  $('topt').innerHTML='<tr><th>Marcador</th><th>Prob.</th></tr>'+lista.slice(0,5).map(x=>`<tr><td>${x[0]} - ${x[1]}</td><td>${pct1(x[2])}</td></tr>`).join('');
- const M=r.m.slice(0,7).map(q=>q.slice(0,7));$('heat').innerHTML='<tr><th></th>'+M[0].map((_,j)=>`<th>${j}</th>`).join('')+'</tr>'+M.map((q,i)=>`<tr><th>${i}</th>`+q.map(p=>`<td style="background:rgba(46,204,113,${(p/mx).toFixed(2)})">${(p*100).toFixed(0)}</td>`).join('')+'</tr>').join('');renderTabla()}
+ const M=r.m.slice(0,7).map(q=>q.slice(0,7));$('heat').innerHTML='<tr><th></th>'+M[0].map((_,j)=>`<th>${j}</th>`).join('')+'</tr>'+M.map((q,i)=>`<tr><th>${i}</th>`+q.map(p=>`<td style="background:rgba(46,204,113,${(p/mx).toFixed(2)})">${(p*100).toFixed(0)}</td>`).join('')+'</tr>').join('');$('iaP').innerHTML=(()=>{const f=L.proximos.find(x=>x.h===h&&x.a===a);return f?an(f):''})();renderTabla()}
 const partidosDe=t=>{const p=P[lig],i=p.teams.indexOf(t),o=[];p.m.forEach(([d,h,a,hg,ag])=>{if(h===i)o.push({d,loc:1,gf:hg,ga:ag,o:a});else if(a===i)o.push({d,loc:0,gf:ag,ga:hg,o:h})});return o};
 function renderComp(){if(!P){$('cmpTab').innerHTML='<div class="nota">Cargando historial…</div>';return}
  const A=$('ca').value,B=$('cb').value,ini=+('20'+D.temporada.slice(0,2)+'0701'),pa=partidosDe(A),pb=partidosDe(B),p=P[lig];
@@ -106,7 +111,7 @@ function renderComp(){if(!P){$('cmpTab').innerHTML='<div class="nota">Cargando h
  $('h2h').innerHTML=hh.length?`<div class="kpi"><div><b style="color:var(--ac)">${wa}</b><span>victorias ${A}</span></div><div><b>${wd}</b><span>empates</span></div><div><b style="color:var(--b)">${wb}</b><span>victorias ${B}</span></div></div><h3>Partidos en las últimas 3 temporadas</h3><table>`+hh.slice(0,8).map(([d,h,a,hg,ag])=>`<tr><td>${diaStr(ymdDia(d))}</td><td class="n">${p.teams[h]}</td><td><b>${hg} - ${ag}</b></td><td class="n">${p.teams[a]}</td></tr>`).join('')+'</table>':'<div class="nota">No se han enfrentado en las últimas 3 temporadas de esta liga.</div>'}
 function renderPrec(){const B=D.backtest,g=B.global;if(!g){$('precK').innerHTML='<div class="nota">Aún no hay suficientes partidos para evaluar.</div>';return}
  const k=(v,t)=>`<div><b>${v}</b><span>${t}</span></div>`;
- $('precK').innerHTML='<div class="kpi">'+k(g.n.toLocaleString('es-CO'),'partidos evaluados')+k(pct1(g.acc),'acierto del modelo (1X2)')+(g.accB!=null?k(pct1(g.accB),'acierto del mercado (cuotas)'):'')+k(pct1(g.acc_local),'acierto si siempre eligiera local')+k(g.ll.toFixed(3),'log loss del modelo')+(g.llB!=null?k(g.llB.toFixed(3),'log loss del mercado'):'')+k(g.ll0.toFixed(3),'log loss de referencia')+'</div>';
+ $('precK').innerHTML='<div class="kpi">'+k(g.n.toLocaleString('es-CO'),'partidos evaluados')+k(pct1(g.acc),'acierto del modelo (1X2)')+(g.accB!=null?k(pct1(g.accB),'acierto del mercado (cuotas)'):'')+k(pct1(g.acc_local),'acierto si siempre eligiera local')+k(g.ll.toFixed(3),'log loss del modelo')+(g.llB!=null?k(g.llB.toFixed(3),'log loss del mercado'):'')+k(g.ll0.toFixed(3),'log loss de referencia')+'</div>'+cmpML(B);
  $('precN').innerHTML=`Evaluación honesta (walk-forward): cada partido desde ${B.desde} se predice usando solo datos anteriores a esa fecha. <b>Acierto</b> = el resultado más probable fue el real. <b>Log loss</b>: menor es mejor; el mercado de cuotas suele ser una vara muy exigente. Tomado sobre ${g.nb} partidos con cuotas${g.llM!=null?`, el modelo tiene log loss ${g.llM.toFixed(3)} y acierto ${pct1(g.accM)} frente a ${g.llB.toFixed(3)} y ${pct1(g.accB)} del mercado`:''}.`;
  $('precT').innerHTML='<tr><th class="n">Liga</th><th>Partidos</th><th>Acierto</th><th>Mercado</th><th>Log loss</th></tr>'+Object.values(D.ligas).filter(l=>l.backtest).map(l=>{const b=l.backtest;return`<tr><td class="n">${l.nombre}</td><td>${b.n}</td><td>${pct1(b.acc)}</td><td>${b.accB!=null?pct1(b.accB):'-'}</td><td>${b.ll.toFixed(3)}</td></tr>`}).join('');
  $('chCal').innerHTML=chart([{c:'#8aa0b4',dash:1,pts:[[0,0],[1,1]]},{n:'Observado',c:'#2ecc71',pts:B.cal.map(q=>[q[0],q[1]])},{c:'#2ecc71',dots:1,pts:B.cal.map(q=>[q[0],q[1]])}],{xf:v=>pct(v),yf:v=>pct(v),x0:0,x1:1,y0:0,y1:1})}
@@ -119,5 +124,6 @@ fetch('data/datos.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{D=d;$('li
  $('liga').onchange=cargarLiga;$('h').onchange=$('a').onchange=renderPred;$('ca').onchange=$('cb').onchange=renderComp;
  document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>go(b.dataset.t));renderPrec();cargarLiga();
  fetch('data/partidos.json',{cache:'no-cache'}).then(r=>r.json()).then(p=>{P=p;renderComp()}).catch(()=>{$('cmpTab').innerHTML='<div class="nota">No se pudo cargar el historial.</div>'})
+fetch('data/analisis.json',{cache:'no-cache'}).then(x=>x.ok?x.json():{}).catch(()=>({})).then(a=>{AN=(a&&a.partidos)||{};if(L)renderProx()})
 }).catch(()=>{$('meta').textContent='No se pudieron cargar los datos'});
 </script></body></html>
