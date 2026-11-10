@@ -12,7 +12,7 @@ nav button{background:none;border:0;color:var(--mut);font:inherit;padding:8px 14
 nav button.on{color:var(--txt);border-color:var(--ac)}
 main{max-width:1100px;margin:auto;padding:20px}.tab{display:none;gap:20px;grid-template-columns:1fr 1fr}.tab.on{display:grid}
 @media(max-width:850px){.tab{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;overflow-x:auto}
+.card{background:rgba(24,35,47,.86);border:1px solid var(--line);border-radius:12px;padding:18px;overflow-x:auto}
 .full{grid-column:1/-1}h2{margin:0 0 12px;font-size:16px}h3{margin:14px 0 6px;font-size:13px;color:var(--mut);font-weight:600}
 select{background:#0f1720;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px;width:100%;font-size:15px}
 .sel{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-bottom:14px}
@@ -34,7 +34,7 @@ th{color:var(--mut);font-weight:600}td.n,th.n{text-align:left}tr.s1 td{backgroun
 svg text{fill:var(--mut);font-size:10px}
 .ayuda{margin:-4px 0 12px;font-size:13px;color:var(--mut);line-height:1.45}
 .ia{margin-top:8px;padding:8px 10px;background:#0f1720;border-left:3px solid var(--b);border-radius:6px;font-size:13px}
-</style></head><body>
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}header,main{position:relative;z-index:1}</style></head><body>
 <header><h1>Analista de fútbol</h1><small id="meta">Cargando…</small><select id="liga"></select></header>
 <nav id="nav"><button data-t="prox" class="on">Próximos partidos</button><button data-t="pred">Predicción</button><button data-t="comp">Comparador</button><button data-t="prec">Precisión del modelo</button><button data-t="tabla">Tabla</button></nav>
 <main>
@@ -126,4 +126,24 @@ fetch('data/datos.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{D=d;$('li
  fetch('data/partidos.json',{cache:'no-cache'}).then(r=>r.json()).then(p=>{P=p;renderComp()}).catch(()=>{$('cmpTab').innerHTML='<div class="nota">No se pudo cargar el historial.</div>'})
 fetch('data/analisis.json',{cache:'no-cache'}).then(x=>x.ok?x.json():{}).catch(()=>({})).then(a=>{AN=(a&&a.partidos)||{};if(L)renderProx()})
 }).catch(()=>{$('meta').textContent='No se pudieron cargar los datos'});
-</script></body></html>
+</script><script>(()=>{const c=document.createElement('canvas');c.id='bg';document.body.prepend(c);const x=c.getContext('2d'),R=matchMedia('(prefers-reduced-motion:reduce)').matches;
+let W,H,P=[],m={x:.5,y:.5},b={x:0,y:0,vx:0,vy:0},pulse=[];
+const size=()=>{const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);b.x=W/2;b.y=H/2;
+ P=Array.from({length:Math.round(Math.min(70,W*H/20000))},(_,i)=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,t:i%2}))};
+const cancha=()=>{const pw=Math.min(W*.94,H*1.5),ph=pw*.64,ox=(m.x-.5)*-26+W/2-pw/2,oy=(m.y-.5)*-18+H/2-ph/2;
+ x.save();x.translate(ox,oy);for(let i=0;i<10;i+=2){x.fillStyle='rgba(46,204,113,.035)';x.fillRect(pw/10*i,0,pw/10,ph)}
+ x.strokeStyle='rgba(46,204,113,.16)';x.lineWidth=2;x.strokeRect(0,0,pw,ph);x.beginPath();x.moveTo(pw/2,0);x.lineTo(pw/2,ph);x.stroke();
+ x.beginPath();x.arc(pw/2,ph/2,ph*.14,0,7);x.stroke();x.beginPath();x.arc(pw/2,ph/2,3,0,7);x.fillStyle='rgba(46,204,113,.3)';x.fill();
+ [[0,1],[pw,-1]].forEach(([e,s])=>{x.strokeRect(s>0?e:e-pw*.16,ph*.23,pw*.16,ph*.54);x.strokeRect(s>0?e:e-pw*.06,ph*.38,pw*.06,ph*.24);x.beginPath();x.arc(e+s*pw*.11,ph/2,3,0,7);x.fill()});x.restore()};
+const draw=()=>{x.clearRect(0,0,W,H);cancha();const mx=m.x*W,my=m.y*H;b.vx+=(mx-b.x)*.012;b.vy+=(my-b.y)*.012;b.vx*=.86;b.vy*=.86;b.x+=b.vx;b.y+=b.vy;
+ P.forEach(p=>{const dx=p.x-b.x,dy=p.y-b.y,d=Math.hypot(dx,dy);if(d<150&&d>1){p.vx+=dx/d*.12;p.vy+=dy/d*.12}p.vx*=.985;p.vy*=.985;
+  const s=Math.hypot(p.vx,p.vy);if(s<.12){p.vx+=(Math.random()-.5)*.03;p.vy+=(Math.random()-.5)*.03}
+  p.x+=p.vx;p.y+=p.vy;if(p.x<-10)p.x=W+10;if(p.x>W+10)p.x=-10;if(p.y<-10)p.y=H+10;if(p.y>H+10)p.y=-10});
+ for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const d=Math.hypot(P[i].x-P[j].x,P[i].y-P[j].y);if(d<120){x.strokeStyle=`rgba(138,160,180,${(1-d/120)*.22})`;x.lineWidth=1;x.beginPath();x.moveTo(P[i].x,P[i].y);x.lineTo(P[j].x,P[j].y);x.stroke()}}
+ P.forEach(p=>{x.fillStyle=p.t?'rgba(74,163,255,.55)':'rgba(46,204,113,.55)';x.beginPath();x.arc(p.x,p.y,3,0,7);x.fill()});
+ pulse=pulse.filter(q=>q.r<160);pulse.forEach(q=>{q.r+=3;x.strokeStyle=`rgba(241,196,15,${.5*(1-q.r/160)})`;x.lineWidth=2;x.beginPath();x.arc(q.x,q.y,q.r,0,7);x.stroke()});
+ const g=x.createRadialGradient(b.x,b.y,0,b.x,b.y,34);g.addColorStop(0,'rgba(255,255,255,.35)');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.beginPath();x.arc(b.x,b.y,34,0,7);x.fill();
+ x.fillStyle='rgba(255,255,255,.9)';x.beginPath();x.arc(b.x,b.y,5,0,7);x.fill()};
+const loop=()=>{draw();requestAnimationFrame(loop)};
+addEventListener('pointermove',e=>{m.x=e.clientX/W;m.y=e.clientY/H});addEventListener('pointerdown',e=>pulse.push({x:e.clientX,y:e.clientY,r:6}));addEventListener('resize',()=>{size();if(R)draw()});
+size();m.x=.5;m.y=.5;R?draw():loop()})();</script></body></html>
