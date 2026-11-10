@@ -35,15 +35,23 @@ def leer(src):
 def cargar(cod, temps, csv_dir):
     partes = []
     for t in temps:
+        copia = DATA / f"{cod}_{t}.csv"
         try:
             d = leer(csv_dir / f"{cod}_{t}.csv" if csv_dir else f"{BASE}/mmz4281/{t}/{cod}.csv")
             d = d[CORE + ODDS].dropna(subset=CORE)
             d["Date"] = pd.to_datetime(d["Date"], dayfirst=True, format="mixed")
             d[["FTHG", "FTAG"]] = d[["FTHG", "FTAG"]].astype(int)
-            d.to_csv(DATA / f"{cod}_{t}.csv", index=False)
-            partes.append(d)
+            d.to_csv(copia, index=False)
         except Exception as ex:
-            print("  sin datos", cod, t, ex)
+            if csv_dir is None and copia.exists():   # la fuente fallo: se usa la copia guardada en el repositorio
+                print("  usando copia guardada", cod, t, "-", str(ex)[:80])
+                d = pd.read_csv(copia); d["Date"] = pd.to_datetime(d["Date"])
+                for c in ODDS:
+                    if c not in d.columns:
+                        d[c] = float("nan")
+            else:
+                print("  sin datos", cod, t, ex); continue
+        partes.append(d)
     if not partes:
         raise ValueError("sin datos")
     df = pd.concat(partes).sort_values("Date", kind="stable").reset_index(drop=True)
