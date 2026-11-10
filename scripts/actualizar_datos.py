@@ -185,6 +185,87 @@ def proximos(csv_dir):
     return out
 
 
+SEL_URL = "https://raw.githubusercontent.com/martj42/international_results/master/results.csv"
+ES = {"Brazil": "Brasil", "Spain": "España", "Germany": "Alemania", "France": "Francia", "England": "Inglaterra", "Italy": "Italia",
+      "Netherlands": "Países Bajos", "Belgium": "Bélgica", "Croatia": "Croacia", "Switzerland": "Suiza", "Denmark": "Dinamarca",
+      "Sweden": "Suecia", "Norway": "Noruega", "Poland": "Polonia", "Czech Republic": "Chequia", "Turkey": "Turquía", "Greece": "Grecia",
+      "Scotland": "Escocia", "Wales": "Gales", "Republic of Ireland": "Irlanda", "Hungary": "Hungría", "Romania": "Rumanía",
+      "Ukraine": "Ucrania", "Russia": "Rusia", "Mexico": "México", "United States": "Estados Unidos", "Canada": "Canadá",
+      "Peru": "Perú", "Panama": "Panamá", "Haiti": "Haití", "Japan": "Japón", "South Korea": "Corea del Sur", "Iran": "Irán",
+      "Saudi Arabia": "Arabia Saudita", "Qatar": "Catar", "Iraq": "Irak", "Morocco": "Marruecos", "Egypt": "Egipto", "Algeria": "Argelia",
+      "Tunisia": "Túnez", "Cameroon": "Camerún", "Ivory Coast": "Costa de Marfil", "South Africa": "Sudáfrica", "DR Congo": "RD Congo",
+      "Uzbekistan": "Uzbekistán", "Jordan": "Jordania", "China PR": "China", "New Zealand": "Nueva Zelanda", "Slovakia": "Eslovaquia",
+      "Slovenia": "Eslovenia", "Iceland": "Islandia", "Finland": "Finlandia", "Northern Ireland": "Irlanda del Norte",
+      "North Macedonia": "Macedonia del Norte", "Cape Verde": "Cabo Verde", "Bosnia and Herzegovina": "Bosnia y Herzegovina"}
+
+
+def k_torneo(t):
+    t = str(t)
+    return 20 if t == "Friendly" else 60 if t == "FIFA World Cup" else 40 if "qualification" in t else 50 if any(
+        w in t for w in ("Euro", "Copa Am", "African Cup", "Asian Cup", "Gold Cup", "Nations League", "Confederations")) else 30
+
+
+def selecciones(csv_dir, hoy):
+    """Selecciones nacionales: Elo + Poisson (goles esperados segun la diferencia de Elo). Cancha neutral."""
+    d = pd.read_csv(csv_dir / "results.csv" if csv_dir else SEL_URL)
+    d["date"] = pd.to_datetime(d["date"]); d = d.dropna(subset=["home_score", "away_score"])
+    d = d[(d.date >= "2014-01-01") & (d.date <= pd.Timestamp(hoy))].sort_values("date", kind="stable").reset_index(drop=True)
+    d[["home_score", "away_score"]] = d[["home_score", "away_score"]].astype(int)
+    for c in ("home_team", "away_team"):
+        d[c] = d[c].replace(ES)
+    d[d.date >= "2018-01-01"][["date", "home_team", "away_team", "home_score", "away_score", "tournament", "neutral"]].to_csv(
+        DATA / "selecciones.csv", index=False)
+    neu = d["neutral"].astype(str).str.upper().eq("TRUE")
+    test_desde = (pd.Timestamp(hoy) - pd.Timedelta(days=730) - EPOCH).days
+    ini_v = pd.Timestamp(hoy) - pd.Timedelta(days=730); ini_ymd = int(ini_v.strftime("%Y%m%d"))
+    elo, n, rows, cnt, hist = {}, {}, [], [0, 0, 0], {}
+    for r, ne in zip(d.itertuples(), neu):
+        h, a, hg, ag, dia = r.home_team, r.away_team, r.home_score, r.away_score, (r.date - EPOCH).days
+        eh, ea = elo.get(h, 1500.0), elo.get(a, 1500.0)
+        dif = eh + (0 if ne else HOME_ELO) - ea; y = 0 if hg > ag else 1 if hg == ag else 2
+        if n.get(h, 0) >= 8 and n.get(a, 0) >= 8 and r.date >= pd.Timestamp("2016-01-01"):
+            rows.append((dia, y, dif, hg + ag, tuple((c + 1) / (sum(cnt) + 3) for c in cnt)))
+        cnt[y] += 1; n[h] = n.get(h, 0) + 1; n[a] = n.get(a, 0) + 1
+        gd = abs(hg - ag); mult = 1 if gd < 2 else 1.5 if gd == 2 else (11 + gd) / 8
+        delta = k_torneo(r.tournament) * mult * ((1.0 if y == 0 else 0.5 if y == 1 else 0.0) - 1 / (1 + 10 ** (-dif / 400)))
+        elo[h], elo[a] = eh + delta, ea - delta
+        ymd = int(r.date.strftime("%Y%m%d"))
+        hist.setdefault(h, []).append([ymd, round(eh + delta)]); hist.setdefault(a, []).append([ymd, round(ea - delta)])
+    mu = float((d.home_score.sum() + d.away_score.sum()) / (2 * len(d)))
+    tr = [x for x in rows if test_desde - 1460 <= x[0] < test_desde]; te = [x for x in rows if x[0] >= test_desde]
+    if len(tr) < 300 or len(te) < 100:
+        raise ValueError("pocos partidos de selecciones")
+    pr = lambda dif, b: probs(mu * math.exp(b * dif / 400), mu * math.exp(-b * dif / 400))
+    ll = lambda b: sum(-math.log(max(pr(x[2], b)[x[1]], 1e-9)) for x in tr)
+    b = min([0.3 + 0.05 * i for i in range(17)], key=ll)
+    bt = metricas([(x[1], pr(x[2], b), None, x[4], x[0]) for x in te])
+    ven = d[d.date >= ini_v]; cuenta = {}
+    for r in ven.itertuples():
+        cuenta[r.home_team] = cuenta.get(r.home_team, 0) + 1; cuenta[r.away_team] = cuenta.get(r.away_team, 0) + 1
+    orden = sorted(t for t, c in cuenta.items() if c >= 20)
+    eq = {}
+    for t in orden:
+        g_ = ven[(ven.home_team == t) | (ven.away_team == t)]
+        gf = ga = w = e = 0; res = []
+        for r in g_.itertuples():
+            a_, c_ = (r.home_score, r.away_score) if r.home_team == t else (r.away_score, r.home_score)
+            gf += a_; ga += c_; w += a_ > c_; e += a_ == c_; res.append("G" if a_ > c_ else "E" if a_ == c_ else "P")
+        f = math.exp(b * (elo[t] - 1500) / 400)
+        eq[t] = {"pj": len(g_), "g": w, "e": e, "p": len(g_) - w - e, "gf": int(gf), "gc": int(ga), "pts": 3 * w + e, "forma": res[-5:],
+                 "ataque_l": round(f, 4), "defensa_l": round(1 / f, 4), "ataque_v": round(f, 4), "defensa_v": round(1 / f, 4),
+                 "elo": round(elo[t])}
+    L = {"nombre": "Selecciones nacionales", "avg_h": round(mu, 4), "avg_a": round(mu, 4), "n": len(ven), "equipos": eq, "orden": orden,
+         "proximos": [], "neutral": True, "desde": ini_ymd, "backtest": bt,
+         "nota": "Selecciones: ranking Elo de los últimos 2 años, todo en cancha neutral, sin calendario ni cuotas."}
+    t3 = int((pd.Timestamp(hoy) - pd.Timedelta(days=1095)).strftime("%Y%m%d"))
+    ix = {t: i for i, t in enumerate(orden)}
+    d3 = d[(d.date >= pd.Timestamp(str(t3))) & d.home_team.isin(ix) & d.away_team.isin(ix)]
+    P = {"teams": orden, "elo": {str(ix[t]): [q for q in hist[t] if q[0] >= t3] for t in orden},
+         "m": [[int(r.date.strftime("%Y%m%d")), ix[r.home_team], ix[r.away_team], int(r.home_score), int(r.away_score)] for r in d3.itertuples()]}
+    print("OK INT", len(d), "partidos;", len(te), "en backtest;", len(orden), "selecciones; b =", b)
+    return L, P
+
+
 def main():
     csv_dir = Path(sys.argv[sys.argv.index("--csv-dir") + 1]) if "--csv-dir" in sys.argv else None
     DATA.mkdir(exist_ok=True)
@@ -243,6 +324,10 @@ def main():
                          "elo": {str(ix[t]): [q for q in v if q[0] >= tres_ymd] for t, v in hist.items() if t in ix},
                          "m": [[int(r.Date.strftime("%Y%m%d")), ix[r.HomeTeam], ix[r.AwayTeam], int(r.FTHG), int(r.FTAG)] for r in d3.itertuples()]}
         print("OK", cod, len(df), "partidos;", len(mine), "en backtest;", len(L["proximos"]), "próximos")
+    try:
+        ligas["INT"], partidos["INT"] = selecciones(csv_dir, hoy)
+    except Exception as ex:
+        print("Selecciones omitidas:", ex)
     bt = {"global": metricas(vista(ev, "p")), "desde": f"{ini - 1}-07-01"}
     mejor, vm = "poisson", "p"
     if ml_ok:
