@@ -3855,7 +3855,6 @@ date,home_team,away_team,home_score,away_score,tournament,neutral
 2022-04-27,México,Guatemala,0,0,Friendly,True
 2022-05-12,Bahamas,Turks and Caicos Islands,4,2,Friendly,False
 2022-05-12,Dominica,Saint Vincent and the Grenadines,2,1,Friendly,False
-2022-05-13,Guernsey,Jersey,1,2,Muratti Vase,False
 2022-05-14,Bahamas,Turks and Caicos Islands,1,2,Friendly,False
 2022-05-15,Dominica,Saint Vincent and the Grenadines,3,1,Friendly,False
 2022-05-21,Yoruba Nation,Matabeleland,1,1,CONIFA Africa Football Cup,True
@@ -4757,6 +4756,7 @@ date,home_team,away_team,home_score,away_score,tournament,neutral
 2023-03-29,Rwanda,Benin,1,1,African Cup of Nations qualification,False
 2023-03-31,Nepal,Laos,2,1,Tri Nation Tournament,False
 2023-04-19,Estados Unidos,México,1,1,Friendly,False
+2023-05-13,Guernsey,Jersey,1,2,Muratti Vase,False
 2023-06-07,México,Guatemala,2,0,Friendly,False
 2023-06-09,Lebanon,Vanuatu,3,1,Intercontinental Cup,True
 2023-06-09,India,Mongolia,2,0,Intercontinental Cup,False
